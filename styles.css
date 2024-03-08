@@ -1,0 +1,52 @@
+:root {
+  --button-color: red;
+  --button-color2: purple;
+}
+
+body {
+  background-color: #0a0a23;
+}
+
+#text {
+  background-color: #0a0a23;
+  color: #ffffff;
+  padding: 10px;
+}
+
+#game {
+  max-width: 750px;
+  max-height: 600px;
+  background-color: #ffffff;
+  margin: 30px auto 0px;
+  padding: 10px;
+}
+
+#controls {
+  width: 63px;
+  height: 60px;
+  border: 1px solid black;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  transform: rotate(45deg);
+  position: relative;
+  left: 89%;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background-color: var(--button-color2);
+  border: 1px solid var(--button-color);
+  border-radius: 0% 50% 0% 50%;
+  padding: 2px;
+}
+
+.north, .south {
+  background-image: linear-gradient(-45deg, var(--button-color2), var(--button-color));
+}
+
+.east, .west {
+  transform: rotate(-90deg);
+  background-image: linear-gradient(45deg, var(--button-color2), var(--button-color));
+}
