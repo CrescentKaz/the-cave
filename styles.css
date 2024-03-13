@@ -24,7 +24,7 @@ body {
 #controls {
   width: 63px;
   height: 60px;
-  border: 1px solid black;
+  border: 1px dashed black;
   padding: 8px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
