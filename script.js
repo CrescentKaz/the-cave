@@ -1,31 +1,42 @@
+let health = 100;
+let atk = 1;
+let gold = 0;
+let dragonHealth;
+let inven = ["stick"];
+
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const button4 = document.querySelector("#button4"); 
+const button5 = document.querySelector("#button5");
+const healthText = document.querySelector("#healthText");
+const atkText = document.querySelector("#atkText");
 const text = document.querySelector("#text"); 
 const picture = document.querySelector("#picture");
+const currentRoomText = document.querySelector("#currentRoomText"); 
 
 const locations = [
   { 
     name: "entrance",
+    room: "Entrance",
     "button functions": [goLargeCavern, goDeadEnd, goDeadEnd, goWin],
     text: "Before you looms the dark, decrepit crags of Mt Feir, so named for the fear it instills upon all who tred it's trecherous terrain. You are a knight tasked by the King and Queen to slay the dragon inhabiting Mt Feir and freeing the people of it's villany. The large gaping maw of the mountain lies to the North of you.",
     picture: ""
   },
   {
-    name: "large cavern",
+    name: "largeCavern",
     "button functions": [goUndergroundRiver, goHiddenRoom, goTunnelOfBio, goEntrance],
     text: "You enter a large cavern littered with stalagtites, stalagmites, and columns of various widths. It is dark and dank. The faint scent of muggy decay wafts gently accross the ground. Soft dripping echoes around you as you catch flashes of sunlight reflecting from the falling droplettes.",
     picture: ""
   },
   {
-    name: "hidden room",
+    name: "hiddenRoom",
     "button functions": [goDeadEnd, goDeadEnd, goLargeCavern, goDeadEnd],
     text: 'You fly up and spot a small alcove to the east. As your feet touch the ground in the alcove you see a tiny engraving on the wall, "Created by Kaitlyn Johnson".',
     picture: ""
   },
   {
-    name: "tunnel of biolumenence",
+    name: "tunnelOfBio",
     "button functions": [goRockWall, goLargeCavern, goDeadEnd, goDeadEnd],
     text: "The tunnel literally glows as biolumenencent algae and cave crawlers line the walls and ceiling. They're mostly teal with some flat pinks and neon yellows. To the East is the large carvern. To the West is a wall of rock where even the algae and critters mostly avoid. You think you spot a few handholds...",
     picture: ""
