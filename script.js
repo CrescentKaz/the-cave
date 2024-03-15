@@ -133,16 +133,6 @@ const locations = [
   },
 ]; 
 
-const deadEnds = [
-  {
-    name: "dead end",
-    "button text": ["N", "E", "W", "S"],
-    "button functions": [restart, restart, restart, restart],
-    text: "You stumble into the wall and hit your head. You pass out from a concusion. Press any direction to continue.",
-    picture: ""
-  },
-];
-
 const miscLocals = [
   {
     name: "win",
@@ -181,19 +171,6 @@ function update(locations) {
   button4.onclick = locations["button functions"][3];
   text.innerText = locations.text;
   picture.innerText = locations.picture;
-}
-
-function update(deadEnds) {
-  button1.innerText = deadEnds["button text"][0];
-  button2.innerText = deadEnds["button text"][1];
-  button3.innerText = deadEnds["button text"][2];
-  button4.innerText = deadEnds["button text"][3];
-  button1.onclick = deadEnds["button functions"][0];
-  button2.onclick = deadEnds["button functions"][1];
-  button3.onclick = deadEnds["button functions"][2];
-  button4.onclick = deadEnds["button functions"][3];
-  text.innerText = deadEnds.text;
-  picture.innerText = deadEnds.picture;
 }
 
 function update(miscLocals) {
@@ -299,7 +276,14 @@ function goDragonRoom() {
 }
 
 function goDeadEnd() {
-  update(deadEnds[0]);
+  const deadEnd = [
+    "You can't go this way!",
+    "You wouldn't want to hit your head!",
+    'You feel like if this wall could talk it would say, "You shall not pass!" ',
+    "This doesn't lead anywhere!",
+    "No! Surely not that way!"
+  ]
+  alert(deadEnd[Math.random()]);
 }
 
 function goWin() {
