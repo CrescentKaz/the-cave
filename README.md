@@ -26,11 +26,23 @@ locations:
 15 - cave painting,
 16 - fresh tracks,
 17 - treasure hoard,
-18 - dragon room <--start here,
-19 - dead end,
-20 - win,
-21 - mini game,
+18 - dragon room,
+
+miscLocals:
+0 - win,
+1 - mini game,
 
 deaths: 
 0 - bone room, 
+
+Game Requirements:
+monster stats (dragon, bat, giant centipede, crab)
+player stats (hp, atk)
+inventory (sword, book, stick, armor?, gold, treasure)
+spells (fire, fly, light)
+arrowkeys (same functionality as clicking the rose compass)
+keyboard hotkeys (wasd, i/b, 123 for spells)
+images (pictures for each location)
+dead ends must not cause a restart
+monotone color sceme execpt for interactables (fights, items, mini game (think fall guys style for the mini game. I want it to be super obvious that it's not actually connected to the cave) ) 
 
