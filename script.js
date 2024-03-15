@@ -327,7 +327,8 @@ function goDeathBoneRoom() {
 }
 
 function pickOne() {
-  pick(1);
+  let numPickOne = Math.floor(Math.random()*11);
+  
 }
 
 function pickTwo() {
