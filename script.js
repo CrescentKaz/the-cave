@@ -304,9 +304,14 @@ function goDeadEnd() {
     "You wouldn't want to hit your head!",
     'You feel like if this wall could talk it would say, "You shall not pass!" ',
     "This doesn't lead anywhere!",
-    "No! Surely not that way!"
+    "No! Surely not that way!",
+    "Just because you're facing a rock doesn't mean they can't see you!", 
+    "Yes, I agree. Staring at a wall is a perfectly good waste of time!", 
+    "You are not being paid by the hour. Maybe try a different direction!",
+    "Do you ever think about why we're here?",
+    "There is no map on this wall."
   ]
-  alert(deadEnd[Math.floor(Math.random()*5)]);
+  alert(deadEnd[Math.floor(Math.random()*deadEnd.length())]);
 }
 
 function goWin() {
