@@ -28,7 +28,7 @@ const locations = [
     room: "Large Cavern",
     "button functions": [goUndergroundRiver, goHiddenRoom, goTunnelOfBio, goEntrance],
     text: "You enter a large cavern littered with stalagtites, stalagmites, and columns of various widths. It is dark and dank. The faint scent of muggy decay wafts gently accross the ground. Soft dripping echoes around you as you catch flashes of sunlight reflecting from the falling droplettes.",
-    picture: ""
+    picture: src="./images/image-large-cavern.png";
   },
   {
     name: "hiddenRoom",
