@@ -45,28 +45,28 @@ const locations = [
     picture: ""
   },
   {
-    name: "rock wall",
+    name: "rockWall",
     room: "Rock Wall",
     "button functions": [goDeadEnd, goDeadEnd, goDragonRoom, goTunnelOfBio],
     text: "You look up and down this section of wall. Large handholds dot the surface at just the right spaces... You think it can take you up into a small twisting tunnel. On the ground and to the South is a soft glowing light at the end of the tunnel.",
     picture: ""
   },
   {
-    name: "underground river",
+    name: "undergroundRiver",
     room: "Underground River",
     "button functions": [goOldTracks, goBatCave, goOldCampsite, goLargeCavern], 
     text: "In front of you is a rushing river. Glowing algae light the room. There's a path to the west and to the east, the water is low enough to cross and follow a different path. To the north is a large dropoff where the river forms a waterfall to the ledge below. In the distance you can see a path that follows the river to the north.",
     picture: ""
   },
   {
-    name: "old campsite",
+    name: "oldCampsite",
     room: "Old Campsite",
     "button functions": [goDeadEnd, goUndergroundRiver, goDeadEnd, goDeadEnd],
     text: "You find an old campsite with a burnt out firepit, a tattered dusty tent that leans too far to the right, and a few large rocks that might have doubled as stools. Luckily, you don't find any bodies. You do find a small empty knapsack and a book tucked just inside the tent. To the East lies the underground river.",
     picture: ""
   },
   {
-    name: "bat cave",
+    name: "batCave",
     room: "Bat Cave",
     "button functions": [goDeadEnd, goDeadEnd, goUndergroundRiver, goDeadEnd],
     text: "You enter a spacous warm cave with lots of high pitched chittering. You look up to see the ceiling absolutely covered in small black bodies. The ground underfoot is a bit mushy. You found a bat cave! To the West awaits the underground river.",
@@ -87,14 +87,14 @@ const locations = [
     picture: ""
   },
   {
-    name: "bone room",
+    name: "boneRoom",
     room: "Bone Room",
     "button functions": [goDeadEnd, goSortaOldTracks, goDeadEnd, goDeadEnd],
     text: "Bones of full 50 men lie strewn about. Some are broken, others whole, and yet others with many many needle-thin stalagtites poking straight through. You think it might be best to go back the way you came.",
     picture: ""
   },
   {
-    name: "old carving",
+    name: "oldCarving",
     room: "Old Carving", 
     "button functions": [goDeadEnd, goDeadEnd, goDeadEnd, goSortaOldTracks],
     text: 'Before you are crude letters carved into the wall of rock. Written in Aramaic, it reads "If you do doubt your courage or your strength come no further. Only he who is valiant and pure of spirit may enter the Cave of Aaaaaargh" ... they must have died while carving it.',
@@ -108,7 +108,7 @@ const locations = [
     picture: ""
   },
   {
-    name: "dark room",
+    name: "darkRoom",
     room: "Dark Room",
     "button functions": [goDeadEnd, goDeadEnd, goMiniGame, goWeekOldTracks],
     text: "It is too dark in here to see. To the South you see the hole you just crawled through.",
@@ -122,7 +122,7 @@ const locations = [
     picture: ""
   },
   {
-    name: "cave painting",
+    name: "cavePainting",
     room: "Cave Painting",
     "button functions": [goDeadEnd, goDeadEnd, goNewerTracks, goDeadEnd],
     text: 'You see rust colored smears criss-crossing the wall. They spell out, "HELP!" ',
@@ -136,14 +136,14 @@ const locations = [
     picture: ""
   },
   {
-    name: "treasure hoard",
+    name: "treasureHoard",
     room: "Treasure Hoard",
     "button functions": [goDragonRoom, goFreshTracks, goDeadEnd, goDeadEnd],
     text: "Red, green, blue, purple, yellow, and oragne lights raidiate from all kinds of gems. Gold coins, ingots, and bars overflow from giant chalises and chests. Strings of pearls hang from stalagtites. Shimmering silks swath ornate silver-wraught forms. Sapphires litter the floor like a river and a small stream of rubies and garnets seem to pour out of a pile of emeralds like lava over a lush mountainside. The entire room is a walk-through-able art piece with a path going from North to East.",
     picture: ""
   },
   {
-    name: "dragon room",
+    name: "dragonRoom",
     room: "Dragon Room",
     "button functions": [goDeadEnd, goDeathBoneRoom, goRockWall, goTreasureHoard],
     text: "You open your eyes to a dimly lit room. A loud snoring makes you jump as you notice a large dark colored dragon asleep right next to you. You have no armor, no weapons, no magic. Your only option is to flee, but to which way? There seems to be an opening to the east. To the south you spot some glinting light and to the west you see a rock wall with what appears to be hand holds and a small tunnel down.",
@@ -161,7 +161,7 @@ const miscLocals = [
     picture: ""
   },
   {
-    name: "mini game",
+    name: "miniGame",
     room: "🤪",
     "button text": ["1", "0", "3", "2"],
     "button functions": [pickOne, goDarkRoom, pickThree, pickTwo],
@@ -172,7 +172,7 @@ const miscLocals = [
   
 const deaths = [
   { 
-    name: "bone room",
+    name: "boneRoom",
     text: "You slip and slide down a hole onto bones of full 50 men strewn about. Some are broken, others whole, and yet others with many many thin stalagmites piercing straight through. Unfortuneately you land on one of these. It is very painful... You Died. ☠️ Ending 1 (Press any Direction to continue.)",
     picture: ""
   },
