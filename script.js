@@ -176,6 +176,11 @@ const deaths = [
     text: "You slip and slide down a hole onto bones of full 50 men strewn about. Some are broken, others whole, and yet others with many many thin stalagmites piercing straight through. Unfortuneately you land on one of these. It is very painful... You Died. ☠️ Ending 1 (Press any Direction to continue.)",
     picture: ""
   },
+  {
+    name: "runAway",
+    text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 2 (Press any Direction to continue.",
+    picture: ""
+  }
 ];
 
 // initialize buttons
@@ -324,6 +329,10 @@ function goMiniGame() {
 
 function goDeathBoneRoom() {
   update(deaths[0]);
+}
+
+function goDeathRunAway() {
+  update(deaths[1]);
 }
 
 function pickOne() {
