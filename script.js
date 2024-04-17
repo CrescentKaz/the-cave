@@ -94,7 +94,7 @@ const locations = [
     picture: ""
   },
   {
-    name: "week old tracks",
+    name: "weekOldTracks",
     room: "Ruby Tracks",
     "button functions": [goDarkRoom, goDeadEnd, goSortaOldTracks, goNewerTracks],
     text: "The air is stale and heavy as you make your way around a curve in the trail. A bead of sweat trickles down your calf and you peer into the dim light. The tracks deffinately went this way... did the King and Queen know they dragon could shapeshift...? To the North is a hole in the wall, too dark to see into. The tracks appear to head around to the South. You hope this hasn\'t been a large loop.",
@@ -108,7 +108,7 @@ const locations = [
     picture: ""
   },
   {
-    name: "newer tracks",
+    name: "newerTracks",
     room: "Golden Tracks",
     "button functions": [goWeekOldTracks, goCavePainting, goFreshTracks, goDeadEnd],
     text: "The air is still a little stale but you catch a whiff of a musky scent. You gently brush your left foot across the edge of one track print ringed in gold. The tracks point off to the West. You just came from the North.", 
@@ -122,7 +122,7 @@ const locations = [
     picture: ""
   },
   {
-    name: "fresh tracks",
+    name: "freshTracks",
     room: "Fresh Tracks",
     "button functions": [goDeadEnd, goNewerTracks, goTreasureHoard, goDeadEnd],
     text: "You crouch down slowly, mindful of the noise from your armor. Your fingers brush against the easily disturbed ground. These tracks are very fresh, possibly from today, and the pungent odor of lizard musk confirms it. You cane from the East. To the west you see the faint glow of what appears to be a rainbow all out of order.",
@@ -132,14 +132,14 @@ const locations = [
     name: "treasureHoard",
     room: "Treasure Hoard",
     "button functions": [goDragonRoom, goFreshTracks, goDeadEnd, goDeadEnd],
-    text: "Red, green, blue, purple, yellow, and oragne lights raidiate from all kinds of gems. Gold coins, ingots, and bars overflow from giant chalises and chests. Strings of pearls hang from stalagtites. Shimmering silks swath ornate silver-wraught forms. Sapphires litter the floor like a river and a small stream of rubies and garnets seem to pour out of a pile of emeralds like lava over a lush mountainside. The entire room is a walk-through-able art piece with a path going from North to East.",
+    text: "Red, green, blue, purple, yellow, and oragne lights raidiate from all kinds of gems. Gold coins, ingots, and bars overflow from giant chalises and chests. Strings of pearls hang from stalagtites. Shimmering silks swath ornate silver-wraught forms. Sapphires litter the floor like a river and a small stream of rubies and garnets seem to pour out of a pile of emeralds like lava over a lush mountainside. The entire room is a walk-through-able art piece with a path going from East to North.",
     picture: ""
   },
   {
     name: "dragonRoom",
     room: "Dragon Room",
     "button functions": [goDeadEnd, goDeathBoneRoom, goRockWall, goTreasureHoard],
-    text: "You open your eyes to a dimly lit room. A loud snoring makes you jump as you notice a large dark colored dragon asleep right next to you. You have no armor, no weapons, no magic. Your only option is to flee, but to which way? There seems to be an opening to the east. To the south you spot some glinting light and to the west you see a rock wall with what appears to be hand holds and a small tunnel down.",
+    text: "You blink as your eyes adjust to the dimly lit room. A loud snoring makes you jump and you notice a large dark colored dragon asleep right next to you. What do you do?",
     picture: ""
   },
 ]; 
