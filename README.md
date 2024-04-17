@@ -46,3 +46,17 @@ images (pictures for each location)
 dead ends must not cause a restart
 monotone color sceme execpt for interactables (fights, items, mini game (think fall guys style for the mini game. I want it to be super obvious that it's not actually connected to the cave) ) 
 
+To Do List:
+0. add all wins/deaths and update ending #
+1. update readme with correct locations/miscLocals/deaths
+2. copy nav bar from landing page into Cave
+3. add monster list
+4. add inven list
+5. add notes of where player will find each item
+6. add inven functionality
+7. add spellbook functionality
+8. switch up css
+9. add device responsivness
+10. add accesability
+11. spell check EVERYTHING!
+12. make public and go live
