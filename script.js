@@ -19,14 +19,14 @@ const locations = [
   { 
     name: "entrance",
     room: "Entrance",
-    "button functions": [goLargeCavern, goDeadEnd, goDeadEnd, goWin],
+    "button functions": [goLargeCavern, goDeathRunAway, goDeathRunAway, goDeathRunAway],
     text: "Before you looms the dark, decrepit crags of Mt Feir, so named for the fear it instills upon all who tred it's trecherous terrain. You are a knight tasked by the King and Queen to slay the dragon inhabiting Mt Feir and freeing the people of it's villany. The large gaping maw of the mountain lies to the North of you.",
     picture: ""
   },
   {
     name: "largeCavern",
     room: "Large Cavern",
-    "button functions": [goUndergroundRiver, goHiddenRoom, goTunnelOfBio, goEntrance],
+    "button functions": [goUndergroundRiver, goDeadEnd, goTunnelOfBio, goEntrance],
     text: "You enter a large cavern littered with stalagtites, stalagmites, and columns of various widths. It is dark and dank. The faint scent of muggy decay wafts gently accross the ground. Soft dripping echoes around you as you catch flashes of sunlight reflecting from the falling droplettes.",
     picture: src="./images/image-large-cavern.png";
   },
@@ -40,50 +40,43 @@ const locations = [
   {
     name: "tunnelOfBio",
     room: "Tunnel of Bioluminescence",
-    "button functions": [goRockWall, goLargeCavern, goDeadEnd, goDeadEnd],
-    text: "The tunnel literally glows as biolumenencent algae and cave crawlers line the walls and ceiling. They're mostly teal with some flat pinks and neon yellows. To the East is the large carvern. To the West is a wall of rock where even the algae and critters mostly avoid. You think you spot a few handholds...",
-    picture: ""
-  },
-  {
-    name: "rockWall",
-    room: "Rock Wall",
-    "button functions": [goDeadEnd, goDeadEnd, goDragonRoom, goTunnelOfBio],
-    text: "You look up and down this section of wall. Large handholds dot the surface at just the right spaces... You think it can take you up into a small twisting tunnel. On the ground and to the South is a soft glowing light at the end of the tunnel.",
+    "button functions": [goDeadEnd, goLargeCavern, goDeadEnd, goDeadEnd],
+    text: "The tunnel literally glows as biolumenencent algae and cave crawlers line the walls and ceiling. They're mostly teal with some flat pinks and neon yellows. To the East is the large carvern. Above is a dim golden light. If only there was a way to get up there...",
     picture: ""
   },
   {
     name: "undergroundRiver",
-    room: "Underground River",
+    room: "Underground Stream",
     "button functions": [goOldTracks, goBatCave, goOldCampsite, goLargeCavern], 
-    text: "In front of you is a rushing river. Glowing algae light the room. There's a path to the west and to the east, the water is low enough to cross and follow a different path. To the north is a large dropoff where the river forms a waterfall to the ledge below. In the distance you can see a path that follows the river to the north.",
+    text: "In front of you is a rushing stream. Glowing algae lights the room. There's a path to the west and to the east, the water is low enough to follow to the north.",
     picture: ""
   },
   {
     name: "oldCampsite",
     room: "Old Campsite",
     "button functions": [goDeadEnd, goUndergroundRiver, goDeadEnd, goDeadEnd],
-    text: "You find an old campsite with a burnt out firepit, a tattered dusty tent that leans too far to the right, and a few large rocks that might have doubled as stools. Luckily, you don't find any bodies. You do find a small empty knapsack and a book tucked just inside the tent. To the East lies the underground river.",
+    text: "You find an old campsite with a burnt out firepit, a tattered dusty tent that leans too far to the right, and a few large rocks that might have doubled as stools. Luckily, you don't find any bodies. You do find a small empty knapsack and a book tucked just inside the tent. To the East lies the underground stream.",
     picture: ""
   },
   {
     name: "batCave",
     room: "Bat Cave",
     "button functions": [goDeadEnd, goDeadEnd, goUndergroundRiver, goDeadEnd],
-    text: "You enter a spacous warm cave with lots of high pitched chittering. You look up to see the ceiling absolutely covered in small black bodies. The ground underfoot is a bit mushy. You found a bat cave! To the West awaits the underground river.",
+    text: "You enter a spacous warm cave with lots of high pitched chittering. You look up to see the ceiling absolutely covered in small black bodies. The ground underfoot is a bit mushy. You found a bat cave! To the West awaits the underground stream.",
     picture: ""
   },
   {
-    name: "old tracks",
-    room: "Old Tracks",
+    name: "oldTracks",
+    room: "Coin Tracks",
     "button functions": [goSortaOldTracks, goDeadEnd, goDeadEnd, goUndergroundRiver],
-    text: "Large depressions trail off to the North. You can't tell for certain if they're going towards the north or from the north, but there's only one way to find out. The underground river is to the South if you're too scared.",
+    text: "A small coin catches the light and brings your attention to large depressions that trail off to the North. You can't tell for certain if they're going towards the north or from the north, but there's only one way to find out. The underground stream is to the South if you're too scared.",
     picture: ""
   },
   {
-    name: "sorta old tracks",
-    room: "Sorta Old Tracks",
+    name: "sortaOldTracks",
+    room: "Sapphire Tracks",
     "button functions": [goOldCarving, goWeekOldTracks, goBoneRoom, goOldTracks],
-    text: "The world gets still and quiet as you track your target. Sweat beads apon your brow and your hair sticks to the sides of your face. Are you ready for this? Did you get enough training? Did you eat enough for breakfast? What if you ate too much? You think the dragon would leave the village alone if you threw up on it? Better not test that... You're at a crossroads in the mountain. You can vaugely make out some sort of carving to the North, the older tracks lie to the South, newer tracks head East and a rancid scent wafts towards you from the West.",
+    text: "The world gets still and quiet as you track your target. Sweat beads apon your brow and your hair sticks to the sides of your face. Are you ready for this? Did you get enough training? Did you eat enough for breakfast? What if you ate too much? You think the dragon would leave the village alone if you threw up on it? Better not test that... You're at a crossroads in the mountain. You can vaugely make out some sort of carving to the North, the coin tracks lie to the South, a pink glint rests in the tracks that head East and a rancid scent wafts towards you from the West.",
     picture: ""
   },
   {
@@ -102,9 +95,9 @@ const locations = [
   },
   {
     name: "week old tracks",
-    room: "Week Old Tracks",
+    room: "Ruby Tracks",
     "button functions": [goDarkRoom, goDeadEnd, goSortaOldTracks, goNewerTracks],
-    text: "The air is stale and heavy. A bead of sweat trickles down calf as you peer into the dim light. The tracks deffinately went this way. You guess they might be a week old or so? To the North is a hole in the wall, too dark to see into. The tracks appear to head South, which means West would be further from the dragon.",
+    text: "The air is stale and heavy as you make your way around a curve in the trail. A bead of sweat trickles down your calf and you peer into the dim light. The tracks deffinately went this way... did the King and Queen know they dragon could shapeshift...? To the North is a hole in the wall, too dark to see into. The tracks appear to head around to the South. You hope this hasn\'t been a large loop.",
     picture: ""
   },
   {
@@ -116,23 +109,23 @@ const locations = [
   },
   {
     name: "newer tracks",
-    room: "Newer Tracks",
+    room: "Golden Tracks",
     "button functions": [goWeekOldTracks, goCavePainting, goFreshTracks, goDeadEnd],
-    text: "The air is still a little stale but you catch a whiff of a musky scent. You gently brush your left foot across the edge of one track print. These could only be a few days old. The tracks point off to the West. To the North are the week old tracks.",
+    text: "The air is still a little stale but you catch a whiff of a musky scent. You gently brush your left foot across the edge of one track print ringed in gold. The tracks point off to the West. You just came from the North.", 
     picture: ""
   },
   {
     name: "cavePainting",
     room: "Cave Painting",
     "button functions": [goDeadEnd, goDeadEnd, goNewerTracks, goDeadEnd],
-    text: 'You see rust colored smears criss-crossing the wall. They spell out, "HELP!" ',
+    text: 'You see rust colored smears criss-crossing the wall. They spell out, "KRONOS"... some sort of password maybe?',
     picture: ""
   },
   {
     name: "fresh tracks",
     room: "Fresh Tracks",
     "button functions": [goDeadEnd, goNewerTracks, goTreasureHoard, goDeadEnd],
-    text: "You crouch down slowly, mindful of the noise from your armor. Your fingers brush against the easily disturbed ground. These tracks are very fresh, possibly from today, and the pungent odor of lizard musk confirms it. To the East are tracks a few days old. To the west you see the faint glow of what appears to be a rainbow all out of order.",
+    text: "You crouch down slowly, mindful of the noise from your armor. Your fingers brush against the easily disturbed ground. These tracks are very fresh, possibly from today, and the pungent odor of lizard musk confirms it. You cane from the East. To the west you see the faint glow of what appears to be a rainbow all out of order.",
     picture: ""
   },
   {
