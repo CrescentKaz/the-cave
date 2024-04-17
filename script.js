@@ -146,11 +146,27 @@ const locations = [
 
 const miscLocals = [
   {
-    name: "win",
+    name: "winSword",
     room: "Winner!",
     "button text": ["N", "E", "W", "S"],
     "button functions": [restart, restart, restart, restart],
-    text: "You escaped the dragon! YOU WIN! 🎉 Ending 2 (Press any direction to continue.)",
+    text: "You manage to slay the dragon! YOU WIN! 🎉 Ending 3 (Press any direction to continue.)",
+    picture: ""
+  },
+  {
+    name: "winStick",
+    room: "Winner!", 
+    "button text": ["N", "E", "W", "S"],
+    "button functions": [restart, restart, restart, restart],
+    text: "You finally manage to slay the dragon after a harrowing duel! YOU WIN! 🎉 Ending 4 (Press any direction to continue.)",
+    picture: ""
+  },
+  {
+    name: "winFire",
+    room: "Winner!", 
+    "button text": ["N", "E", "W", "S"],
+    "button functions": [restart, restart, restart, restart],
+    text: "You incinerate the shapeshifting dragon and almost kill yourself in the process by burning away all the oxygen in the cave! Seriously, might want to rethink that next time... YOU WIN! 🎉 Ending 5 (Press any direction to continue.)",
     picture: ""
   },
   {
@@ -172,6 +188,11 @@ const deaths = [
   {
     name: "runAway",
     text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 2 (Press any Direction to continue.",
+    picture: ""
+  },
+  {
+    nane: "takeTreasure",
+    text: "ENTER TEXT HERE",
     picture: ""
   }
 ];
