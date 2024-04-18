@@ -209,6 +209,11 @@ const deaths = [
     name: "dragonFist",
     text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon's have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending # (Press any direction to continue.)",
     picture: ""
+  },
+  {
+    name: "dragonLost",
+    text: "After a long a tiresome struggle, you try and try but can't seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it's counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don't know if your armor can take another blow and don't want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. ENTER REMAINING TEXT HERE",
+    picture: ""
   }
 ];
 
