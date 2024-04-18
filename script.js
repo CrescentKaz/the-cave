@@ -169,6 +169,14 @@ const miscLocals = [
     text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win (but don't escape the dragon)! (Press 0 to go back.)",
     picture: ""
   },
+  {
+    name: "fight",
+    room: "Fight!",
+    "button text": [],
+    "button functions": [],
+    text: "",
+    picture: ""
+  },
 ];
   
 const deaths = [
