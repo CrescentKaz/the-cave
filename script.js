@@ -2,7 +2,7 @@ let health = 100;
 let atk = 1;
 let gold = 0;
 let monsterHealth;
-let inven = ["stick"];
+let inven = ["fist"];
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -34,7 +34,7 @@ const locations = [
     name: "hiddenRoom",
     room: "Hidden Room",
     "button functions": [goDeadEnd, goDeadEnd, goLargeCavern, goDeadEnd],
-    text: 'You fly up and spot a small alcove to the east. As your feet touch the ground in the alcove you see a tiny engraving on the wall, "Created by Kaitlyn Johnson".',
+    text: """You fly up and spot a small alcove to the east. As your feet touch the ground in the alcove you see a tiny engraving on the wall, "Created by Kaitlyn Johnson for her Dad. While his favorite knight tale didn't involve a dragon, she hopes he'll enjoy this game anyway." """,
     picture: ""
   },
   {
@@ -154,14 +154,6 @@ const miscLocals = [
     picture: ""
   },
   {
-    name: "winStick",
-    room: "Winner!", 
-    "button text": ["N", "E", "W", "S"],
-    "button functions": [restart, restart, restart, restart],
-    text: "You finally manage to slay the dragon after a harrowing duel! YOU WIN! 🎉 Ending 4 (Press any direction to continue.)",
-    picture: ""
-  },
-  {
     name: "winFire",
     room: "Winner!", 
     "button text": ["N", "E", "W", "S"],
@@ -187,12 +179,27 @@ const deaths = [
   },
   {
     name: "runAway",
-    text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 2 (Press any Direction to continue.",
+    text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 2 (Press any Direction to continue.)",
     picture: ""
   },
   {
     nane: "takeTreasure",
     text: "ENTER TEXT HERE",
+    picture: ""
+  },
+  {
+    name: "monsterDidIt",
+    text: "You died to a cave monster. How shameful... Ending # (Press any direction to continue.)",
+    picture: ""
+  },
+  {
+    name: "dragonStick",
+    text: "You attempted to beat the dragon with a stick, while he slept. It did not work out for you. Maybe if you had a horse and a lance... Ending # (Press any direction to continue.)",
+    picture: ""
+  },
+  {
+    name: "dragonFist",
+    text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon's have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending # (Press any direction to continue.)",
     picture: ""
   }
 ];
@@ -221,10 +228,10 @@ const monsters = [
 ];
 
 // initialize buttons
-button1.onclick = goDeadEnd;
-button2.onclick = goBoneRoom;
-button3.onclick = goRockWall;
-button4.onclick = goTreasureHoard;
+button1.onclick = goLargeCavern;
+button2.onclick = goDeathRunAway;
+button3.onclick = goDeathRunAway;
+button4.onclick = goDeathRunAway;
 
 function update(locations) {
   button1.onclick = locations["button functions"][0];
