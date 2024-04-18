@@ -1,7 +1,7 @@
 let health = 100;
 let atk = 1;
 let gold = 0;
-let dragonHealth;
+let monsterHealth;
 let inven = ["stick"];
 
 const button1 = document.querySelector("#button1");
@@ -194,6 +194,29 @@ const deaths = [
     nane: "takeTreasure",
     text: "ENTER TEXT HERE",
     picture: ""
+  }
+];
+
+const monsters = [
+  {
+    name: "Frog",
+    level: 2,
+    health: 10
+  },
+  {
+    name: "Worm",
+    level: 5,
+    health: 25
+  },
+  {
+    name: "Bat",
+    level: 10,
+    health: 50
+  },
+  {
+    name: "Dragon",
+    level: 25,
+    health: 200
   }
 ];
 
