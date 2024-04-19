@@ -3,6 +3,7 @@ let atk = 1;
 let gold = 0;
 let monsterHealth;
 let inven = ["fist"];
+let roomCount = 0;
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -172,9 +173,9 @@ const miscLocals = [
   {
     name: "fight",
     room: "Fight!",
-    "button text": [],
-    "button functions": [],
-    text: "",
+    "button text": ["A", "B", "C", "D"],
+    "button functions": [ , , , ],
+    text: "A " + monster.name + " has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
     picture: ""
   },
 ];
@@ -245,6 +246,7 @@ button1.onclick = goLargeCavern;
 button2.onclick = goDeathRunAway;
 button3.onclick = goDeathRunAway;
 button4.onclick = goDeathRunAway;
+button5.onclick = toggleInven;
 
 function update(locations) {
   button1.onclick = locations["button functions"][0];
@@ -419,6 +421,21 @@ function pick(guess) {
   } else {
     text.innerText += "Wrong! You feel shame for no real reason!";
   }
+}
+
+function toggleInven() {
+  text.innerText += "\n";
+  for (let i = 0; i < inven.length + 1; i++) {
+    text.innerText += inven[i] + " ";
+  }
+}
+
+if roomCount > 3 {
+  
+}
+
+function pickFight() {
+  
 }
 
 function restart() {
