@@ -35,7 +35,7 @@ const locations = [
     name: "hiddenRoom",
     room: "Hidden Room",
     "button functions": [goDeadEnd, goDeadEnd, goLargeCavern, goDeadEnd],
-    text: """You fly up and spot a small alcove to the east. As your feet touch the ground in the alcove you see a tiny engraving on the wall, "Created by Kaitlyn Johnson for her Dad. While his favorite knight tale didn't involve a dragon, she hopes he'll enjoy this game anyway." """,
+    text: '''You fly up and spot a small alcove to the east. As your feet touch the ground in the alcove you see a tiny engraving on the wall, "Created by Kaitlyn Johnson." ''',
     picture: ""
   },
   {
