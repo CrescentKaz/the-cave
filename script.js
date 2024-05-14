@@ -21,7 +21,7 @@ const locations = [
     name: "entrance",
     room: "Entrance",
     "button functions": [goLargeCavern, goDeathRunAway, goDeathRunAway, goDeathRunAway],
-    text: "Before you looms the dark, decrepit crags of Mt Feir, so named for the fear it instills upon all who tred it's trecherous terrain. You are a knight tasked by the King and Queen to slay the dragon inhabiting Mt Feir and freeing the people of it's villany. The large gaping maw of the mountain lies to the North of you.",
+    text: "Before you looms the dark, decrepit crags of Mt Feir, so named for the fear it instills upon all who tred it\'s trecherous terrain. You are a knight tasked by the King and Queen to slay the dragon inhabiting Mt Feir and freeing the people of it\'s villany. The large gaping maw of the mountain lies to the North of you.",
     picture: src="./images/image-the-cave.png"
   },
   {
@@ -35,28 +35,28 @@ const locations = [
     name: "hiddenRoom",
     room: "Hidden Room",
     "button functions": [goDeadEnd, goDeadEnd, goLargeCavern, goDeadEnd],
-    text: '''You fly up and spot a small alcove to the east. As your feet touch the ground in the alcove you see a tiny engraving on the wall, "Created by Kaitlyn Johnson." ''',
+    text: "You fly up and spot a small alcove to the east. As your feet touch the ground in the alcove you see a tiny engraving on the wall, \"Created by Kaitlyn Johnson.\" ",
     picture: ""
   },
   {
     name: "tunnelOfBio",
     room: "Tunnel of Bioluminescence",
     "button functions": [goDeadEnd, goLargeCavern, goDeadEnd, goDeadEnd],
-    text: "The tunnel literally glows as biolumenencent algae and cave crawlers line the walls and ceiling. They're mostly teal with some flat pinks and neon yellows. To the East is the large carvern. Above is a dim golden light. If only there was a way to get up there...",
+    text: "The tunnel literally glows as biolumenencent algae and cave crawlers line the walls and ceiling. They\'re mostly teal with some flat pinks and neon yellows. To the East is the large carvern. Above is a dim golden light. If only there was a way to get up there...",
     picture: ""
   },
   {
     name: "undergroundRiver",
     room: "Underground Stream",
     "button functions": [goOldTracks, goBatCave, goOldCampsite, goLargeCavern], 
-    text: "In front of you is a rushing stream. Glowing algae lights the room. There's a path to the west and to the east, the water is low enough to follow to the north.",
+    text: "In front of you is a rushing stream. Glowing algae lights the room. There\'s a path to the west and to the east, the water is low enough to follow to the north.",
     picture: ""
   },
   {
     name: "oldCampsite",
     room: "Old Campsite",
     "button functions": [goDeadEnd, goUndergroundRiver, goDeadEnd, goDeadEnd],
-    text: "You find an old campsite with a burnt out firepit, a tattered dusty tent that leans too far to the right, and a few large rocks that might have doubled as stools. Luckily, you don't find any bodies. You do find a small empty knapsack and a book tucked just inside the tent. To the East lies the underground stream.",
+    text: "You find an old campsite with a burnt out firepit, a tattered dusty tent that leans too far to the right, and a few large rocks that might have doubled as stools. Luckily, you don\'t find any bodies. You do find a small empty knapsack and a book tucked just inside the tent. To the East lies the underground stream.",
     picture: ""
   },
   {
@@ -70,14 +70,14 @@ const locations = [
     name: "oldTracks",
     room: "Coin Tracks",
     "button functions": [goSortaOldTracks, goDeadEnd, goDeadEnd, goUndergroundRiver],
-    text: "A small coin catches the light and brings your attention to large depressions that trail off to the North. You can't tell for certain if they're going towards the north or from the north, but there's only one way to find out. The underground stream is to the South if you're too scared.",
+    text: "A small coin catches the light and brings your attention to large depressions that trail off to the North. You can\'t tell for certain if they\'re  going towards the north or from the north, but there\'s only one way to find out. The underground stream is to the South if you\'re too scared.",
     picture: ""
   },
   {
     name: "sortaOldTracks",
     room: "Sapphire Tracks",
     "button functions": [goOldCarving, goWeekOldTracks, goBoneRoom, goOldTracks],
-    text: "The world gets still and quiet as you track your target. Sweat beads apon your brow and your hair sticks to the sides of your face. Are you ready for this? Did you get enough training? Did you eat enough for breakfast? What if you ate too much? You think the dragon would leave the village alone if you threw up on it? Better not test that... You're at a crossroads in the mountain. You can vaugely make out some sort of carving to the North, the coin tracks lie to the South, a pink glint rests in the tracks that head East and a rancid scent wafts towards you from the West.",
+    text: "The world gets still and quiet as you track your target. Sweat beads apon your brow and your hair sticks to the sides of your face. Are you ready for this? Did you get enough training? Did you eat enough for breakfast? What if you ate too much? You think the dragon would leave the village alone if you threw up on it? Better not test that... You\'re at a crossroads in the mountain. You can vaugely make out some sort of carving to the North, the coin tracks lie to the South, a pink glint rests in the tracks that head East and a rancid scent wafts towards you from the West.",
     picture: ""
   },
   {
@@ -91,7 +91,7 @@ const locations = [
     name: "oldCarving",
     room: "Old Carving", 
     "button functions": [goDeadEnd, goDeadEnd, goDeadEnd, goSortaOldTracks],
-    text: 'Before you are crude letters carved into the wall of rock. Written in Aramaic, it reads "If you do doubt your courage or your strength come no further. Only he who is valiant and pure of spirit may enter the Cave of Aaaaaargh" ... they must have died while carving it.',
+    text: "Before you are crude letters carved into the wall of rock. Written in Aramaic, it reads \"If you do doubt your courage or your strength come no further. Only he who is valiant and pure of spirit may enter the Cave of Aaaaaargh\" ... they must have died while carving it.",
     picture: ""
   },
   {
@@ -119,21 +119,21 @@ const locations = [
     name: "cavePainting",
     room: "Cave Painting",
     "button functions": [goDeadEnd, goDeadEnd, goNewerTracks, goDeadEnd],
-    text: 'You see rust colored smears criss-crossing the wall. They spell out, "KRONOS"... some sort of password maybe?',
+    text: "You see rust colored smears criss-crossing the wall. They spell out, \"KRONOS\"... some sort of password maybe?",
     picture: ""
   },
   {
     name: "freshTracks",
     room: "Fresh Tracks",
     "button functions": [goDeadEnd, goNewerTracks, goTreasureHoard, goDeadEnd],
-    text: "You crouch down slowly, mindful of the noise from your armor. Your fingers brush against the easily disturbed ground. These tracks are very fresh, possibly from today, and the pungent odor of lizard musk confirms it. You cane from the East. To the west you see the faint glow of what appears to be a rainbow all out of order.",
+    text: "You crouch down slowly, mindful of the noise from your armor. Your fingers brush against the easily disturbed ground. These tracks are very fresh, possibly from today, and the pungent odor of lizard musk confirms it. You came from the East. To the west you see the faint glow of what appears to be a rainbow all out of order.",
     picture: ""
   },
   {
     name: "treasureHoard",
     room: "Treasure Hoard",
     "button functions": [goDragonRoom, goFreshTracks, goDeadEnd, goDeadEnd],
-    text: "Red, green, blue, purple, yellow, and oragne lights raidiate from all kinds of gems. Gold coins, ingots, and bars overflow from giant chalises and chests. Strings of pearls hang from stalagtites. Shimmering silks swath ornate silver-wraught forms. Sapphires litter the floor like a river and a small stream of rubies and garnets seem to pour out of a pile of emeralds like lava over a lush mountainside. The entire room is a walk-through-able art piece with a path going from East to North.",
+    text: "Red, green, blue, purple, yellow, and orange lights raidiate from all kinds of gems. Gold coins, ingots, and bars overflow from giant chalises and chests. Strings of pearls hang from stalagtites. Shimmering silks swath ornate silver-wraught forms. Sapphires litter the floor like a river and a small stream of rubies and garnets seem to pour out of a pile of emeralds like lava over a lush mountainside. The entire room is a walk-through-able art piece with a path going from East to North.",
     picture: ""
   },
   {
@@ -167,7 +167,7 @@ const miscLocals = [
     room: "🤪",
     "button text": ["1", "0", "3", "2"],
     "button functions": [pickOne, goDarkRoom, pickThree, pickTwo],
-    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win (but don't escape the dragon)! (Press 0 to go back.)",
+    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win (but don\'t escape the dragon)! (Press 0 to go back.)",
     picture: ""
   },
   {
@@ -208,12 +208,12 @@ const deaths = [
   },
   {
     name: "dragonFist",
-    text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon's have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending # (Press any direction to continue.)",
+    text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon/s have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending # (Press any direction to continue.)",
     picture: ""
   },
   {
     name: "dragonLost",
-    text: """After a long a tiresome struggle, you try and try but can't seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it's counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don't know if your armor can take another blow and don't want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. Pain races through your nerves and your eyes lock up at the ceiling. You can't move. A roaring waterfall in your ears begins to drown out everything else. Your body crumples to the ground but you can't feel it. Can't hear it. Soon, you can't see the cave ceiling anymore... Ending # (Press any direction to continue.)""",
+    text: "After a long a tiresome struggle, you try and try but can\'t seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it\'s counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don\'t know if your armor can take another blow and don\'t want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. Pain races through your nerves and your eyes lock up at the ceiling. You can\'t move. A roaring waterfall in your ears begins to drown out everything else. Your body crumples to the ground but you can\'t feel it. Can\'t hear it. Soon, you can\'t see the cave ceiling anymore... Ending # (Press any direction to continue.)",
     picture: ""
   }
 ];
