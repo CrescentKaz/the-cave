@@ -171,11 +171,35 @@ const miscLocals = [
     picture: ""
   },
   {
-    name: "fight",
+    name: "fightFrog",
     room: "Fight!",
     "button text": ["A", "B", "C", "D"],
     "button functions": [ , , , ],
-    text: "A " + monster.name + " has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
+    text: "A frog has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
+    picture: ""
+  },
+  {
+    name: "fightWorm",
+    room: "Fight!",
+    "button text": ["A", "B", "C", "D"],
+    "button functions": [ , , , ],
+    text: "A worm has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
+    picture: ""
+  },
+  {
+    name: "fightBat",
+    room: "Fight!",
+    "button text": ["A", "B", "C", "D"],
+    "button functions": [ , , , ],
+    text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
+    picture: ""
+  },
+  {
+    name: "fightDragon",
+    room: "Fight!",
+    "button text": ["A", "B", "C", "D"],
+    "button functions": [ , , , ],
+    text: "The dragon has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
     picture: ""
   },
 ];
@@ -302,64 +326,64 @@ function goTunnelOfBio() {
   update(locations[3]);
 }
 
-function goRockWall() {
+// function goRockWall() {
+// update(locations[4]);
+// }
+
+function goUndergroundRiver() {
   update(locations[4]);
 }
 
-function goUndergroundRiver() {
+function goOldCampsite() {
   update(locations[5]);
 }
 
-function goOldCampsite() {
+function goBatCave() {
   update(locations[6]);
 }
 
-function goBatCave() {
+function goOldTracks() {
   update(locations[7]);
 }
 
-function goOldTracks() {
+function goSortaOldTracks() {
   update(locations[8]);
 }
 
-function goSortaOldTracks() {
+function goBoneRoom() {
   update(locations[9]);
 }
 
-function goBoneRoom() {
+function goOldCarving() {
   update(locations[10]);
 }
 
-function goOldCarving() {
+function goWeekOldTracks() {
   update(locations[11]);
 }
 
-function goWeekOldTracks() {
+function goDarkRoom() {
   update(locations[12]);
 }
 
-function goDarkRoom() {
+function goNewerTracks() {
   update(locations[13]);
 }
 
-function goNewerTracks() {
+function goCavePainting() {
   update(locations[14]);
 }
 
-function goCavePainting() {
+function goFreshTracks() {
   update(locations[15]);
 }
 
-function goFreshTracks() {
+function goTreasureHoard() {
   update(locations[16]);
 }
 
-function goTreasureHoard() {
-  update(locations[17]);
-}
-
 function goDragonRoom() {
-  update(locations[18]);
+  update(locations[17]);
 }
 
 function goDeadEnd() {
@@ -378,12 +402,16 @@ function goDeadEnd() {
   alert(deadEnd[Math.floor(Math.random()*deadEnd.length())]);
 }
 
-function goWin() {
+function goWinSword() {
   update(miscLocals[0]);
 }
 
-function goMiniGame() {
+function goWinFire() {
   update(miscLocals[1]);
+}
+
+function goMiniGame() {
+  update(miscLocals[2]);
 }
 
 function goDeathBoneRoom() {
@@ -431,11 +459,8 @@ function toggleInven() {
 }
 
 if roomCount > 3 {
-  
-}
-
-function pickFight() {
-  
+  update(miscLocals[Math.floor(Math.random()*3)];
+  roomCount = 0;
 }
 
 function restart() {
