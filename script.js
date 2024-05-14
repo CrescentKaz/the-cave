@@ -216,7 +216,7 @@ const deaths = [
     picture: ""
   },
   {
-    nane: "takeTreasure",
+    name: "takeTreasure",
     text: "ENTER TEXT HERE",
     picture: ""
   },
@@ -232,7 +232,7 @@ const deaths = [
   },
   {
     name: "dragonFist",
-    text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon/s have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending # (Press any direction to continue.)",
+    text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon\'s have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending # (Press any direction to continue.)",
     picture: ""
   },
   {
@@ -414,12 +414,48 @@ function goMiniGame() {
   update(miscLocals[2]);
 }
 
+function goFightFrog() {
+  update(miscLocals[3]);
+}
+
+function goFightWorm() {
+  update(miscLocals[4]);
+}
+
+function goFightBat() {
+  update(miscLocals[5]);
+}
+
+function goFightDragon() {
+  update(miscLocals[6]);
+}
+
 function goDeathBoneRoom() {
   update(deaths[0]);
 }
 
 function goDeathRunAway() {
   update(deaths[1]);
+}
+
+function goDeathTakeTreasure() {
+  update(deaths[2]);
+}
+
+function goDeathMonsterDidIt() {
+  update(deaths[3]);
+}
+
+function goDeathDragonStick() {
+  update(deaths[4]);
+}
+
+function goDeathDragonFist() {
+  update(deaths[5]);
+}
+
+function goDeathDragonLost() {
+  update(deaths[6]);
 }
 
 function pickOne() {
