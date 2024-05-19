@@ -22,14 +22,14 @@ const locations = [
     room: "Entrance",
     "button functions": [goLargeCavern, goDeathRunAway, goDeathRunAway, goDeathRunAway],
     text: "Before you looms the dark, decrepit crags of Mt Feir, so named for the fear it instills upon all who tred it\'s trecherous terrain. You are a knight tasked by the King and Queen to slay the dragon inhabiting Mt Feir and freeing the people of it\'s villany. The large gaping maw of the mountain lies to the North of you.",
-    picture: src="./images/image-the-cave.png"
+    picture: src="./images/the-cave.png"
   },
   {
     name: "largeCavern",
     room: "Large Cavern",
     "button functions": [goUndergroundRiver, goDeadEnd, goTunnelOfBio, goEntrance],
     text: "You enter a large cavern littered with stalagtites, stalagmites, and columns of various widths. It is dark and dank. The faint scent of muggy decay wafts gently accross the ground. Soft dripping echoes around you as you catch flashes of sunlight reflecting from the falling droplettes.",
-    picture: src="./images/image-large-cavern.png"
+    picture: src="./images/large-cavern.png"
   },
   {
     name: "hiddenRoom",
