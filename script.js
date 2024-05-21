@@ -151,7 +151,7 @@ const miscLocals = [
     room: "Winner!",
     "button text": ["N", "E", "W", "S"],
     "button functions": [restart, restart, restart, restart],
-    text: "You manage to slay the dragon! YOU WIN! 🎉 Ending 3 (Press any direction to continue.)",
+    text: "You manage to slay the dragon! YOU WIN! 🎉 Ending 1 of 10 (press any direction to continue)",
     picture: src="./images/.png"
   },
   {
@@ -159,7 +159,7 @@ const miscLocals = [
     room: "Winner!", 
     "button text": ["N", "E", "W", "S"],
     "button functions": [restart, restart, restart, restart],
-    text: "You incinerate the shapeshifting dragon and almost kill yourself in the process by burning away all the oxygen in the cave! Seriously, might want to rethink that next time... YOU WIN! 🎉 Ending 5 (Press any direction to continue.)",
+    text: "You incinerate the shapeshifting dragon and almost kill yourself in the process by burning away all the oxygen in the cave! Seriously, might want to rethink that next time... YOU WIN! 🎉 Ending 2 of 10 (press any direction to continue)",
     picture: src="./images/.png"
   },
   {
@@ -207,37 +207,37 @@ const miscLocals = [
 const deaths = [
   { 
     name: "boneRoom",
-    text: "You slip and slide down a hole onto bones of full 50 men strewn about. Some are broken, others whole, and yet others with many many thin stalagmites piercing straight through. Unfortuneately you land on one of these. It is very painful... You Died. ☠️ Ending 1 (Press any Direction to continue.)",
+    text: "You slip and slide down a hole onto bones of full 50 men strewn about. Some are broken, others whole, and yet others with many many thin stalagmites piercing straight through. Unfortuneately you land on one of these. It is very painful... You Died. ☠️ Ending 3 of 10 (press any direction to continue)",
     picture: src="./images/.png"
   },
   {
     name: "runAway",
-    text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 2 (Press any Direction to continue.)",
+    text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 4 of 10 (press any direction to continue)",
     picture: src="./images/.png"
   },
   {
     name: "takeTreasure",
-    text: "ENTER TEXT HERE",
+    text: "ENTER TEXT HERE Ending 5 of 10 (press any direction to continue)",
     picture: src="./images/.png"
   },
   {
     name: "monsterDidIt",
-    text: "You died to a cave monster. How shameful... Ending # (Press any direction to continue.)",
+    text: "You died to a cave monster. How shameful... Ending 6 of 10 (press any direction to continue)",
     picture: src="./images/.png"
   },
   {
     name: "dragonStick",
-    text: "You attempted to beat the dragon with a stick, while he slept. It did not work out for you. Maybe if you had a horse and a lance... Ending # (Press any direction to continue.)",
+    text: "You attempted to beat the dragon with a stick, while he slept. It did not work out for you. Maybe if you had a horse and a lance... Ending 7 of 10 (press any direction to continue)",
     picture: src="./images/.png"
   },
   {
     name: "dragonFist",
-    text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon\'s have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending # (Press any direction to continue.)",
+    text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon\'s have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending 8 of 10 (press any direction to continue)",
     picture: src="./images/.png"
   },
   {
     name: "dragonLost",
-    text: "After a long a tiresome struggle, you try and try but can\'t seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it\'s counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don\'t know if your armor can take another blow and don\'t want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. Pain races through your nerves and your eyes lock up at the ceiling. You can\'t move. A roaring waterfall in your ears begins to drown out everything else. Your body crumples to the ground but you can\'t feel it. Can\'t hear it. Soon, you can\'t see the cave ceiling anymore... Ending # (Press any direction to continue.)",
+    text: "After a long a tiresome struggle, you try and try but can\'t seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it\'s counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don\'t know if your armor can take another blow and don\'t want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. Pain races through your nerves and your eyes lock up at the ceiling. You can\'t move. A roaring waterfall in your ears begins to drown out everything else. Your body crumples to the ground but you can\'t feel it. Can\'t hear it. Soon, you can\'t see the cave ceiling anymore... Ending 9 of 10 (press any direction to continue)",
     picture: src="./images/.png"
   }
 ];
