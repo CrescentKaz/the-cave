@@ -4,6 +4,7 @@ let gold = 0;
 let monsterHealth;
 let inven = ["fist"];
 let roomCount = 0;
+let nothingCount = 0;
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -173,32 +174,32 @@ const miscLocals = [
   {
     name: "fightFrog",
     room: "Fight!",
-    "button text": ["A", "B", "C", "D"],
-    "button functions": [ , , , ],
-    text: "A frog has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
-    picture: src="./images/.png"
+    "button text": ["A", "B", "C", " "],
+    "button functions": [fight, dodge, goDeathRunAway, doNothing],
+    text: "A frog has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
+    picture: src="./images/frog.png"
   },
   {
     name: "fightWorm",
     room: "Fight!",
-    "button text": ["A", "B", "C", "D"],
-    "button functions": [ , , , ],
+    "button text": ["A", "B", "C", " "],
+    "button functions": [fight, dodge, goDeathRunAway, doNothing],
     text: "A worm has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
-    picture: src="./images/.png"
+    picture: src="./images/worm.png"
   },
   {
     name: "fightBat",
     room: "Fight!",
-    "button text": ["A", "B", "C", "D"],
-    "button functions": [ , , , ],
+    "button text": ["A", "B", "C", " "],
+    "button functions": [fight, dodge, goDeathRunAway, doNothing],
     text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
     picture: src="./images/.png"
   },
   {
     name: "fightDragon",
     room: "Fight!",
-    "button text": ["A", "B", "C", "D"],
-    "button functions": [ , , , ],
+    "button text": ["A", "B", "C", " "],
+    "button functions": [fight, dodge, goDeathRunAway, doNothing],
     text: "The dragon has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
     picture: src="./images/.png"
   },
@@ -264,6 +265,15 @@ const monsters = [
     health: 200
   }
 ];
+
+if roomCount > 3 {
+  update(miscLocals[Math.floor(Math.random()*3)];
+  roomCount = 0;
+}
+
+if nothingCount > 3 {
+  goDeathRunAway();
+}
 
 // initialize buttons
 button1.onclick = goLargeCavern;
@@ -458,6 +468,10 @@ function goDeathDragonLost() {
   update(deaths[6]);
 }
 
+function doNothing() {
+ nothingCount += 1;
+}
+
 function pickOne() {
   let numPickOne = Math.floor(Math.random()*11);
   
@@ -494,10 +508,9 @@ function toggleInven() {
   }
 }
 
-if roomCount > 3 {
-  update(miscLocals[Math.floor(Math.random()*3)];
-  roomCount = 0;
-}
+function fight() {}
+
+function dodge() {}
 
 function restart() {
   goEntrance();
