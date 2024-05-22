@@ -1,5 +1,4 @@
 let health = 100;
-let atk = 1;
 let gold = 0;
 let monsterHealth;
 let inven = ["fist"];
@@ -264,6 +263,17 @@ const monsters = [
     level: 25,
     health: 200
   }
+];
+
+const items [
+  {name: "fist", atk: 1},
+  {name: "stick", atk: 2},
+  sword,
+  book,
+  gold,
+  treasure,
+  potionHeal,
+  potionPoison
 ];
 
 if roomCount > 3 {
