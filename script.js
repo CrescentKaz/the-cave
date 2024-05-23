@@ -268,12 +268,8 @@ const monsters = [
 const items [
   {name: "fist", atk: 1},
   {name: "stick", atk: 2},
-  sword,
-  book,
-  gold,
-  treasure,
-  potionHeal,
-  potionPoison
+  {name: "sword", atk: 20},
+  {name: "book", atk: 0}
 ];
 
 if roomCount > 3 {
@@ -488,11 +484,11 @@ function pickOne() {
 }
 
 function pickTwo() {
-  pick(2);
+  let numPickTwo = [Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
 }
 
 function pickThree() {
-  pick(3);
+  let numPickThree = [Math.floor(Math.random()*11), Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
 }
 
 function pick(guess) {
@@ -514,7 +510,7 @@ function pick(guess) {
 function toggleInven() {
   text.innerText += "\n";
   for (let i = 0; i < inven.length + 1; i++) {
-    text.innerText += inven[i] + " ";
+    text.innerText += (inven[i] + " ");
   }
 }
 
