@@ -1,5 +1,7 @@
+let xp = 0;
 let health = 100;
 let gold = 0;
+let fighting;
 let monsterHealth;
 let inven = ["fist"];
 let roomCount = 0;
@@ -15,6 +17,36 @@ const atkText = document.querySelector("#atkText");
 const text = document.querySelector("#text"); 
 const picture = document.querySelector("#picture");
 const currentRoomText = document.querySelector("#currentRoomText"); 
+
+const items [
+  {name: "fist", atk: 1},
+  {name: "stick", atk: 2},
+  {name: "sword", atk: 20},
+//  {name: "book", atk: 0}
+];
+
+const monsters = [
+  {
+    name: "Frog",
+    level: 2,
+    health: 10
+  },
+  {
+    name: "Worm",
+    level: 5,
+    health: 25
+  },
+  {
+    name: "Bat",
+    level: 10,
+    health: 50
+  },
+  {
+    name: "Dragon",
+    level: 25,
+    health: 200
+  }
+];
 
 const locations = [
   { 
@@ -242,36 +274,6 @@ const deaths = [
   }
 ];
 
-const monsters = [
-  {
-    name: "Frog",
-    level: 2,
-    health: 10
-  },
-  {
-    name: "Worm",
-    level: 5,
-    health: 25
-  },
-  {
-    name: "Bat",
-    level: 10,
-    health: 50
-  },
-  {
-    name: "Dragon",
-    level: 25,
-    health: 200
-  }
-];
-
-const items [
-  {name: "fist", atk: 1},
-  {name: "stick", atk: 2},
-  {name: "sword", atk: 20},
-  {name: "book", atk: 0}
-];
-
 if roomCount > 3 {
   update(miscLocals[Math.floor(Math.random()*3)];
   roomCount = 0;
@@ -480,7 +482,6 @@ function doNothing() {
 
 function pickOne() {
   let numPickOne = Math.floor(Math.random()*11);
-  
 }
 
 function pickTwo() {
@@ -514,7 +515,11 @@ function toggleInven() {
   }
 }
 
-function fight() {}
+function fight() {
+  monsterHealth = monsters[fighting].health;
+  monsterName.innerText = monsters[fighting].name;
+  monsterHealthText.innerText = monsterHealth; 
+}
 
 function dodge() {}
 
