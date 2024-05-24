@@ -18,11 +18,17 @@ const text = document.querySelector("#text");
 const picture = document.querySelector("#picture");
 const currentRoomText = document.querySelector("#currentRoomText"); 
 
-const items [
+const weapons = [
   {name: "fist", atk: 1},
   {name: "stick", atk: 2},
   {name: "sword", atk: 20},
 //  {name: "book", atk: 0}
+];
+
+const spells = [
+  {name: "fire"},
+  {name: "fly"},
+  {name: "light"}
 ];
 
 const monsters = [
@@ -515,7 +521,12 @@ function toggleInven() {
   }
 }
 
-function fight() {
+function fightFrog() {
+  fighting = 0;
+  goFight();
+}
+
+function goFight() {
   monsterHealth = monsters[fighting].health;
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth; 
