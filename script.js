@@ -335,14 +335,14 @@ function update(deaths) {
 
 function goEntrance() {
   update(locations[0]);
-  if "book" in inven {
-    button#.innerText = "Fly";
-    button#.onclick = goHiddenRoom();
-  };
 }
 
 function goLargeCavern() {
   update(locations[1]);
+  if "book" in inven {
+    button2.innerText = "Fly";
+    button2.onclick = goHiddenRoom();
+  };
 }
 
 function goHiddenRoom() {
