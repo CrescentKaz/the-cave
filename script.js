@@ -21,8 +21,7 @@ const currentRoomText = document.querySelector("#currentRoomText");
 const weapons = [
   {name: "fist", atk: 1},
   {name: "stick", atk: 2},
-  {name: "sword", atk: 20},
-//  {name: "book", atk: 0}
+  {name: "sword", atk: 20}
 ];
 
 const spells = [
@@ -336,6 +335,10 @@ function update(deaths) {
 
 function goEntrance() {
   update(locations[0]);
+  if "book" in inven {
+    button#.innerText = "Fly";
+    button#.onclick = goHiddenRoom();
+  };
 }
 
 function goLargeCavern() {
@@ -356,10 +359,16 @@ function goTunnelOfBio() {
 
 function goUndergroundRiver() {
   update(locations[4]);
+  if weapons[1] not in inven {
+    inven.push(weapons[1])};
 }
 
 function goOldCampsite() {
   update(locations[5]);
+  if "book" not in inven {
+    inven.push("book")};
+  if weapons[2] not in inven {
+    inven.push(weapons[2])};
 }
 
 function goBatCave() {
