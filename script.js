@@ -535,6 +535,21 @@ function fightFrog() {
   goFight();
 }
 
+function fightWorm() {
+  fighting = 1;
+  goFight();
+}
+
+function fightBat() {
+  fighting = 2;
+  goFight();
+}
+
+function fightDragon() {
+  fighting = 3;
+  goFight();
+}
+
 function goFight() {
   monsterHealth = monsters[fighting].health;
   monsterName.innerText = monsters[fighting].name;
