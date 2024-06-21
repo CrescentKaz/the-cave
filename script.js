@@ -353,10 +353,6 @@ function goTunnelOfBio() {
   update(locations[3]);
 }
 
-// function goRockWall() {
-// update(locations[4]);
-// }
-
 function goUndergroundRiver() {
   update(locations[4]);
   if weapons[1] not in inven {
@@ -554,6 +550,16 @@ function goFight() {
   monsterHealth = monsters[fighting].health;
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth; 
+  monsterStats.style.display = "block";
+}
+
+function attack() {
+  text.innerText = "The " + monsters[fighting].name + " attacks."; 
+  text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
+  health -= getMonsterAttackValue(monsters[fighting].level);
+  if (isMonsterHit()) {
+    monsterHealth -= weapons]currentWeapons].power + Math.floor(Math.random()
+    }
 }
 
 function dodge() {}
