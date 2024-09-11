@@ -230,7 +230,7 @@ button1.onclick = goLargeCavern;
 button2.onclick = goDeathRunAway;
 button3.onclick = goDeathRunAway;
 button4.onclick = goDeathRunAway;
-button5.onclick = toggleInven;
+button5.onclick = goDeathRunAway;
 
 function update(locations) {
   button1.onclick = locations["button functions"][0];
