@@ -1,13 +1,4 @@
-// testing if i can create a split
-
-let xp = 0;
-let health = 100;
-let gold = 0;
-let fighting;
-let monsterHealth;
-let inven = [];
-let roomCount = 0;
-let nothingCount = 0;
+// THIS IS FOR VERIFYING LOCATIONS ONLY
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -19,41 +10,6 @@ const atkText = document.querySelector("#atkText");
 const text = document.querySelector("#text"); 
 const picture = document.querySelector("#picture");
 const currentRoomText = document.querySelector("#currentRoomText"); 
-
-const weapons = [
-  {name: "fist", atk: 1},
-  {name: "stick", atk: 2},
-  {name: "sword", atk: 20}
-];
-
-const spells = [
-  {name: "fire"},
-  {name: "fly"},
-  {name: "light"}
-];
-
-const monsters = [
-  {
-    name: "Frog",
-    level: 2,
-    health: 10
-  },
-  {
-    name: "Worm",
-    level: 5,
-    health: 25
-  },
-  {
-    name: "Bat",
-    level: 10,
-    health: 50
-  },
-  {
-    name: "Dragon",
-    level: 25,
-    health: 200
-  }
-];
 
 const locations = [
   { 
@@ -190,30 +146,27 @@ const miscLocals = [
     room: "Winner!",
     "button text": ["N", "E", "W", "S"],
     "button functions": [restart, restart, restart, restart],
-    text: "You manage to slay the dragon! YOU WIN! 🎉 Ending 1 of 10 (press any direction to continue)",
-    picture: src="./images/.png"
+    text: "You manage to slay the dragon! YOU WIN! 🎉 Ending 1 of 10 (press any direction to continue)"
   },
   {
     name: "winFire",
     room: "Winner!", 
     "button text": ["N", "E", "W", "S"],
     "button functions": [restart, restart, restart, restart],
-    text: "You incinerate the shapeshifting dragon and almost kill yourself in the process by burning away all the oxygen in the cave! Seriously, might want to rethink that next time... YOU WIN! 🎉 Ending 2 of 10 (press any direction to continue)",
-    picture: src="./images/.png"
+    text: "You incinerate the shapeshifting dragon and almost kill yourself in the process by burning away all the oxygen in the cave! Seriously, might want to rethink that next time... YOU WIN! 🎉 Ending 2 of 10 (press any direction to continue)"
   },
   {
     name: "miniGame",
     room: "🤪",
     "button text": ["1", "0", "3", "2"],
-    "button functions": [pickOne, goDarkRoom, pickThree, pickTwo],
-    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win (but don\'t escape the dragon)! (Press 0 to go back.)",
-    picture: src="./images/.png"
+    "button functions": [goDeathRunAway, goDarkRoom, goDeathRunAway, goDeathRunAway],
+    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win (but don\'t escape the dragon)! (Press 0 to go back.)"
   },
   {
     name: "fightFrog",
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
-    "button functions": [fight, dodge, goDeathRunAway, doNothing],
+    "button functions": [goDeathRunAway, goDeathRunAway, goDeathRunAway, goDeathRunAway],
     text: "A frog has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
     picture: src="./images/frog.png"
   },
@@ -221,7 +174,7 @@ const miscLocals = [
     name: "fightWorm",
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
-    "button functions": [fight, dodge, goDeathRunAway, doNothing],
+    "button functions": [goDeathRunAway, goDeathRunAway, goDeathRunAway, goDeathRunAway],
     text: "A worm has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
     picture: src="./images/worm.png"
   },
@@ -229,62 +182,48 @@ const miscLocals = [
     name: "fightBat",
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
-    "button functions": [fight, dodge, goDeathRunAway, doNothing],
-    text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
-    picture: src="./images/.png"
+    "button functions": [goDeathRunAway, goDeathRunAway, goDeathRunAway, goDeathRunAway],
+    text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)"
   },
   {
     name: "fightDragon",
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
-    "button functions": [fight, dodge, goDeathRunAway, doNothing],
-    text: "The dragon has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
-    picture: src="./images/.png"
+    "button functions": [goDeathRunAway, goDeathRunAway, goDeathRunAway, goDeathRunAway],
+    text: "The dragon has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)"
   },
 ];
   
 const deaths = [
   { 
     name: "boneRoom",
-    text: "You slip and slide down a hole onto bones of full 50 men strewn about. Some are broken, others whole, and yet others with many many thin stalagmites piercing straight through. Unfortuneately you land on one of these. It is very painful... You Died. ☠️ Ending 3 of 10 (press any direction to continue)",
-    picture: src="./images/.png"
+    text: "You slip and slide down a hole onto bones of full 50 men strewn about. Some are broken, others whole, and yet others with many many thin stalagmites piercing straight through. Unfortuneately you land on one of these. It is very painful... You Died. ☠️ Ending 3 of 10 (press any direction to continue)"
   },
   {
     name: "runAway",
-    text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 4 of 10 (press any direction to continue)",
-    picture: src="./images/.png"
+    text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 4 of 10 (press any direction to continue)"
   },
   {
     name: "takeTreasure",
-    text: "ENTER TEXT HERE Ending 5 of 10 (press any direction to continue)",
-    picture: src="./images/.png"
+    text: "ENTER TEXT HERE Ending 5 of 10 (press any direction to continue)"
   },
   {
     name: "monsterDidIt",
-    text: "You died to a cave monster. How shameful... Ending 6 of 10 (press any direction to continue)",
-    picture: src="./images/.png"
+    text: "You died to a cave monster. How shameful... Ending 6 of 10 (press any direction to continue)"
   },
   {
     name: "dragonStick",
-    text: "You attempted to beat the dragon with a stick, while he slept. It did not work out for you. Maybe if you had a horse and a lance... Ending 7 of 10 (press any direction to continue)",
-    picture: src="./images/.png"
+    text: "You attempted to beat the dragon with a stick, while he slept. It did not work out for you. Maybe if you had a horse and a lance... Ending 7 of 10 (press any direction to continue)"
   },
   {
     name: "dragonFist",
-    text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon\'s have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending 8 of 10 (press any direction to continue)",
-    picture: src="./images/.png"
+    text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon\'s have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending 8 of 10 (press any direction to continue)"
   },
   {
     name: "dragonLost",
-    text: "After a long a tiresome struggle, you try and try but can\'t seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it\'s counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don\'t know if your armor can take another blow and don\'t want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. Pain races through your nerves and your eyes lock up at the ceiling. You can\'t move. A roaring waterfall in your ears begins to drown out everything else. Your body crumples to the ground but you can\'t feel it. Can\'t hear it. Soon, you can\'t see the cave ceiling anymore... Ending 9 of 10 (press any direction to continue)",
-    picture: src="./images/.png"
+    text: "After a long a tiresome struggle, you try and try but can\'t seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it\'s counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don\'t know if your armor can take another blow and don\'t want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. Pain races through your nerves and your eyes lock up at the ceiling. You can\'t move. A roaring waterfall in your ears begins to drown out everything else. Your body crumples to the ground but you can\'t feel it. Can\'t hear it. Soon, you can\'t see the cave ceiling anymore... Ending 9 of 10 (press any direction to continue)"
   }
 ];
-
-if roomCount > 3 {
-  update(miscLocals[Math.floor(Math.random()*3)];
-  roomCount = 0;
-}
 
 // initialize buttons
 button1.onclick = goLargeCavern;
@@ -333,16 +272,10 @@ function update(deaths) {
 
 function goEntrance() {
   update(locations[0]);
-  inven.push(weapons.slice(,-3));
 }
 
 function goLargeCavern() {
   update(locations[1]);
-  if "book" in inven {
-    button2.innerText = "Fly";
-    button2.onclick = goHiddenRoom();
-  } else {
-  };
 }
 
 function goHiddenRoom() {
@@ -355,16 +288,10 @@ function goTunnelOfBio() {
 
 function goUndergroundRiver() {
   update(locations[4]);
-  if weapons[1] not in inven {
-    inven.push(weapons[1])};
 }
 
 function goOldCampsite() {
   update(locations[5]);
-  if "book" not in inven {
-    inven.push("book")};
-  if weapons[2] not in inven {
-    inven.push(weapons[2])};
 }
 
 function goBatCave() {
@@ -486,87 +413,6 @@ function goDeathDragonFist() {
 function goDeathDragonLost() {
   update(deaths[6]);
 }
-
-function doNothing() {
- nothingCount += 1;
-  if nothingCount > 3 {
-    goDeathRunAway();
-  } else {
-  };
-}
-
-function pickOne() {
-  let numPickOne = Math.floor(Math.random()*11);
-}
-
-function pickTwo() {
-  let numPickTwo = [Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
-}
-
-function pickThree() {
-  let numPickThree = [Math.floor(Math.random()*11), Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
-}
-
-function pick(guess) {
-  let numbers = [];
-  while (numbers.length < 10) {
-    numbers.push(Math.floor(Math.random() * 11));
-  }
-  text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
-  for (let i = 0; i < 10; i++) {
-    text.innerText += numbers[i] + "\n";
-  }
-  if (numbers.indexOf(guess) !== -1) {
-    text.innerText += "Correct! You win 20 imaginary gold!";
-  } else {
-    text.innerText += "Wrong! You feel shame for no real reason!";
-  }
-}
-
-function toggleInven() {
-  text.innerText += "\n";
-  for (let i = 0; i < inven.length + 1; i++) {
-    text.innerText += (inven[i] + " ");
-  }
-}
-
-function fightFrog() {
-  fighting = 0;
-  goFight();
-}
-
-function fightWorm() {
-  fighting = 1;
-  goFight();
-}
-
-function fightBat() {
-  fighting = 2;
-  goFight();
-}
-
-function fightDragon() {
-  fighting = 3;
-  goFight();
-}
-
-function goFight() {
-  monsterHealth = monsters[fighting].health;
-  monsterName.innerText = monsters[fighting].name;
-  monsterHealthText.innerText = monsterHealth; 
-  monsterStats.style.display = "block";
-}
-
-function attack() {
-  text.innerText = "The " + monsters[fighting].name + " attacks."; 
-  text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
-  health -= getMonsterAttackValue(monsters[fighting].level);
-  if (isMonsterHit()) {
-    monsterHealth -= weapons]currentWeapons].power + Math.floor(Math.random()
-    }
-}
-
-function dodge() {}
 
 function restart() {
   goEntrance();
