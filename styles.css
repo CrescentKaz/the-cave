@@ -70,8 +70,9 @@ button {
 
 #picture {
   max-width: 700px;
+  max-height: 810px; 
   position: relative;
-  top: -195px;
+  top: -295px;
   z-index: 0;
 }
 
