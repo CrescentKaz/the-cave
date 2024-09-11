@@ -3,7 +3,7 @@ let health = 100;
 let gold = 0;
 let fighting;
 let monsterHealth;
-let inven = ["fist"];
+let inven = [];
 let roomCount = 0;
 let nothingCount = 0;
 
@@ -284,10 +284,6 @@ if roomCount > 3 {
   roomCount = 0;
 }
 
-if nothingCount > 3 {
-  goDeathRunAway();
-}
-
 // initialize buttons
 button1.onclick = goLargeCavern;
 button2.onclick = goDeathRunAway;
@@ -335,6 +331,7 @@ function update(deaths) {
 
 function goEntrance() {
   update(locations[0]);
+  inven.push(weapons.slice(,-3));
 }
 
 function goLargeCavern() {
@@ -342,6 +339,7 @@ function goLargeCavern() {
   if "book" in inven {
     button2.innerText = "Fly";
     button2.onclick = goHiddenRoom();
+  } else {
   };
 }
 
@@ -489,6 +487,10 @@ function goDeathDragonLost() {
 
 function doNothing() {
  nothingCount += 1;
+  if nothingCount > 3 {
+    goDeathRunAway();
+  } else {
+  };
 }
 
 function pickOne() {
