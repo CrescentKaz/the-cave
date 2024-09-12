@@ -134,7 +134,7 @@ const locations = [
   {
     name: "dragonRoom",
     room: "Dragon Room",
-    "button functions": [goDeadEnd, goDeathBoneRoom, goRockWall, goTreasureHoard],
+    "button functions": [goDeadEnd, goDeadEnd, goRockWall, goTreasureHoard],
     text: "You blink as your eyes adjust to the dimly lit room. A loud snoring makes you jump and you notice a large dark colored dragon asleep right next to you. What do you do?",
     picture: src="./images/dragon-room.png"
   },
