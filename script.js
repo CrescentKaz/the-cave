@@ -238,7 +238,6 @@ function update(locations) {
   button3.onclick = locations["button functions"][2];
   button4.onclick = locations["button functions"][3];
   text.innerText = locations.text;
-  picture.innerText = locations.picture;
   currentRoomText.innerText = locations.room;
 }
 
@@ -252,7 +251,6 @@ function update(miscLocals) {
   button3.onclick = miscLocals["button functions"][2];
   button4.onclick = miscLocals["button functions"][3];
   text.innerText = miscLocals.text;
-  picture.innerText = miscLocals.picture;
   currentRoomText.innerText = miscLocals.room;
 }
 
@@ -266,7 +264,6 @@ function update(deaths) {
   button3.onclick = restart();
   button4.onclick = restart();
   text.innerText = deaths.text;
-  picture.innerText = deaths.picture;
   currentRoomText.innerText = "You Died";
 }
 
@@ -354,8 +351,9 @@ function goDeadEnd() {
     "You are not being paid by the hour. Maybe try a different direction!",
     "Do you ever think about why we're here?",
     "There is no map on this wall."
-  ]
-  alert(deadEnd[Math.floor(Math.random()*deadEnd.length())]);
+  ];
+  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length())];
+  alert(deadEndMessage);
 }
 
 function goWinSword() {
