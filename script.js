@@ -99,7 +99,7 @@ const locations = [
   {
     name: "darkRoom",
     room: "Dark Room",
-    "button functions": [goDeadEnd, goDeadEnd, goMiniGame, goWeekOldTracks],
+    "button functions": [goDeadEnd, goDeadEnd, goDeadEnd, goWeekOldTracks],
     text: "It is too dark in here to see. To the South you see the hole you just crawled through.",
     picture: src="./images/dark-room.png"
   },
@@ -140,7 +140,6 @@ const locations = [
   },
 ]; 
 
-/*
 const miscLocals = [
   {
     name: "winSword",
@@ -194,7 +193,6 @@ const miscLocals = [
     text: "The dragon has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)"
   },
 ];
-*/
 
 const deaths = [
   { 
@@ -256,7 +254,6 @@ function update(miscLocals) {
   text.innerText = miscLocals.text;
   currentRoomText.innerText = miscLocals.room;
 }
-*/
 
 function update(deaths) {
   button1.innerText = "☠️";
@@ -270,6 +267,7 @@ function update(deaths) {
   text.innerText = deaths.text;
   currentRoomText.innerText = "You Died";
 }
+*/
 
 function goEntrance() {
   update(locations[0]);
@@ -394,14 +392,12 @@ function goFightDragon() {
 function goDeathBoneRoom() {
   update(deaths[0]);
 }
-*/
 
 function goDeathRunAway() {
   update(deaths[1]);
   alert("should be death run away");
 }
 
-/*
 function goDeathTakeTreasure() {
   update(deaths[2]);
 }
