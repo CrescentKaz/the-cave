@@ -273,6 +273,7 @@ function goEntrance() {
 
 function goLargeCavern() {
   update(locations[1]);
+  alert("should be in the large cavern");
 }
 
 function goHiddenRoom() {
@@ -391,6 +392,7 @@ function goDeathBoneRoom() {
 
 function goDeathRunAway() {
   update(deaths[1]);
+  alert("should be death run away");
 }
 
 function goDeathTakeTreasure() {
