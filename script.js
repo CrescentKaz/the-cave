@@ -227,9 +227,9 @@ const deaths = [
 
 // initialize buttons
 button1.onclick = goLargeCavern;
-button2.onclick = goDeathRunAway;
-button3.onclick = goDeathRunAway;
-button4.onclick = goDeathRunAway;
+button2.onclick = goDeadEnd;
+button3.onclick = goDeadEnd;
+button4.onclick = goDeadEnd;
 
 
 function update(locations) {
