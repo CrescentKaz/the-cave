@@ -140,6 +140,7 @@ const locations = [
   },
 ]; 
 
+/*
 const miscLocals = [
   {
     name: "winSword",
@@ -193,7 +194,8 @@ const miscLocals = [
     text: "The dragon has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)"
   },
 ];
-  
+*/
+
 const deaths = [
   { 
     name: "boneRoom",
@@ -241,6 +243,7 @@ function update(locations) {
   currentRoomText.innerText = locations.room;
 }
 
+/*
 function update(miscLocals) {
   button1.innerText = miscLocals["button text"][0];
   button2.innerText = miscLocals["button text"][1];
@@ -253,6 +256,7 @@ function update(miscLocals) {
   text.innerText = miscLocals.text;
   currentRoomText.innerText = miscLocals.room;
 }
+*/
 
 function update(deaths) {
   button1.innerText = "☠️";
@@ -358,6 +362,7 @@ function goDeadEnd() {
   alert(deadEndMessage);
 }
 
+/*
 function goWinSword() {
   update(miscLocals[0]);
 }
@@ -389,12 +394,14 @@ function goFightDragon() {
 function goDeathBoneRoom() {
   update(deaths[0]);
 }
+*/
 
 function goDeathRunAway() {
   update(deaths[1]);
   alert("should be death run away");
 }
 
+/*
 function goDeathTakeTreasure() {
   update(deaths[2]);
 }
@@ -414,6 +421,7 @@ function goDeathDragonFist() {
 function goDeathDragonLost() {
   update(deaths[6]);
 }
+*/
 
 function restart() {
   goEntrance();
