@@ -340,7 +340,7 @@ function goDragonRoom() {
 }
 
 function goDeadEnd() {
-  const deadEnd = [
+/*  const deadEnd = [
     "You can't go this way!",
     "You wouldn't want to hit your head!",
     'You feel like if this wall could talk it would say, "You shall not pass!" ',
@@ -352,7 +352,8 @@ function goDeadEnd() {
     "Do you ever think about why we're here?",
     "There is no map on this wall."
   ];
-  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length())];
+  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length())]; */
+  let deadEndMessage = "DEAD end!";
   alert(deadEndMessage);
 }
 
