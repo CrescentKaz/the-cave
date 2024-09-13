@@ -327,6 +327,7 @@ function update(deaths) {
 function goEntrance() {
   update(locations[0]);
   inven.push(weapons[0]);
+  alert("you are at the entrance");
 }
 
 function goLargeCavern() {
@@ -474,6 +475,7 @@ function goDeathBoneRoom() {
 
 function goDeathRunAway() {
   update(deaths[1]);
+  alert("you died due to running away");
 }
 
 function goDeathTakeTreasure() {
