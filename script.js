@@ -287,6 +287,10 @@ button4.onclick = goDeathRunAway;
 button5.onclick = toggleInven;
 
 function updateL(locations) {
+  button1.innerText = "N";
+  button2.innerText = "E";
+  button3.innerText = "W";
+  button4.innerText = "S";
   button1.onclick = locations["button functions"][0];
   button2.onclick = locations["button functions"][1];
   button3.onclick = locations["button functions"][2];
@@ -335,8 +339,7 @@ function goLargeCavern() {
   if ("book" in inven) {
     button2.innerText = "Fly";
     button2.onclick = goHiddenRoom();
-  };
-  alert("you are at the large cavern"); 
+  }; 
 }
 
 function goHiddenRoom() {
@@ -437,8 +440,9 @@ function goDeadEnd() {
     "You are not being paid by the hour. Maybe try a different direction!",
     "Do you ever think about why we're here?",
     "There is no map on this wall."
-  ]
-  alert(deadEnd[Math.floor(Math.random()*deadEnd.length())]);
+  ]; 
+  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length())];
+  alert(deadEndMessage);
 }
 
 function goWinSword() {
@@ -514,15 +518,15 @@ function doNothing() {
 }
 
 function pickOne() {
-  let numPickOne = Math.floor(Math.random()*11);
+  let guess = Math.floor(Math.random()*11);
 }
 
 function pickTwo() {
-  let numPickTwo = [Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
+  let guess = [Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
 }
 
 function pickThree() {
-  let numPickThree = [Math.floor(Math.random()*11), Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
+  let guess = [Math.floor(Math.random()*11), Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
 }
 
 function pick(guess) {
@@ -589,5 +593,9 @@ function dodge() {
 }
 
 function restart() {
+  let xp = 0;
+  let health = 100;
+  let gold = 0;
+  let inven = [];
   goEntrance();
 }
