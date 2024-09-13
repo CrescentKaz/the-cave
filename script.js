@@ -211,7 +211,7 @@ const miscLocals = [
     name: "fightFrog",
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
-    "button functions": [fight, dodge, goDeathRunAway, doNothing],
+    "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "A frog has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
     picture: src="./images/frog.png"
   },
@@ -219,7 +219,7 @@ const miscLocals = [
     name: "fightWorm",
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
-    "button functions": [fight, dodge, goDeathRunAway, doNothing],
+    "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "A worm has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
     picture: src="./images/worm.png"
   },
@@ -227,7 +227,7 @@ const miscLocals = [
     name: "fightBat",
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
-    "button functions": [fight, dodge, goDeathRunAway, doNothing],
+    "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
     picture: src="./images/.png"
   },
@@ -235,7 +235,7 @@ const miscLocals = [
     name: "fightDragon",
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
-    "button functions": [fight, dodge, goDeathRunAway, doNothing],
+    "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "The dragon has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
     picture: src="./images/.png"
   },
@@ -584,7 +584,9 @@ function attack() {
     }
 }
 
-function dodge() {}
+function dodge() {
+  text.innerText = "You dodged the " + monsters[fighting].name + "'s attack.";
+}
 
 function restart() {
   goEntrance();
