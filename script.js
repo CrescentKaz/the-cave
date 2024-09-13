@@ -327,7 +327,6 @@ function update(deaths) {
 function goEntrance() {
   update(locations[0]);
   inven.push(weapons[0]);
-  alert("you are at the entrance");
 }
 
 function goLargeCavern() {
@@ -337,6 +336,7 @@ function goLargeCavern() {
     button2.innerText = "Fly";
     button2.onclick = goHiddenRoom();
   };
+  alert("you are at the large cavern"); 
 }
 
 function goHiddenRoom() {
