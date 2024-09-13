@@ -286,7 +286,7 @@ button3.onclick = goDeathRunAway;
 button4.onclick = goDeathRunAway;
 button5.onclick = toggleInven;
 
-function update(locations) {
+function updateL(locations) {
   button1.onclick = locations["button functions"][0];
   button2.onclick = locations["button functions"][1];
   button3.onclick = locations["button functions"][2];
@@ -296,7 +296,7 @@ function update(locations) {
   currentRoomText.innerText = locations.room;
 }
 
-function update(miscLocals) {
+function updateM(miscLocals) {
   button1.innerText = miscLocals["button text"][0];
   button2.innerText = miscLocals["button text"][1];
   button3.innerText = miscLocals["button text"][2];
@@ -310,7 +310,7 @@ function update(miscLocals) {
   currentRoomText.innerText = miscLocals.room;
 }
 
-function update(deaths) {
+function updateD(deaths) {
   button1.innerText = "☠️";
   button2.innerText = "☠️";
   button3.innerText = "☠️";
@@ -325,12 +325,12 @@ function update(deaths) {
 }
 
 function goEntrance() {
-  update(locations[0]);
+  updateL(locations[0]);
   inven.push(weapons[0]);
 }
 
 function goLargeCavern() {
-  update(locations[1]);
+  updateL(locations[1]);
   countingRooms();
   if ("book" in inven) {
     button2.innerText = "Fly";
@@ -340,24 +340,24 @@ function goLargeCavern() {
 }
 
 function goHiddenRoom() {
-  update(locations[2]);
+  updateL(locations[2]);
   countingRooms();
 }
 
 function goTunnelOfBio() {
-  update(locations[3]);
+  updateL(locations[3]);
   countingRooms();
 }
 
 function goUndergroundRiver() {
-  update(locations[4]);
+  updateL(locations[4]);
   countingRooms();
   if (weapons[1]) not in inven; {
     inven.push(weapons[1])};
 }
 
 function goOldCampsite() {
-  update(locations[5]);
+  updateL(locations[5]);
   countingRooms();
   if ("book") not in inven; {
     inven.push("book")};
@@ -366,62 +366,62 @@ function goOldCampsite() {
 }
 
 function goBatCave() {
-  update(locations[6]);
+  updateL(locations[6]);
   countingRooms();
 }
 
 function goOldTracks() {
-  update(locations[7]);
+  updateL(locations[7]);
   countingRooms();
 }
 
 function goSortaOldTracks() {
-  update(locations[8]);
+  updateL(locations[8]);
   countingRooms();
 }
 
 function goBoneRoom() {
-  update(locations[9]);
+  updateL(locations[9]);
   countingRooms();
 }
 
 function goOldCarving() {
-  update(locations[10]);
+  updateL(locations[10]);
   countingRooms();
 }
 
 function goWeekOldTracks() {
-  update(locations[11]);
+  updateL(locations[11]);
   countingRooms();
 }
 
 function goDarkRoom() {
-  update(locations[12]);
+  updateL(locations[12]);
   countingRooms();
 }
 
 function goNewerTracks() {
-  update(locations[13]);
+  updateL(locations[13]);
   countingRooms();
 }
 
 function goCavePainting() {
-  update(locations[14]);
+  updateL(locations[14]);
   countingRooms();
 }
 
 function goFreshTracks() {
-  update(locations[15]);
+  updateL(locations[15]);
   countingRooms();
 }
 
 function goTreasureHoard() {
-  update(locations[16]);
+  updateL(locations[16]);
   countingRooms();
 }
 
 function goDragonRoom() {
-  update(locations[17]);
+  updateL(locations[17]);
   countingRooms();
 }
 
@@ -442,60 +442,60 @@ function goDeadEnd() {
 }
 
 function goWinSword() {
-  update(miscLocals[0]);
+  updateM(miscLocals[0]);
 }
 
 function goWinFire() {
-  update(miscLocals[1]);
+  updateM(miscLocals[1]);
 }
 
 function goMiniGame() {
-  update(miscLocals[2]);
+  updateM(miscLocals[2]);
 }
 
 function goFightFrog() {
-  update(miscLocals[3]);
+  updateM(miscLocals[3]);
 }
 
 function goFightWorm() {
-  update(miscLocals[4]);
+  updateM(miscLocals[4]);
 }
 
 function goFightBat() {
-  update(miscLocals[5]);
+  updateM(miscLocals[5]);
 }
 
 function goFightDragon() {
-  update(miscLocals[6]);
+  updateM(miscLocals[6]);
 }
 
 function goDeathBoneRoom() {
-  update(deaths[0]);
+  updateD(deaths[0]);
 }
 
 function goDeathRunAway() {
-  update(deaths[1]);
+  updateD(deaths[1]);
   alert("you died due to running away");
 }
 
 function goDeathTakeTreasure() {
-  update(deaths[2]);
+  updateD(deaths[2]);
 }
 
 function goDeathMonsterDidIt() {
-  update(deaths[3]);
+  updateD(deaths[3]);
 }
 
 function goDeathDragonStick() {
-  update(deaths[4]);
+  updateD(deaths[4]);
 }
 
 function goDeathDragonFist() {
-  update(deaths[5]);
+  updateD(deaths[5]);
 }
 
 function goDeathDragonLost() {
-  update(deaths[6]);
+  updateD(deaths[6]);
 }
 
 function countingRooms() { 
