@@ -355,16 +355,16 @@ function goTunnelOfBio() {
 function goUndergroundRiver() {
   updateL(locations[4]);
   countingRooms();
-  if (weapons[1]) not in inven; {
+  if (weapons[1] not in inven) {
     inven.push(weapons[1])};
 }
 
 function goOldCampsite() {
   updateL(locations[5]);
   countingRooms();
-  if ("book") not in inven; {
+  if ("book" not in inven) {
     inven.push("book")};
-  if (weapons[2]) not in inven; {
+  if (weapons[2] not in inven) {
     inven.push(weapons[2])};
 }
 
@@ -441,7 +441,7 @@ function goDeadEnd() {
     "Do you ever think about why we're here?",
     "There is no map on this wall."
   ]; 
-  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length())].str;
+  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length)].str;
   alert(deadEndMessage);
 }
 
