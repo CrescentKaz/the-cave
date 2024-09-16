@@ -141,7 +141,7 @@ const locations = [
   {
     name: "darkRoom",
     room: "Dark Room",
-    "button functions": [goDeadEnd, goDeadEnd, goMiniGame, goWeekOldTracks],
+    "button functions": [goDeadEnd, goDeadEnd, goDeadEnd, goWeekOldTracks],
     text: "It is too dark in here to see. To the South you see the hole you just crawled through.",
     picture: ""
   },
@@ -441,7 +441,7 @@ function goDeadEnd() {
     "Do you ever think about why we're here?",
     "There is no map on this wall."
   ]; 
-  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length())];
+  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length())].str;
   alert(deadEndMessage);
 }
 
@@ -459,18 +459,22 @@ function goMiniGame() {
 
 function goFightFrog() {
   updateM(miscLocals[3]);
+  roomCount = 0;
 }
 
 function goFightWorm() {
   updateM(miscLocals[4]);
+  roomCount = 0;
 }
 
 function goFightBat() {
   updateM(miscLocals[5]);
+  roomCount = 0;
 }
 
 function goFightDragon() {
   updateM(miscLocals[6]);
+  roomCount = 0;
 }
 
 function goDeathBoneRoom() {
@@ -503,18 +507,17 @@ function goDeathDragonLost() {
 }
 
 function countingRooms() { 
-  roomCount += 1;
   if (roomCount > 3) {
     update(miscLocals[Math.floor(Math.random()*3)]);
-    roomCount = 0;
-  }
+  };
+  roomCount += 1;
 }
 
 function doNothing() {
- nothingCount += 1;
   if (nothingCount > 3) {
     goDeathRunAway();
   };
+   nothingCount += 1;
 }
 
 function pickOne() {
