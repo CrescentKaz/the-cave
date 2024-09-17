@@ -4,8 +4,8 @@ let gold = 0;
 let fighting;
 let monsterHealth;
 let inven = [];
-let roomCount;
-let nothingCount;
+let roomCount = 0;
+let nothingCount = 0;
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -330,7 +330,10 @@ function updateD(deaths) {
 
 function goEntrance() {
   updateL(locations[0]);
+  if (weapons[0] in inven) {
+  } else {
   inven.push(weapons[0]);
+  }
 }
 
 function goLargeCavern() {
@@ -355,16 +358,19 @@ function goTunnelOfBio() {
 function goUndergroundRiver() {
   updateL(locations[4]);
   countingRooms();
-  if (weapons[1] not in inven) {
+  if (weapons[1] in inven) {
+  } else {
     inven.push(weapons[1])};
 }
 
 function goOldCampsite() {
   updateL(locations[5]);
   countingRooms();
-  if ("book" not in inven) {
+  if ("book" in inven) {
+  } else {
     inven.push("book")};
-  if (weapons[2] not in inven) {
+  if (weapons[2] in inven) {
+  } else {
     inven.push(weapons[2])};
 }
 
@@ -599,6 +605,10 @@ function restart() {
   let xp = 0;
   let health = 100;
   let gold = 0;
+  let fighting;
+  let monsterHealth;
   let inven = [];
+  let roomCount = 0;
+  let nothingCount = 0;
   goEntrance();
 }
