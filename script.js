@@ -19,9 +19,9 @@ const picture = document.querySelector("#picture");
 const currentRoomText = document.querySelector("#currentRoomText"); 
 
 const weapons = [
-  {name: "fist", atk: 1},
-  {name: "stick", atk: 2},
-  {name: "sword", atk: 20}
+  {0: "fist", atk: 1},
+  {1: "stick", atk: 2},
+  {2: "sword", atk: 20}
 ];
 
 // still need to add spells to location functions
