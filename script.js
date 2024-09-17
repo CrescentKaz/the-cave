@@ -24,6 +24,7 @@ const weapons = [
   {name: "sword", atk: 20}
 ];
 
+// still need to add spells to location functions
 const spells = [
   {name: "fire"},
   {name: "fly"},
@@ -332,7 +333,7 @@ function goEntrance() {
   updateL(locations[0]);
   if (weapons[0] in inven) {
   } else {
-  inven.push(weapons[0]);
+  inven.push(weapons.slice(0,1));
   }
 }
 
@@ -360,7 +361,7 @@ function goUndergroundRiver() {
   countingRooms();
   if (weapons[1] in inven) {
   } else {
-    inven.push(weapons[1])};
+    inven.push(weapons.slice(1,2))};
 }
 
 function goOldCampsite() {
@@ -371,7 +372,7 @@ function goOldCampsite() {
     inven.push("book")};
   if (weapons[2] in inven) {
   } else {
-    inven.push(weapons[2])};
+    inven.push(weapons.slice(2,3))};
 }
 
 function goBatCave() {
