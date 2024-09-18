@@ -331,9 +331,9 @@ function updateD(deaths) {
 
 function goEntrance() {
   updateL(locations[0]);
-  if (weapons[0] in inven) {
+  if ("Fist" in inven) {
   } else {
-  inven.push(weapons.slice(0,1));
+  inven.push("Fist");
   }
 }
 
@@ -359,9 +359,9 @@ function goTunnelOfBio() {
 function goUndergroundRiver() {
   updateL(locations[4]);
   countingRooms();
-  if (weapons[1] in inven) {
+  if ("Stick" in inven) {
   } else {
-    inven.push(weapons.slice(1,2))};
+    inven.push("Stick")};
 }
 
 function goOldCampsite() {
@@ -370,9 +370,9 @@ function goOldCampsite() {
   if ("Spellbook" in inven) {
   } else {
     inven.push("Spellbook")};
-  if (weapons[2] in inven) {
+  if ("Sword" in inven) {
   } else {
-    inven.push(weapons.slice(2,3))};
+    inven.push("Sword")};
 }
 
 function goBatCave() {
