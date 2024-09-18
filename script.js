@@ -448,7 +448,8 @@ function goDeadEnd() {
     "Do you ever think about why we're here?",
     "There is no map on this wall."
   ]; 
-  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length)].toString();
+  let whichMessage = Math.floor(Math.random()*deadEnd.length)
+  let deadEndMessage = deadEnd[whichMessage];
   alert(deadEndMessage);
 }
 
@@ -515,7 +516,8 @@ function goDeathDragonLost() {
 
 function countingRooms() { 
   if (roomCount > 3) {
-    update(miscLocals[Math.floor(Math.random()*3)]);
+    const monNum = Math.floor(Math.random()*3)
+    update(miscLocals[monNum]);
   };
   roomCount += 1;
 }
