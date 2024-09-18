@@ -559,13 +559,13 @@ function pick(guess) {
 }
 
 function toggleInven() {
-  text.innerText += "\n";
+  text.innerText += "\n Current Inventory is: ";
 //  for (let i = 0; i < inven.length + 1; i++) {
 //    text.innerText += (inven[i]["name"].toString() + " ");
 //  }
   const iterator1 = inven[Symbol.iterator]();
   for (const value of iterator1) {
-    text.innerText += value;
+    text.innerText += value + " ";
   }
 }
 
