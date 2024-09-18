@@ -448,7 +448,7 @@ function goDeadEnd() {
     "Do you ever think about why we're here?",
     "There is no map on this wall."
   ]; 
-  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length)].str;
+  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length)].toString();
   alert(deadEndMessage);
 }
 
