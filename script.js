@@ -332,8 +332,10 @@ function updateD(deaths) {
 function goEntrance() {
   updateL(locations[0]);
   if ("Fist" in inven) {
+    alert("cannot aquire fist, already have that");
   } else {
   inven.push("Fist");
+  alert("aquired fist");
   }
 }
 
@@ -360,19 +362,25 @@ function goUndergroundRiver() {
   updateL(locations[4]);
   countingRooms();
   if ("Stick" in inven) {
+    alert("cannot aquire stick, already have that");
   } else {
     inven.push("Stick")};
+    alert("aquired stick");
 }
 
 function goOldCampsite() {
   updateL(locations[5]);
   countingRooms();
   if ("Spellbook" in inven) {
+    alert("cannot aquire book, already have that");
   } else {
     inven.push("Spellbook")};
+    alert("aquired book");
   if ("Sword" in inven) {
+    alert("cannot aquire sword, already have that");
   } else {
     inven.push("Sword")};
+    alert("aquired sword");
 }
 
 function goBatCave() {
