@@ -3,7 +3,7 @@ let health = 100;
 let gold = 0;
 let fighting;
 let monsterHealth;
-let inven = [];
+let inven = ["Fist"];
 let roomCount = 0;
 let nothingCount = 0;
 
@@ -136,7 +136,7 @@ const locations = [
     name: "weekOldTracks",
     room: "Ruby Tracks",
     "button functions": [goDarkRoom, goDeadEnd, goSortaOldTracks, goNewerTracks],
-    text: "The air is stale and heavy as you make your way around a curve in the trail. A bead of sweat trickles down your calf and you peer into the dim light. The tracks deffinately went this way... did the King and Queen know they dragon could shapeshift...? To the North is a hole in the wall, too dark to see into. The tracks appear to head around to the South. You hope this hasn\'t been a large loop.",
+    text: "The air is stale and heavy as you make your way around a curve in the trail. A bead of sweat trickles down your calf and you peer into the dim light. The tracks definitely went this way... did the King and Queen know the dragon could shapeshift...? To the North is a hole in the wall, too dark to see into. The tracks appear to head around to the South. You hope this hasn\'t been a large loop.",
     picture: "./images/Tracks_Ruby.PNG"
   },
   {
@@ -144,7 +144,7 @@ const locations = [
     room: "Dark Room",
     "button functions": [goDeadEnd, goDeadEnd, goDeadEnd, goWeekOldTracks],
     text: "It is too dark in here to see. To the South you see the hole you just crawled through.",
-    picture: ""
+    picture: "./images/Dark_Room.PNG"
   },
   {
     name: "newerTracks",
@@ -206,7 +206,7 @@ const miscLocals = [
     "button text": ["1", "0", "3", "2"],
     "button functions": [pickOne, goDarkRoom, pickThree, pickTwo],
     text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win (but don\'t escape the dragon)! (Press 0 to go back.)",
-    picture: ""
+    picture: "./images/Mini_Game.PNG"
   },
   {
     name: "fightFrog",
@@ -246,37 +246,37 @@ const deaths = [
   { 
     name: "boneRoom",
     text: "You slip and slide down a hole onto bones of full 50 men strewn about. Some are broken, others whole, and yet others with many many thin stalagmites piercing straight through. Unfortuneately you land on one of these. It is very painful... You Died. ☠️ Ending 3 of 10 (press any direction to continue)",
-    picture: ""
+    picture: "./images/Death_Bone_Room.PNG"
   },
   {
     name: "runAway",
     text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 4 of 10 (press any direction to continue)",
-    picture: ""
+    picture: "./images/Death_Run_Away.PNG"
   },
   {
     name: "takeTreasure",
     text: "ENTER TEXT HERE Ending 5 of 10 (press any direction to continue)",
-    picture: ""
+    picture: "./images/Death_Treasure.PNG"
   },
   {
     name: "monsterDidIt",
     text: "You died to a cave monster. How shameful... Ending 6 of 10 (press any direction to continue)",
-    picture: ""
+    picture: "./images/Death_Monster.PNG"
   },
   {
     name: "dragonStick",
     text: "You attempted to beat the dragon with a stick, while he slept. It did not work out for you. Maybe if you had a horse and a lance... Ending 7 of 10 (press any direction to continue)",
-    picture: ""
+    picture: "./images/Death_Dragon_Stick.PNG"
   },
   {
     name: "dragonFist",
     text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon\'s have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending 8 of 10 (press any direction to continue)",
-    picture: ""
+    picture: "./images/Death_Dragon_Fist.PNG"
   },
   {
     name: "dragonLost",
     text: "After a long a tiresome struggle, you try and try but can\'t seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it\'s counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don\'t know if your armor can take another blow and don\'t want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. Pain races through your nerves and your eyes lock up at the ceiling. You can\'t move. A roaring waterfall in your ears begins to drown out everything else. Your body crumples to the ground but you can\'t feel it. Can\'t hear it. Soon, you can\'t see the cave ceiling anymore... Ending 9 of 10 (press any direction to continue)",
-    picture: ""
+    picture: "./images/Death_Dragon_Sword.PNG"
   }
 ];
 
