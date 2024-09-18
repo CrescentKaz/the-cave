@@ -340,7 +340,7 @@ function goEntrance() {
 function goLargeCavern() {
   updateL(locations[1]);
   countingRooms();
-  if ("book" in inven) {
+  if ("Spellbook" in inven) {
     button2.innerText = "Fly";
     button2.onclick = goHiddenRoom();
   }; 
@@ -367,9 +367,9 @@ function goUndergroundRiver() {
 function goOldCampsite() {
   updateL(locations[5]);
   countingRooms();
-  if ("book" in inven) {
+  if ("Spellbook" in inven) {
   } else {
-    inven.push("book")};
+    inven.push("Spellbook")};
   if (weapons[2] in inven) {
   } else {
     inven.push(weapons.slice(2,3))};
@@ -517,7 +517,7 @@ function goDeathDragonLost() {
 function countingRooms() { 
   if (roomCount > 3) {
     const monNum = Math.floor(Math.random()*3)
-    update(miscLocals[monNum]);
+    updateM(miscLocals[monNum]);
   };
   roomCount += 1;
 }
