@@ -463,6 +463,7 @@ function goWinFire() {
 
 function goMiniGame() {
   updateM(miscLocals[2]);
+  roomCount = 0;
 }
 
 function goFightFrog() {
@@ -516,7 +517,7 @@ function goDeathDragonLost() {
 
 function countingRooms() { 
   if (roomCount > 3) {
-    const monNum = Math.floor(Math.random()*3)
+    const monNum = Math.floor((Math.random()*3)+3)
     updateM(miscLocals[monNum]);
   };
   roomCount += 1;
