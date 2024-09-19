@@ -570,7 +570,7 @@ function toggleInven() {
 //  }
   const iterator1 = inven[Symbol.iterator]();
   for (const value of iterator1) {
-    text.innerText += "${value} ";
+    text.innerText += value + " ";
   }
 }
 
