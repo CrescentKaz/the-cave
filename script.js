@@ -536,15 +536,15 @@ function doNothing() {
 }
 
 function pickOne() {
-  let guess = Math.floor(Math.random()*11);
+  pick(Math.floor(Math.random()*11));
 }
 
 function pickTwo() {
-  let guess = [Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
+  pick([Math.floor(Math.random()*11), Math.floor(Math.random()*11)]);
 }
 
 function pickThree() {
-  let guess = [Math.floor(Math.random()*11), Math.floor(Math.random()*11), Math.floor(Math.random()*11)];
+  pick([Math.floor(Math.random()*11), Math.floor(Math.random()*11), Math.floor(Math.random()*11)]);
 }
 
 function pick(guess) {
