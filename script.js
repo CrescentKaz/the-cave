@@ -331,12 +331,6 @@ function updateD(deaths) {
 
 function goEntrance() {
   updateL(locations[0]);
-  if ("Fist" in inven) {
-    alert("cannot aquire fist, already have that");
-  } else {
-  inven.push("Fist");
-  alert("aquired fist");
-  }
 }
 
 function goLargeCavern() {
@@ -573,7 +567,7 @@ function toggleInven() {
 //  }
   const iterator1 = inven[Symbol.iterator]();
   for (const value of iterator1) {
-    text.innerText += value + " ";
+    text.innerText += "${value} ";
   }
 }
 
