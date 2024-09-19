@@ -331,6 +331,9 @@ function updateD(deaths) {
 
 function goEntrance() {
   updateL(locations[0]);
+  let inven = ["Fist"];
+  let roomCount = 0;
+  let nothingCount = 0;
 }
 
 function goLargeCavern() {
