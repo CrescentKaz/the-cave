@@ -493,31 +493,38 @@ function goFightDragon() {
 
 function goDeathBoneRoom() {
   updateD(deaths[0]);
+  roomCount = 0;
 }
 
 function goDeathRunAway() {
   updateD(deaths[1]);
   alert("you died due to running away");
+  roomCount = 0;
 }
 
 function goDeathTakeTreasure() {
   updateD(deaths[2]);
+  roomCount = 0;
 }
 
 function goDeathMonsterDidIt() {
   updateD(deaths[3]);
+  roomCount = 0;
 }
 
 function goDeathDragonStick() {
   updateD(deaths[4]);
+  roomCount = 0;
 }
 
 function goDeathDragonFist() {
   updateD(deaths[5]);
+  roomCount = 0;
 }
 
 function goDeathDragonLost() {
   updateD(deaths[6]);
+  roomCount = 0;
 }
 
 function countingRooms() { 
