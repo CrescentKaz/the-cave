@@ -584,11 +584,14 @@ function toggleInven() {
 //  for (let i = 0; i < inven.length + 1; i++) {
 //    text.innerText += (inven[i]["name"].toString() + " ");
 //  }
-  const iterator1 = inven[Symbol.iterator]();
-  for (const value of iterator1) {
-    text.innerText += value;
-    text.innerText += " ";
-  }
+
+//  const iterator1 = inven[Symbol.iterator]();
+  //for (const value of iterator1) {
+    //text.innerText += value;
+    //text.innerText += " ";
+  //}
+  const invenString = inven.join(", ");
+  text.innerText += invenString; 
 }
 
 function fightFrog() {
@@ -612,8 +615,8 @@ function fightDragon() {
 }
 
 function goFight() {
-  monsterHealth = monsters[fighting].health;
-  monsterName.innerText = monsters[fighting].name;
+  monsterHealth = monsters[fighting][2];
+  monsterName.innerText = monsters[fighting][0];
   monsterHealthText.innerText = monsterHealth; 
   monsterStats.style.display = "block";
 }
@@ -621,16 +624,16 @@ function goFight() {
 function attack() {
 // Need to implement a way for the player to choose which weapon they use. I'm thinking of adding more buttons that appear as weapons are added to the inven. Until then, currentWeapon will be the 2 slot. 
   let currentWeapon = 2;
-  text.innerText = "The " + monsters[fighting].name + " attacks."; 
-  text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
-  health -= getMonsterAttackValue(monsters[fighting].level);
+  text.innerText = "The " + monsters[fighting][0] + " attacks."; 
+  text.innerText += "You attack it with your " + weapons[currentWeapon][0] + ".";
+  health -= getMonsterAttackValue(monsters[fighting][1]);
   if (isMonsterHit()) {
-    monsterHealth -= weapons[currentWeapons].power + Math.floor(Math.random());
+    monsterHealth -= weapons[currentWeapons][1] + Math.floor(Math.random());
     }
 }
 
 function dodge() {
-  text.innerText = "You dodged the " + monsters[fighting].name + "'s attack.";
+  text.innerText = "You dodged the " + monsters[fighting][0] + "'s attack.";
 }
 
 function restart() {
