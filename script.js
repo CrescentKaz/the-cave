@@ -181,6 +181,13 @@ const locations = [
     text: "You blink as your eyes adjust to the dimly lit room. A loud snoring makes you jump and you notice a large dark colored dragon asleep right next to you. What do you do?",
     picture: "./images/Dragon.PNG"
   },
+  { 
+    name: "restart",
+    room: "Try Again",
+    "button functions": [goLargeCavern, goDeathRunAway, goDeathRunAway, goDeathRunAway],
+    text: "Before you looms the dark, decrepit crags of Mt Feir, so named for the fear it instills upon all who tred it\'s trecherous terrain. You are a knight tasked by the King and Queen to slay the dragon inhabiting Mt Feir and freeing the people of it\'s villany. The large gaping maw of the mountain lies to the North of you.",
+    picture: "./images/The_Cave.PNG"
+  },
 ]; 
 
 const miscLocals = [
@@ -361,23 +368,25 @@ function goUndergroundRiver() {
   if ("Stick" in inven) {
     alert("cannot aquire stick, already have that");
   } else {
-    inven.push("Stick")};
+    inven.unshift("Stick")};
     alert("aquired stick");
 }
 
 function goOldCampsite() {
   updateL(locations[5]);
   countingRooms();
-  if ("Spellbook" in inven) {
-    alert("cannot aquire book, already have that");
-  } else {
-    inven.push("Spellbook")};
-    alert("aquired book");
   if ("Sword" in inven) {
     alert("cannot aquire sword, already have that");
   } else {
-    inven.push("Sword")};
+    inven.unshift("Sword");
     alert("aquired sword");
+  }
+  if ("Spellbook" in inven) {
+    alert("cannot aquire book, already have that");
+  } else {
+    inven.push("Spellbook");
+    alert("aquired book");
+  }
 }
 
 function goBatCave() {
@@ -577,7 +586,8 @@ function toggleInven() {
 //  }
   const iterator1 = inven[Symbol.iterator]();
   for (const value of iterator1) {
-    text.innerText += value + " ";
+    text.innerText += value;
+    text.innerText += " ";
   }
 }
 
@@ -609,6 +619,8 @@ function goFight() {
 }
 
 function attack() {
+// Need to implement a way for the player to choose which weapon they use. I'm thinking of adding more buttons that appear as weapons are added to the inven. Until then, currentWeapon will be the 2 slot. 
+  let currentWeapon = 2;
   text.innerText = "The " + monsters[fighting].name + " attacks."; 
   text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
@@ -630,5 +642,5 @@ function restart() {
   let inven = [];
   let roomCount = 0;
   let nothingCount = 0;
-  goEntrance();
+  updateL(Locations[18]);
 }
