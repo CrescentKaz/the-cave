@@ -346,7 +346,7 @@ function goEntrance() {
 function goLargeCavern() {
   updateL(locations[1]);
   countingRooms();
-  if ("Spellbook" in inven) {
+  if (inven.includes("Spellbook")) {
     button2.innerText = "Fly";
     button2.onclick = goHiddenRoom();
   }; 
@@ -365,7 +365,7 @@ function goTunnelOfBio() {
 function goUndergroundRiver() {
   updateL(locations[4]);
   countingRooms();
-  if ("Stick" in inven) {
+  if (inven.includes("Stick")) {
     alert("cannot aquire stick, already have that");
   } else {
     inven.unshift("Stick")};
@@ -375,13 +375,13 @@ function goUndergroundRiver() {
 function goOldCampsite() {
   updateL(locations[5]);
   countingRooms();
-  if ("Sword" in inven) {
+  if (inven.includes("Sword")) {
     alert("cannot aquire sword, already have that");
   } else {
     inven.unshift("Sword");
     alert("aquired sword");
   }
-  if ("Spellbook" in inven) {
+  if (inven.includes("Spellbook")) {
     alert("cannot aquire book, already have that");
   } else {
     inven.push("Spellbook");
@@ -580,7 +580,7 @@ function pick(guess) {
 }
 
 function toggleInven() {
-  text.innerText += "\n Current Inventory is: ";
+  text.innerText += "\n Current Inventory is:\ ";
 //  for (let i = 0; i < inven.length + 1; i++) {
 //    text.innerText += (inven[i]["name"].toString() + " ");
 //  }
@@ -623,13 +623,11 @@ function goFight() {
 
 function attack() {
 // Need to implement a way for the player to choose which weapon they use. I'm thinking of adding more buttons that appear as weapons are added to the inven. Until then, currentWeapon will be the 2 slot. 
-  let currentWeapon = 2;
+  const currentWeapon = 2;
   text.innerText = "The " + monsters[fighting][0] + " attacks."; 
   text.innerText += "You attack it with your " + weapons[currentWeapon][0] + ".";
-  health -= getMonsterAttackValue(monsters[fighting][1]);
-  if (isMonsterHit()) {
-    monsterHealth -= weapons[currentWeapons][1] + Math.floor(Math.random());
-    }
+  health -= monsters[fighting][1];
+  monsterHealth -= weapons[currentWeapons][1] + Math.floor(Math.random());
 }
 
 function dodge() {
