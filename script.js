@@ -14,6 +14,7 @@ const button4 = document.querySelector("#button4");
 const button5 = document.querySelector("#button5");
 const healthText = document.querySelector("#healthText");
 const atkText = document.querySelector("#atkText");
+const monsterHealthText = document.querySelector("#monsterHealthText");
 const text = document.querySelector("#text"); 
 const picture = document.querySelector("#picture");
 const currentRoomText = document.querySelector("#currentRoomText"); 
@@ -627,11 +628,11 @@ function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks."; 
   text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
   health -= monsters[fighting].level;
-  monsterHealth -= weapons[currentWeapons].atk + Math.floor(Math.random());
+  monsterHealth -= weapons[currentWeapon].atk + Math.floor(Math.random());
 }
 
 function dodge() {
-  text.innerText = "You dodged the " + monsters[fighting].name + "\'s attack.";
+  text.innerText = "You dodged the " + monsters[fighting].name + "'s attack.";
 }
 
 function restart() {
