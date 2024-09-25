@@ -643,5 +643,5 @@ function restart() {
   let inven = [];
   let roomCount = 0;
   let nothingCount = 0;
-  updateL(Locations[18]);
+  updateL(locations[18]);
 }
