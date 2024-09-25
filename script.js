@@ -625,14 +625,14 @@ function goFight() {
 function attack() {
 // Need to implement a way for the player to choose which weapon they use. I'm thinking of adding more buttons that appear as weapons are added to the inven. Until then, currentWeapon will be the 2 slot. 
   const currentWeapon = 2;
-  text.innerText = "The " + monsters[fighting].name + " attacks."; 
-  text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
+  text.innerText = `The ${monsters[fighting][0]} attacks.`; 
+  text.innerText += `You attack it with your ${weapons[currentWeapon].name}.`;
   health -= monsters[fighting].level;
   monsterHealth -= weapons[currentWeapon].atk + Math.floor(Math.random());
 }
 
 function dodge() {
-  text.innerText = "You dodged the " + monsters[fighting].name + "'s attack.";
+  text.innerText = `You dodged the ${monsters[fighting].name}'s attack.`;
 }
 
 function restart() {
