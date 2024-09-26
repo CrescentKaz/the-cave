@@ -358,6 +358,7 @@ function goLargeCavern() {
 function goHiddenRoom() {
   countingRooms();
   updateL(locations[2]);
+  alert("you find a hidden room");
 }
 
 function goTunnelOfBio() {
@@ -487,58 +488,47 @@ function goMiniGame() {
 }
 
 function goFightFrog() {
-  roomCount = 0;
   updateM(miscLocals[3]);
 }
 
 function goFightWorm() {
-  roomCount = 0;
   updateM(miscLocals[4]);
 }
 
 function goFightBat() {
-  roomCount = 0;
   updateM(miscLocals[5]);
 }
 
 function goFightDragon() {
-  roomCount = 0;
   updateM(miscLocals[6]);
 }
 
 function goDeathBoneRoom() {
-  roomCount = 0;
   updateD(deaths[0]);
 }
 
 function goDeathRunAway() {
-  roomCount = 0;
   updateD(deaths[1]);
   alert("you died due to running away");
 }
 
 function goDeathTakeTreasure() {
-  roomCount = 0;
   updateD(deaths[2]);
 }
 
 function goDeathMonsterDidIt() {
-  roomCount = 0;
   updateD(deaths[3]);
 }
 
 function goDeathDragonStick() {
-  roomCount = 0;
   updateD(deaths[4]);
 }
 
 function goDeathDragonFist() {
-  roomCount = 0;
   updateD(deaths[5]);
 }
 
 function goDeathDragonLost() {
-  roomCount = 0;
   updateD(deaths[6]);
 }
 
@@ -625,6 +615,7 @@ function goFight() {
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth; 
   monsterStats.style.display = "block";
+  roomCount = 0;
 }
 
 function attack() {
