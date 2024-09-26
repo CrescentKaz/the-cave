@@ -71,7 +71,7 @@ const locations = [
   {
     name: "largeCavern",
     room: "Large Cavern",
-    "button functions": [goUndergroundRiver, goDeadEnd, goTunnelOfBio, goEntrance],
+    "button functions": [goUndergroundRiver, goDeadEnd, goTunnelOfBio, goEntrance, goHiddenRoom],
     text: "You enter a large cavern littered with stalagtites, stalagmites, and columns of various widths. It is dark and dank. The faint scent of muggy decay wafts gently accross the ground. Soft dripping echoes around you as you catch flashes of sunlight reflecting from the falling droplettes.",
     picture: "./images/Large_Cavern.PNG"
   },
@@ -358,7 +358,7 @@ function goLargeCavern() {
   updateL(locations[1]);
   if (inven.includes("Spellbook")) {
     button2.innerText = "Fly";
-    button2.onclick = goHiddenRoom();
+    button2.onclick = locations["button functions"][4];
   }; 
 }
 
