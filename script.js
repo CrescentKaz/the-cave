@@ -621,7 +621,6 @@ function goFight() {
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth; 
   monsterStats.style.display = "block";
-  roomCount = 0;
 }
 
 function attack() {
