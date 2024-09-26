@@ -1,6 +1,6 @@
 let xp = 0;
 let health = 100;
-let gold = 0;
+let gold = 1;
 let currentWeapon = 0;
 let roomCount = 0;
 let nothingCount = 0;
@@ -258,36 +258,43 @@ const miscLocals = [
 const deaths = [
   { 
     name: "boneRoom",
+    "button functions": [restart, restart, restart, restart],
     text: "You slip and slide down a hole onto bones of full 50 men strewn about. Some are broken, others whole, and yet others with many many thin stalagmites piercing straight through. Unfortuneately you land on one of these. It is very painful... You Died. ☠️ Ending 3 of 10 (press any direction to continue)",
     picture: "./images/Death_Bone_Room.PNG"
   },
   {
     name: "runAway",
+    "button functions": [restart, restart, restart, restart],
     text: "You run away from your duties. You are branded a traitor and banished to the shadowlands! Ending 4 of 10 (press any direction to continue)",
     picture: "./images/Death_Run_Away.PNG"
   },
   {
     name: "takeTreasure",
+    "button functions": [restart, restart, restart, restart],
     text: "ENTER TEXT HERE Ending 5 of 10 (press any direction to continue)",
     picture: "./images/Death_Treasure.PNG"
   },
   {
     name: "monsterDidIt",
+    "button functions": [restart, restart, restart, restart],
     text: "You died to a cave monster. How shameful... Ending 6 of 10 (press any direction to continue)",
     picture: "./images/Death_Monster.PNG"
   },
   {
     name: "dragonStick",
+    "button functions": [restart, restart, restart, restart],
     text: "You attempted to beat the dragon with a stick, while he slept. It did not work out for you. Maybe if you had a horse and a lance... Ending 7 of 10 (press any direction to continue)",
     picture: "./images/Death_Dragon_Stick.PNG"
   },
   {
     name: "dragonFist",
+    "button functions": [restart, restart, restart, restart],
     text: "You punched the dragon in his face then bit your lip in pain as your bare knuckles began to ooze blood from the fresh wound. Dragon\'s have ganoid scales on their face so you basically punched a rock covered in sandpaper. The dragon's bose twitches and his eyes fly open, pupils diolated wide. He takes one second to stare at you before eating you whole. You died. Ending 8 of 10 (press any direction to continue)",
     picture: "./images/Death_Dragon_Fist.PNG"
   },
   {
     name: "dragonLost",
+    "button functions": [restart, restart, restart, restart],
     text: "After a long a tiresome struggle, you try and try but can\'t seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it\'s counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don\'t know if your armor can take another blow and don\'t want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. Pain races through your nerves and your eyes lock up at the ceiling. You can\'t move. A roaring waterfall in your ears begins to drown out everything else. Your body crumples to the ground but you can\'t feel it. Can\'t hear it. Soon, you can\'t see the cave ceiling anymore... Ending 9 of 10 (press any direction to continue)",
     picture: "./images/Death_Dragon_Sword.PNG"
   }
@@ -333,10 +340,10 @@ function updateD(deaths) {
   button2.innerText = "☠️";
   button3.innerText = "☠️";
   button4.innerText = "☠️";
-  button1.onclick = restart();
-  button2.onclick = restart();
-  button3.onclick = restart();
-  button4.onclick = restart();
+  button1.onclick = deaths["button functions"][0];
+  button2.onclick = deaths["button functions"][1];
+  button3.onclick = deaths["button functions"][2];
+  button4.onclick = deaths["button functions"][3];
   text.innerText = deaths.text;
   picture.src = deaths.picture;
   currentRoomText.innerText = "You Died";
@@ -452,7 +459,6 @@ function goTreasureHoard() {
 }
 
 function goDragonRoom() {
-  countingRooms();
   updateL(locations[17]);
 }
 
@@ -585,7 +591,7 @@ function pick(guess) {
 }
 
 function toggleInven() {
-  text.innerText += "\n Current Inventory is:\ ";
+  text.innerText += "\n Current Inventory is:\  ";
   const invenString = inven.join(", ");
   text.innerText += invenString; 
 }
@@ -650,7 +656,7 @@ function dodge() {
 function restart() {
   xp = 0;
   health = 100;
-  gold = 0;
+  gold = 1;
   inven = ["Fist"];
   roomCount = 0;
   nothingCount = 0;
