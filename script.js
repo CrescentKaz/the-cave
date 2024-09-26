@@ -1,11 +1,13 @@
 let xp = 0;
 let health = 100;
 let gold = 0;
+let currentWeapon = 0;
+let roomCount = 0;
+let nothingCount = 0;
 let fighting;
 let monsterHealth;
 let inven = ["Fist"];
-let roomCount = 0;
-let nothingCount = 0;
+
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -15,6 +17,9 @@ const button5 = document.querySelector("#button5");
 const healthText = document.querySelector("#healthText");
 const atkText = document.querySelector("#atkText");
 const monsterHealthText = document.querySelector("#monsterHealthText");
+const monsterStats = document.querySelector("#monsterStats");
+const monsterName = document.querySelector("#monsterName");
+const goldText = document.querySelector("#goldText");
 const text = document.querySelector("#text"); 
 const picture = document.querySelector("#picture");
 const currentRoomText = document.querySelector("#currentRoomText"); 
@@ -339,14 +344,11 @@ function updateD(deaths) {
 
 function goEntrance() {
   updateL(locations[0]);
-  let inven = ["Fist"];
-  let roomCount = 0;
-  let nothingCount = 0;
 }
 
 function goLargeCavern() {
-  updateL(locations[1]);
   countingRooms();
+  updateL(locations[1]);
   if (inven.includes("Spellbook")) {
     button2.innerText = "Fly";
     button2.onclick = goHiddenRoom();
@@ -354,28 +356,29 @@ function goLargeCavern() {
 }
 
 function goHiddenRoom() {
-  updateL(locations[2]);
   countingRooms();
+  updateL(locations[2]);
 }
 
 function goTunnelOfBio() {
-  updateL(locations[3]);
   countingRooms();
+  updateL(locations[3]);
 }
 
 function goUndergroundRiver() {
-  updateL(locations[4]);
   countingRooms();
+  updateL(locations[4]);
   if (inven.includes("Stick")) {
     alert("cannot aquire stick, already have that");
   } else {
-    inven.unshift("Stick")};
+    inven.unshift("Stick");
     alert("aquired stick");
+  }
 }
 
 function goOldCampsite() {
-  updateL(locations[5]);
   countingRooms();
+  updateL(locations[5]);
   if (inven.includes("Sword")) {
     alert("cannot aquire sword, already have that");
   } else {
@@ -391,63 +394,65 @@ function goOldCampsite() {
 }
 
 function goBatCave() {
-  updateL(locations[6]);
   countingRooms();
+  updateL(locations[6]);
+
 }
 
 function goOldTracks() {
-  updateL(locations[7]);
   countingRooms();
+  updateL(locations[7]);
+
 }
 
 function goSortaOldTracks() {
-  updateL(locations[8]);
   countingRooms();
+  updateL(locations[8]);
 }
 
 function goBoneRoom() {
-  updateL(locations[9]);
   countingRooms();
+  updateL(locations[9]);
 }
 
 function goOldCarving() {
-  updateL(locations[10]);
   countingRooms();
+  updateL(locations[10]);
 }
 
 function goWeekOldTracks() {
-  updateL(locations[11]);
   countingRooms();
+  updateL(locations[11]);
 }
 
 function goDarkRoom() {
-  updateL(locations[12]);
   countingRooms();
+  updateL(locations[12]);
 }
 
 function goNewerTracks() {
-  updateL(locations[13]);
   countingRooms();
+  updateL(locations[13]);
 }
 
 function goCavePainting() {
-  updateL(locations[14]);
   countingRooms();
+  updateL(locations[14]);
 }
 
 function goFreshTracks() {
-  updateL(locations[15]);
   countingRooms();
+  updateL(locations[15]);
 }
 
 function goTreasureHoard() {
-  updateL(locations[16]);
   countingRooms();
+  updateL(locations[16]);
 }
 
 function goDragonRoom() {
-  updateL(locations[17]);
   countingRooms();
+  updateL(locations[17]);
 }
 
 function goDeadEnd() {
@@ -463,7 +468,7 @@ function goDeadEnd() {
     "Do you ever think about why we're here?",
     "There is no map on this wall."
   ]; 
-  let whichMessage = Math.floor(Math.random()*deadEnd.length)
+  let whichMessage = Math.floor(Math.random()*deadEnd.length);
   let deadEndMessage = deadEnd[whichMessage];
   alert(deadEndMessage);
 }
@@ -477,79 +482,81 @@ function goWinFire() {
 }
 
 function goMiniGame() {
-  updateM(miscLocals[2]);
   roomCount = 0;
+  updateM(miscLocals[2]);
 }
 
 function goFightFrog() {
-  updateM(miscLocals[3]);
   roomCount = 0;
+  updateM(miscLocals[3]);
 }
 
 function goFightWorm() {
-  updateM(miscLocals[4]);
   roomCount = 0;
+  updateM(miscLocals[4]);
 }
 
 function goFightBat() {
-  updateM(miscLocals[5]);
   roomCount = 0;
+  updateM(miscLocals[5]);
 }
 
 function goFightDragon() {
-  updateM(miscLocals[6]);
   roomCount = 0;
+  updateM(miscLocals[6]);
 }
 
 function goDeathBoneRoom() {
-  updateD(deaths[0]);
   roomCount = 0;
+  updateD(deaths[0]);
 }
 
 function goDeathRunAway() {
+  roomCount = 0;
   updateD(deaths[1]);
   alert("you died due to running away");
-  roomCount = 0;
 }
 
 function goDeathTakeTreasure() {
-  updateD(deaths[2]);
   roomCount = 0;
+  updateD(deaths[2]);
 }
 
 function goDeathMonsterDidIt() {
-  updateD(deaths[3]);
   roomCount = 0;
+  updateD(deaths[3]);
 }
 
 function goDeathDragonStick() {
-  updateD(deaths[4]);
   roomCount = 0;
+  updateD(deaths[4]);
 }
 
 function goDeathDragonFist() {
-  updateD(deaths[5]);
   roomCount = 0;
+  updateD(deaths[5]);
 }
 
 function goDeathDragonLost() {
-  updateD(deaths[6]);
   roomCount = 0;
+  updateD(deaths[6]);
 }
 
 function countingRooms() { 
-  if (roomCount > 3) {
+  if (roomCount > 2) {
     const monNum = Math.floor((Math.random()*3)+3)
     updateM(miscLocals[monNum]);
-  };
+  } else {
   roomCount += 1;
+  }
 }
 
 function doNothing() {
-  if (nothingCount > 3) {
+  if (nothingCount > 2) {
     goDeathRunAway();
-  };
+  } else {
    nothingCount += 1;
+  }
 }
 
 function pickOne() {
@@ -575,22 +582,20 @@ function pick(guess) {
   }
   if (numbers.indexOf(guess) !== -1) {
     text.innerText += "Correct! You win 20 imaginary gold!";
+    gold += 20;
+    goldText.innerText = gold;
   } else {
     text.innerText += "Wrong! You feel shame for no real reason!";
+    health -= 2;
+    healthText.innerText = health;
+    if (health < 1) {
+      goDeathTakeTreasure();
+    }
   }
 }
 
 function toggleInven() {
   text.innerText += "\n Current Inventory is:\ ";
-//  for (let i = 0; i < inven.length + 1; i++) {
-//    text.innerText += (inven[i]["name"].toString() + " ");
-//  }
-
-//  const iterator1 = inven[Symbol.iterator]();
-  //for (const value of iterator1) {
-    //text.innerText += value;
-    //text.innerText += " ";
-  //}
   const invenString = inven.join(", ");
   text.innerText += invenString; 
 }
@@ -619,32 +624,47 @@ function goFight() {
   monsterHealth = monsters[fighting].health;
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth; 
-//  monsterStats.style.display = "block";
+  monsterStats.style.display = "block";
 }
 
 function attack() {
 // Need to implement a way for the player to choose which weapon they use. I'm thinking of adding more buttons that appear as weapons are added to the inven. Until then, currentWeapon will be the 2 slot. 
-  //const currentWeapon = 2;
-  //text.innerText = `The ${monsters[fighting][0]} attacks.`; 
-  //text.innerText += `You attack it with your ${weapons[currentWeapon].name}.`;
-  //health -= monsters[fighting].level;
-  //monsterHealth -= weapons[currentWeapon].atk + Math.floor(Math.random());
-  alert("you attack");
+  const currentWeapon = 2;
+  text.innerText = `The ${monsters[fighting].name} attacks.`; 
+  text.innerText += `You attack it with your ${weapons[currentWeapon].name}.`;
+  health -= monsters[fighting].level;
+  healthText.innerText = health;
+  monsterHealth -= weapons[currentWeapon].atk + Math.floor(Math.random());
+  monsterHealthText.innerText = monsterHealth; 
+  if (health < 1) {
+    goDeathMonsterDidIt();
+  } else if (monsterHealth < 1) {
+    if (fighting === 3) {
+      goWinSword();
+    } else {
+      goKilledMonster();
+    }
+  }
+}
+
+function goKilledMonster() {
+  alert("you killed the monster. placing you in ruby tracks");
+  goWeekOldTracks(); 
 }
 
 function dodge() {
-//  text.innerText = `You dodged the ${monsters[fighting].name}'s attack.`;
-  alert("you dodge");
+  text.innerText = `You dodged the ${monsters[fighting].name}\'s attack.`;
 }
 
 function restart() {
-  let xp = 0;
-  let health = 100;
-  let gold = 0;
-  let fighting;
-  let monsterHealth;
-  let inven = [];
-  let roomCount = 0;
-  let nothingCount = 0;
+  xp = 0;
+  health = 100;
+  gold = 0;
+  inven = ["Fist"];
+  roomCount = 0;
+  nothingCount = 0;
+  goldText.innerText = gold;
+  healthText.innerText = health;
+  xpText.innerText = xp;
   updateL(locations[18]);
 }
