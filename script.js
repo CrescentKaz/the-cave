@@ -148,7 +148,7 @@ const locations = [
   {
     name: "darkRoom",
     room: "Dark Room",
-    "button functions": [goDeadEnd, goDeadEnd, goDeadEnd, goWeekOldTracks],
+    "button functions": [goDeadEnd, goDeadEnd, goMiniGame, goWeekOldTracks],
     text: "It is too dark in here to see. To the South you see the hole you just crawled through.",
     picture: "./images/Dark_Room.PNG"
   },
