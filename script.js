@@ -495,14 +495,17 @@ function goMiniGame() {
 
 function goFightFrog() {
   updateM(miscLocals[3]);
+  alert("monster fight triggered");
 }
 
 function goFightWorm() {
   updateM(miscLocals[4]);
+  alert("monster fight triggered");
 }
 
 function goFightBat() {
   updateM(miscLocals[5]);
+  alert("monster fight triggered");
 }
 
 function goFightDragon() {
