@@ -1,4 +1,4 @@
-let xp = 0;
+let atk = 0;
 let health = 100;
 let gold = 1;
 let currentWeapon = 0;
@@ -653,14 +653,14 @@ function dodge() {
 }
 
 function restart() {
-  xp = 0;
   health = 100;
+  atk = 1;
   gold = 1;
   inven = ["Fist"];
   roomCount = 0;
   nothingCount = 0;
-  goldText.innerText = gold;
   healthText.innerText = health;
-  xpText.innerText = xp;
+  atkText.innerText = atk;
+  goldText.innerText = gold;
   updateL(locations[18]);
 }
