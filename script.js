@@ -460,6 +460,13 @@ function goTreasureHoard() {
 
 function goDragonRoom() {
   updateL(locations[17]);
+  if (LEAVE) {
+    "button functions": [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard]
+  } else if(FIGHT) {
+    SOMETHING
+  } else if (SPELL) {
+    SOMETHING
+  };
 }
 
 function goDeadEnd() {
