@@ -180,13 +180,6 @@ const locations = [
     text: "Red, green, blue, purple, yellow, and orange lights raidiate from all kinds of gems. Gold coins, ingots, and bars overflow from giant chalises and chests. Strings of pearls hang from stalagtites. Shimmering silks swath ornate silver-wraught forms. Sapphires litter the floor like a river and a small stream of rubies and garnets seem to pour out of a pile of emeralds like lava over a lush mountainside. The entire room is a walk-through-able art piece with a path going from East to North.",
     picture: "./images/Treasure_Hoard.PNG"
   },
-  {
-    name: "dragonRoom",
-    room: "Dragon Room",
-    "button functions": [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard],
-    text: "You blink as your eyes adjust to the dimly lit room. A loud snoring makes you jump and you notice a large dark colored dragon asleep right next to you. What do you do?",
-    picture: "./images/Dragon.PNG"
-  },
   { 
     name: "restart",
     room: "Try Again",
@@ -251,6 +244,14 @@ const miscLocals = [
     "button text": ["A", "B", "C", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "The dragon has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
+    picture: "./images/Dragon.PNG"
+  },
+  {
+    name: "dragonRoom",
+    room: "Dragon Room",
+    "button text": ["Leave", "Fight", "Spell", " "],
+    "button functions": [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard],
+    text: "You blink as your eyes adjust to the dimly lit room. A loud snoring makes you jump and you notice a large dark colored dragon asleep right next to you. What do you do?",
     picture: "./images/Dragon.PNG"
   },
 ];
@@ -459,14 +460,28 @@ function goTreasureHoard() {
 }
 
 function goDragonRoom() {
-  updateL(locations[17]);
-  if (LEAVE) {
-    "button functions": [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard]
+  updateM(miscLocals[7]);
+/*  if (LEAVE) {
+    locations[17]["button functions"] = [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard];
   } else if(FIGHT) {
-    SOMETHING
+    button1.innerText = "Sword";
+    button2.innerText = "Stick";
+    button3.innerText = "Fist";
+    button4.innerText = "Dodge";
+    locations[17]["button functions"] = [goWinSword, goDeathDragonStick, goDeathDragonFist, dodge];
+    text.innerText = "Choose. Your. Weapon!";
   } else if (SPELL) {
-    SOMETHING
-  };
+    button1.innerText = "Fly";
+    button2.innerText = "Light";
+    button3.innerText = "Fire";
+    button4.innerText = "Stand";
+    locations[17]["button functions"] = [, , goWinFire, doNothing];
+    text.innerText = "You ready your new spellbook and pick a spell to cast.";
+  } else {
+    text.innerText += "You stand there, staring at the sleeping dragon.";
+    doNothing();
+  }; 
+*/
 }
 
 function goDeadEnd() {
@@ -672,5 +687,5 @@ function restart() {
   healthText.innerText = health;
   atkText.innerText = atk;
   goldText.innerText = gold;
-  updateL(locations[18]);
+  updateL(locations[17]);
 }
