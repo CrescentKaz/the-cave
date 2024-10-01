@@ -1,3 +1,5 @@
+// Need to make the dragon fight interactive. Currently, it's a static; if choose sword = win, etc.
+
 let atk = 0;
 let health = 100;
 let gold = 1;
@@ -187,6 +189,13 @@ const locations = [
     text: "Before you looms the dark, decrepit crags of Mt Feir, so named for the fear it instills upon all who tred it\'s trecherous terrain. You are a knight tasked by the King and Queen to slay the dragon inhabiting Mt Feir and freeing the people of it\'s villany. The large gaping maw of the mountain lies to the North of you.",
     picture: "./images/The_Cave.PNG"
   },
+  {
+    name: "dragonRoom",
+    room: "Dragon Room",
+    "button functions": [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard],
+    text: "You sneak around the sleeping dragon. Behind you is it\'s treasure hoard. To either side are what kinda look like dark holes? It\'s hard to see in here.",
+    picture: "./images/Dragon.PNG"
+  },
 ]; 
 
 const miscLocals = [
@@ -243,15 +252,31 @@ const miscLocals = [
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
-    text: "The dragon has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
+    text: "You picked a fight with the dragon! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
     picture: "./images/Dragon.PNG"
   },
   {
     name: "dragonRoom",
     room: "Dragon Room",
     "button text": ["Leave", "Fight", "Spell", " "],
-    "button functions": [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard],
+    "button functions": [goDragonRoomLeave, goDragonRoomFight, goDragonRoomSpell, doNothing],
     text: "You blink as your eyes adjust to the dimly lit room. A loud snoring makes you jump and you notice a large dark colored dragon asleep right next to you. What do you do?",
+    picture: "./images/Dragon.PNG"
+  },
+  {
+    name: "dragonRoomFight",
+    room: "Dragon Room",
+    "button text": ["Sword", "Stick", "Fist", " "],
+    "button functions": [goWinSword, goDeathDragonStick, goDeathDragonFist, doNothing],
+    text: "Choose. Your. Weapon!",
+    picture: "./images/Dragon.PNG"
+  },
+  {
+    name: "dragonRoomSpell",
+    room: "Dragon Room",
+    "button text": ["Fly", "Light", "Fire", " "],
+    "button functions": [goDeadEnd, , goWinFire, doNothing],
+    text: "You ready your new spellbook and pick a spell to cast.",
     picture: "./images/Dragon.PNG"
   },
 ];
@@ -298,7 +323,13 @@ const deaths = [
     "button functions": [restart, restart, restart, restart],
     text: "After a long a tiresome struggle, you try and try but can\'t seem to hit the thing! The dragon shifts its shape as easily as water flows downhill, causing you to miss repeatedly. You manage to strike it with one solid good thrust only to find your sword now logged between two scales. You kick the hilt, causing some twisted damage. The dragon howls in pain and anger, then begins it\'s counterattack. It lunges at you, teeth barely missing your shoulder. He steps forward and lunges again. This time you roll backwards to avoid it. You don\'t know if your armor can take another blow and don\'t want to risk finding out. The dragon shifts into a large serpent and strikes you fast and true on your exposed cheek. Pain races through your nerves and your eyes lock up at the ceiling. You can\'t move. A roaring waterfall in your ears begins to drown out everything else. Your body crumples to the ground but you can\'t feel it. Can\'t hear it. Soon, you can\'t see the cave ceiling anymore... Ending 9 of 10 (press any direction to continue)",
     picture: "./images/Death_Dragon_Sword.PNG"
-  }
+  },
+  {
+    name: "dragonLight",
+    "button functions": [restart, restart, restart, restart],
+    text: "You take a deep breath than cast the spell. As the words leave your lips you finally realize this might not have been the best idea. The dragon's eyelid flies open and you stare in abject horror as it's pupil dialates a mere second before landing its gaze on you. CHOMP! You get eaten whole for disturbing it's rest. Ending 10 of 10 (press any direction to continue)",
+    picture: "./images/No_Image.PNG"
+  },
 ];
 
 // initialize buttons
@@ -461,27 +492,18 @@ function goTreasureHoard() {
 
 function goDragonRoom() {
   updateM(miscLocals[7]);
-/*  if (LEAVE) {
-    locations[17]["button functions"] = [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard];
-  } else if(FIGHT) {
-    button1.innerText = "Sword";
-    button2.innerText = "Stick";
-    button3.innerText = "Fist";
-    button4.innerText = "Dodge";
-    locations[17]["button functions"] = [goWinSword, goDeathDragonStick, goDeathDragonFist, dodge];
-    text.innerText = "Choose. Your. Weapon!";
-  } else if (SPELL) {
-    button1.innerText = "Fly";
-    button2.innerText = "Light";
-    button3.innerText = "Fire";
-    button4.innerText = "Stand";
-    locations[17]["button functions"] = [, , goWinFire, doNothing];
-    text.innerText = "You ready your new spellbook and pick a spell to cast.";
-  } else {
-    text.innerText += "You stand there, staring at the sleeping dragon.";
-    doNothing();
-  }; 
-*/
+}
+
+function goDragonRoomLeave() {
+  updateL(locations[18]); 
+}
+
+function goDragonRoomFight() {
+  updateM(miscLocals[8]);
+}
+
+function goDragonRoomSpell() {
+  updateM(miscLocals[9]);
 }
 
 function goDeadEnd() {
@@ -532,6 +554,7 @@ function goFightBat() {
 
 function goFightDragon() {
   updateM(miscLocals[6]);
+  alert("dragon fight triggered");
 }
 
 function goDeathBoneRoom() {
