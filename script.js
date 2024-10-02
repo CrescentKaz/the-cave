@@ -9,6 +9,7 @@ let nothingCount = 0;
 let fighting;
 let monsterHealth;
 let inven = ["Fist"];
+let cast = [];
 
 
 const button1 = document.querySelector("#button1");
@@ -403,6 +404,14 @@ function goHiddenRoom() {
 function goTunnelOfBio() {
   countingRooms();
   updateL(locations[3]);
+  if (cast.includes("Light")) {
+    alert("cannot learn light, already know that");
+  } else if (inven.includes("Spellbook") {
+    cast.push("Light");
+    alert("learned light");
+  } else {
+    alert("error. Dev needs to hunt bugs for Light spell");
+  }
 }
 
 function goUndergroundRiver() {
