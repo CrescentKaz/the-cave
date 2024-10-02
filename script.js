@@ -237,7 +237,7 @@ const miscLocals = [
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
-    text: "A worm has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
+    text: "A worm has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
     picture: "./images/Worm.PNG"
   },
   {
@@ -245,7 +245,7 @@ const miscLocals = [
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
-    text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
+    text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
     picture: "./images/Bat.PNG"
   },
   {
@@ -253,7 +253,7 @@ const miscLocals = [
     room: "Fight!",
     "button text": ["A", "B", "C", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
-    text: "You picked a fight with the dragon! What do you do? (A - attack, B - dodge, C - flee, D - ?)",
+    text: "You picked a fight with the dragon! What do you do? (A - attack, B - dodge, C - flee)",
     picture: "./images/Dragon.PNG"
   },
   {
@@ -268,7 +268,7 @@ const miscLocals = [
     name: "dragonRoomFight",
     room: "Dragon Room",
     "button text": ["Sword", "Stick", "Fist", " "],
-    "button functions": [goWinSword, goDeathDragonStick, goDeathDragonFist, doNothing],
+    "button functions": [goFightDragonSw, goFightDragonSt, goFightDragonFi, doNothing],
     text: "Choose. Your. Weapon!",
     picture: "./images/Dragon.PNG"
   },
@@ -276,7 +276,7 @@ const miscLocals = [
     name: "dragonRoomSpell",
     room: "Dragon Room",
     "button text": ["Fly", "Light", "Fire", " "],
-    "button functions": [goDeadEnd, , goWinFire, doNothing],
+    "button functions": [goDeadEnd, goDeathDragonLight, goWinFire, doNothing],
     text: "You ready your new spellbook and pick a spell to cast.",
     picture: "./images/Dragon.PNG"
   },
@@ -410,7 +410,7 @@ function goTunnelOfBio() {
     cast.push("Light");
     alert("learned light");
   } else {
-    alert("error. Dev needs to hunt bugs for Light spell");
+    alert("cannot learn spell without a book");
   }
 }
 
@@ -445,7 +445,14 @@ function goOldCampsite() {
 function goBatCave() {
   countingRooms();
   updateL(locations[6]);
-
+  if (cast.includes("Fire")) {
+    alert("cannot learn fire, already know that");
+  } else if (inven.includes("Spellbook")) {
+    cast.push("Fire");
+    alert("learned fire");
+  } else {
+    alert("cannot learn spell without a book");
+  }
 }
 
 function goOldTracks() {
@@ -477,6 +484,14 @@ function goWeekOldTracks() {
 function goDarkRoom() {
   countingRooms();
   updateL(locations[12]);
+  if (cast.includes("Fly")) {
+    alert("cannot learn fly, already know that");
+  } else if (inven.includes("Spellbook")) {
+    cast.push("Fly");
+    alert("learned fly");
+  } else {
+    alert("cannot learn spell without a book");
+  }
 }
 
 function goNewerTracks() {
@@ -546,24 +561,22 @@ function goMiniGame() {
   updateM(miscLocals[2]);
 }
 
-function goFightFrog() {
-  updateM(miscLocals[3]);
-  alert("monster fight triggered");
+function goFightDragonSw() {
+  alert("dragon fight triggered with sword");
+  const currentWeapon = 2;
+  fightDragon();
 }
 
-function goFightWorm() {
-  updateM(miscLocals[4]);
-  alert("monster fight triggered");
+function goFightDragonSt() {
+  alert("dragon fight triggers with stick");
+  const currentWeapon = 1;
+  fightDragon();
 }
 
-function goFightBat() {
-  updateM(miscLocals[5]);
-  alert("monster fight triggered");
-}
-
-function goFightDragon() {
-  updateM(miscLocals[6]);
-  alert("dragon fight triggered");
+function goFightDragonFi() {
+  alert("dragon fight triggered with fist");
+  const currentWeapon = 0;
+  fightDragon();
 }
 
 function goDeathBoneRoom() {
@@ -595,6 +608,10 @@ function goDeathDragonLost() {
   updateD(deaths[6]);
 }
 
+function goDeathDragonLight() {
+  updateD(deaths[7]);
+}
+
 function countingRooms() { 
   if (roomCount > 2) {
     const monNum = Math.floor((Math.random()*3)+3)
@@ -613,15 +630,18 @@ function doNothing() {
 }
 
 function pickOne() {
-  pick(Math.floor(Math.random()*11));
+//  pick(Math.floor(Math.random()*11));
+  pick(1);
 }
 
 function pickTwo() {
-  pick([Math.floor(Math.random()*11), Math.floor(Math.random()*11)]);
+//  pick([Math.floor(Math.random()*11), Math.floor(Math.random()*11)]);
+  pick(2);
 }
 
 function pickThree() {
-  pick([Math.floor(Math.random()*11), Math.floor(Math.random()*11), Math.floor(Math.random()*11)]);
+//  pick([Math.floor(Math.random()*11), Math.floor(Math.random()*11), Math.floor(Math.random()*11)]);
+  pick(3);
 }
 
 function pick(guess) {
@@ -648,9 +668,14 @@ function pick(guess) {
 }
 
 function toggleInven() {
-  text.innerText += "\n Current Inventory is:\  ";
+  text.innerText += "\n Current Inventory is:\s";
   const invenString = inven.join(", ");
   text.innerText += invenString; 
+  if (inven.includes("Spellbook")) {
+    text.innerText += "\n Spells learned:\s";
+    const castString = cast.join(", ");
+    text.innerText += castString;
+  }
 }
 
 function fightFrog() {
@@ -681,8 +706,15 @@ function goFight() {
 }
 
 function attack() {
-// Need to implement a way for the player to choose which weapon they use. I'm thinking of adding more buttons that appear as weapons are added to the inven. Until then, currentWeapon will be the 2 slot. 
-  const currentWeapon = 2;
+  if (fighting !== 3) {
+    if (inven.includes("Sword")) {
+      const currentWeapon = 2;
+    } else if (inven.includes("Stick")) {
+      const currentWeapon = 1;
+    } else {
+      const currentWeapon = 0;
+    }
+  }
   text.innerText = `The ${monsters[fighting].name} attacks.`; 
   text.innerText += `You attack it with your ${weapons[currentWeapon].name}.`;
   health -= monsters[fighting].level;
@@ -714,6 +746,7 @@ function restart() {
   atk = 1;
   gold = 1;
   inven = ["Fist"];
+  cast = [];
   roomCount = 0;
   nothingCount = 0;
   healthText.innerText = health;
