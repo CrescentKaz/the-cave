@@ -406,7 +406,7 @@ function goTunnelOfBio() {
   updateL(locations[3]);
   if (cast.includes("Light")) {
     alert("cannot learn light, already know that");
-  } else if (inven.includes("Spellbook") {
+  } else if (inven.includes("Spellbook")) {
     cast.push("Light");
     alert("learned light");
   } else {
