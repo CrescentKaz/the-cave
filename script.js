@@ -33,7 +33,6 @@ const weapons = [
   {name: "sword", atk: 20}
 ];
 
-// still need to add spells to location functions
 const spells = [
   {name: "fire"},
   {name: "fly"},
@@ -389,7 +388,7 @@ function goEntrance() {
 function goLargeCavern() {
   countingRooms();
   updateL(locations[1]);
-  if (inven.includes("Spellbook")) {
+  if (cast.includes("Fly")) {
     button2.innerText = "Fly";
     button2.onclick = locations[1]["button functions"][4];
   }; 
@@ -398,19 +397,15 @@ function goLargeCavern() {
 function goHiddenRoom() {
   countingRooms();
   updateL(locations[2]);
-  alert("you find a hidden room");
 }
 
 function goTunnelOfBio() {
   countingRooms();
   updateL(locations[3]);
   if (cast.includes("Light")) {
-    alert("cannot learn light, already know that");
   } else if (inven.includes("Spellbook")) {
     cast.push("Light");
     alert("learned light");
-  } else {
-    alert("cannot learn spell without a book");
   }
 }
 
@@ -418,10 +413,8 @@ function goUndergroundRiver() {
   countingRooms();
   updateL(locations[4]);
   if (inven.includes("Stick")) {
-    alert("cannot aquire stick, already have that");
   } else {
     inven.unshift("Stick");
-    alert("aquired stick");
   }
 }
 
@@ -429,16 +422,12 @@ function goOldCampsite() {
   countingRooms();
   updateL(locations[5]);
   if (inven.includes("Sword")) {
-    alert("cannot aquire sword, already have that");
   } else {
     inven.unshift("Sword");
-    alert("aquired sword");
   }
   if (inven.includes("Spellbook")) {
-    alert("cannot aquire book, already have that");
   } else {
     inven.push("Spellbook");
-    alert("aquired book");
   }
 }
 
@@ -446,12 +435,8 @@ function goBatCave() {
   countingRooms();
   updateL(locations[6]);
   if (cast.includes("Fire")) {
-    alert("cannot learn fire, already know that");
   } else if (inven.includes("Spellbook")) {
     cast.push("Fire");
-    alert("learned fire");
-  } else {
-    alert("cannot learn spell without a book");
   }
 }
 
@@ -485,12 +470,8 @@ function goDarkRoom() {
   countingRooms();
   updateL(locations[12]);
   if (cast.includes("Fly")) {
-    alert("cannot learn fly, already know that");
   } else if (inven.includes("Spellbook")) {
     cast.push("Fly");
-    alert("learned fly");
-  } else {
-    alert("cannot learn spell without a book");
   }
 }
 
@@ -585,7 +566,6 @@ function goDeathBoneRoom() {
 
 function goDeathRunAway() {
   updateD(deaths[1]);
-  alert("you died due to running away");
 }
 
 function goDeathTakeTreasure() {
@@ -668,11 +648,11 @@ function pick(guess) {
 }
 
 function toggleInven() {
-  text.innerText += "\n Current Inventory is:\s";
+  text.innerText += "\n Current Inventory:";
   const invenString = inven.join(", ");
   text.innerText += invenString; 
   if (inven.includes("Spellbook")) {
-    text.innerText += "\n Spells learned:\s";
+    text.innerText += "\n Spells learned:";
     const castString = cast.join(", ");
     text.innerText += castString;
   }
@@ -722,7 +702,17 @@ function attack() {
   monsterHealth -= weapons[currentWeapon].atk + Math.floor(Math.random());
   monsterHealthText.innerText = monsterHealth; 
   if (health < 1) {
-    goDeathMonsterDidIt();
+    if (fighting === 3) {
+      if (currentWeapon === 0) {
+        goDeathDragonFist();
+      } else if (currentWeapon === 1) {
+        goDeathDragonStick();
+      } else {
+        goDeathDragonLost();
+      }
+    } else {
+      goDeathMonsterDidIt();
+    }
   } else if (monsterHealth < 1) {
     if (fighting === 3) {
       goWinSword();
