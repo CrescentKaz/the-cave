@@ -390,7 +390,7 @@ function goLargeCavern() {
   updateL(locations[1]);
   if (inven.includes("Spellbook")) {
     button2.innerText = "Fly";
-    button2.onclick = locations["button functions"][4];
+    button2.onclick = locations[1]["button functions"][4];
   }; 
 }
 
