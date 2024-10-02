@@ -686,7 +686,7 @@ function goFight() {
 }
 
 function attack() {
-  if (fighting !== 3) {
+  if (fighting !=== 3) {
     if (inven.includes("Sword")) {
       const currentWeapon = 2;
     } else if (inven.includes("Stick")) {
@@ -724,6 +724,7 @@ function attack() {
 
 function goKilledMonster() {
   alert("you killed the monster. placing you in ruby tracks");
+  atk += fighting+1;
   goWeekOldTracks(); 
 }
 
