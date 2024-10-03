@@ -771,5 +771,5 @@ function restart() {
     "Can you collect all three spells?"
   ]; 
   let whichTip = Math.floor(Math.random()*someTips.length);
-  text.innerText += someTips[whichTip];
+  text.innerText += "\n \n" + someTips[whichTip];
 }
