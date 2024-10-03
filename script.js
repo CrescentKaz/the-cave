@@ -87,7 +87,7 @@ const locations = [
   {
     name: "tunnelOfBio",
     room: "Tunnel of Bioluminescence",
-    "button functions": [goDeadEnd, goLargeCavern, goDeadEnd, goDeadEnd],
+    "button functions": [goDeadEnd, goLargeCavern, goDeadEnd, goDeadEnd, goDragonRoom],
     text: "The tunnel literally glows as biolumenencent algae and cave crawlers line the walls and ceiling. They\'re mostly teal with some flat pinks and neon yellows. To the East is the large carvern. Above is a dim golden light. If only there was a way to get up there...",
     picture: "./images/Tunnel_of_Bio.PNG"
   },
@@ -129,7 +129,7 @@ const locations = [
   {
     name: "boneRoom",
     room: "Bone Room",
-    "button functions": [goDeadEnd, goSortaOldTracks, goDeadEnd, goDeadEnd],
+    "button functions": [goDeadEnd, goSortaOldTracks, goDeadEnd, goDeadEnd, goDragonRoom],
     text: "Bones of full 50 men lie strewn about. Some are broken, others whole, and yet others with many many needle-thin stalagtites poking straight through. You think it might be best to go back the way you came.",
     picture: "./images/Bone_Room.PNG"
   },
@@ -150,7 +150,7 @@ const locations = [
   {
     name: "darkRoom",
     room: "Dark Room",
-    "button functions": [goDeadEnd, goDeadEnd, goMiniGame, goWeekOldTracks],
+    "button functions": [goDeadEnd, goDeadEnd, goDeadEnd, goWeekOldTracks, goMiniGame],
     text: "It is too dark in here to see. To the South you see the hole you just crawled through.",
     picture: "./images/Dark_Room.PNG"
   },
@@ -190,7 +190,7 @@ const locations = [
     picture: "./images/The_Cave.PNG"
   },
   {
-    name: "dragonRoom",
+    name: "dragonRoomLeave",
     room: "Dragon Room",
     "button functions": [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard],
     text: "You sneak around the sleeping dragon. Behind you is it\'s treasure hoard. To either side are what kinda look like dark holes? It\'s hard to see in here.",
@@ -407,6 +407,10 @@ function goTunnelOfBio() {
     cast.push("Light");
     alert("learned light");
   }
+  if (cast.includes("Fly")) {
+    button3.innerText = "Fly";
+    button3.onclick = locations[3]["button functions"][4];
+  }
 }
 
 function goUndergroundRiver() {
@@ -454,6 +458,10 @@ function goSortaOldTracks() {
 function goBoneRoom() {
   countingRooms();
   updateL(locations[9]);
+  if (cast.includes("Fly")) {
+    button3.innerText = "Fly";
+    button3.onclick = locations[9]["button functions"][4];
+  }
 }
 
 function goOldCarving() {
@@ -472,6 +480,10 @@ function goDarkRoom() {
   if (cast.includes("Fly")) {
   } else if (inven.includes("Spellbook")) {
     cast.push("Fly");
+  }
+  if (cast.includes("Light")) {
+    button3.innerText = "Light";
+    button3.onclick = locations[12]["button functions"][4];
   }
 }
 
@@ -607,6 +619,7 @@ function doNothing() {
   } else {
    nothingCount += 1;
   }
+  console.log(nothingCount);
 }
 
 function pickOne() {
@@ -686,7 +699,7 @@ function goFight() {
 }
 
 function attack() {
-  if (fighting !=== 3) {
+  if (fighting !== 3) {
     if (inven.includes("Sword")) {
       const currentWeapon = 2;
     } else if (inven.includes("Stick")) {
@@ -744,4 +757,18 @@ function restart() {
   atkText.innerText = atk;
   goldText.innerText = gold;
   updateL(locations[17]);
+  const someTips = [
+    "Can you find all 8 ways to die?",
+    "Can you find both ways to live?",
+    'Can you find "The Incredibles" reference?',
+    'Can you find the "A Knight\'s Tale" reference?',
+    'Can you find the first "Monty Python\'s Quest for the Holy Grail" reference?',
+    'Can you find the second "Monty Python\'s Quest for the Holy Grail" reference?',
+    "Can you find the Hidden Room?", 
+    "Can you find the Mini Game?",
+    "Can you make it out alive with a hundred gold?",
+    "Can you collect all three spells?"
+  ]; 
+  let whichTip = Math.floor(Math.random()*someTips.length);
+  text.innerText += someTips[whichTip];
 }
