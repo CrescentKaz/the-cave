@@ -764,6 +764,7 @@ function restart() {
     'Can you find the "A Knight\'s Tale" reference?',
     'Can you find the first "Monty Python\'s Quest for the Holy Grail" reference?',
     'Can you find the second "Monty Python\'s Quest for the Holy Grail" reference?',
+    'Can you find the "Yu-gi-oh" reference?',
     "Can you find the Hidden Room?", 
     "Can you find the Mini Game?",
     "Can you make it out alive with a hundred gold?",
