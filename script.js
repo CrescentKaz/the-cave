@@ -554,24 +554,6 @@ function goMiniGame() {
   updateM(miscLocals[2]);
 }
 
-function goFightDragonSw() {
-  alert("dragon fight triggered with sword");
-  const currentWeapon = 2;
-  fightDragon();
-}
-
-function goFightDragonSt() {
-  alert("dragon fight triggers with stick");
-  const currentWeapon = 1;
-  fightDragon();
-}
-
-function goFightDragonFi() {
-  alert("dragon fight triggered with fist");
-  const currentWeapon = 0;
-  fightDragon();
-}
-
 function goDeathBoneRoom() {
   updateD(deaths[0]);
 }
@@ -606,7 +588,7 @@ function goDeathDragonLight() {
 
 function countingRooms() { 
   if (roomCount > 2) {
-    const monNum = Math.floor((Math.random()*3)+3)
+    const monNum = Math.floor((Math.random()*3)+3);
     updateM(miscLocals[monNum]);
   } else {
   roomCount += 1;
@@ -689,6 +671,24 @@ function fightBat() {
 function fightDragon() {
   fighting = 3;
   goFight();
+}
+
+function goFightDragonSw() {
+  alert("dragon fight triggered with sword");
+  const currentWeapon = 2;
+  fightDragon();
+}
+
+function goFightDragonSt() {
+  alert("dragon fight triggers with stick");
+  const currentWeapon = 1;
+  fightDragon();
+}
+
+function goFightDragonFi() {
+  alert("dragon fight triggered with fist");
+  const currentWeapon = 0;
+  fightDragon();
 }
 
 function goFight() {
