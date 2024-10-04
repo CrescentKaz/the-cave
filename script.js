@@ -601,22 +601,20 @@ function goDeathDragonLight() {
 }
 
 function countingRooms() { 
+  roomCount += 1;
   if (roomCount > 2) {
 //    const monNum = Math.floor((Math.random()*3)+3);
     updateM(miscLocals[Math.floor((Math.random()*3)+3)]);
-  } else {
-  roomCount += 1;
   }
-  console.log(roomCount);
+  console.log("room count =" + roomCount);
 }
 
 function doNothing() {
+  nothingCount += 1;
   if (nothingCount > 2) {
     goDeathRunAway();
-  } else {
-   nothingCount += 1;
   }
-  console.log(nothingCount);
+  console.log("nothing count =" + nothingCount);
 }
 
 function pickOne() {
