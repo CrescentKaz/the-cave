@@ -1,4 +1,3 @@
-// Need to make the dragon fight interactive. Currently, it's a static; if choose sword = win, etc.
 
 let atk = 0;
 let health = 100;
@@ -402,10 +401,10 @@ function goHiddenRoom() {
 function goTunnelOfBio() {
   countingRooms();
   updateL(locations[3]);
-  if (cast.includes("Light")) {
-  } else if (inven.includes("Spellbook")) {
-    cast.push("Light");
-    alert("learned light");
+  if (!cast.includes("Light")) {
+    if (inven.includes("Spellbook")) {
+      cast.push("Light");
+    }
   }
   if (cast.includes("Fly")) {
     button3.innerText = "Fly";
@@ -416,8 +415,7 @@ function goTunnelOfBio() {
 function goUndergroundRiver() {
   countingRooms();
   updateL(locations[4]);
-  if (inven.includes("Stick")) {
-  } else {
+  if (!inven.includes("Stick")) {
     inven.unshift("Stick");
   }
 }
@@ -433,9 +431,10 @@ function goOldCampsite() {
 function goBatCave() {
   countingRooms();
   updateL(locations[6]);
-  if (cast.includes("Fire")) {
-  } else if (inven.includes("Spellbook")) {
-    cast.push("Fire");
+  if (!cast.includes("Fire")) {
+    if (inven.includes("Spellbook")) {
+      cast.push("Fire");
+    }
   }
 }
 
@@ -472,9 +471,10 @@ function goWeekOldTracks() {
 function goDarkRoom() {
   countingRooms();
   updateL(locations[12]);
-  if (cast.includes("Fly")) {
-  } else if (inven.includes("Spellbook")) {
-    cast.push("Fly");
+  if (!cast.includes("Fly")) {
+    if (inven.includes("Spellbook")) {
+      cast.push("Fly");
+    }
   }
   if (cast.includes("Light")) {
     button3.innerText = "Light";
@@ -490,8 +490,7 @@ function goNewerTracks() {
 function goCavePainting() {
   countingRooms();
   updateL(locations[14]);
-  if (inven.includes("Sword")) {
-  } else {
+  if (!inven.includes("Sword")) {
     inven.unshift("Sword");
   }
 }
@@ -535,8 +534,8 @@ function goDeadEnd() {
     "Do you ever think about why we're here?",
     "There is no map on this wall."
   ]; 
-  let whichMessage = Math.floor(Math.random()*deadEnd.length);
-  let deadEndMessage = deadEnd[whichMessage];
+//  let whichMessage = Math.floor(Math.random()*deadEnd.length);
+  let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length)];
   alert(deadEndMessage);
 }
 
@@ -587,11 +586,12 @@ function goDeathDragonLight() {
 
 function countingRooms() { 
   if (roomCount > 2) {
-    const monNum = Math.floor((Math.random()*3)+3);
-    updateM(miscLocals[monNum]);
+//    const monNum = Math.floor((Math.random()*3)+3);
+    updateM(miscLocals[Math.floor((Math.random()*3)+3)]);
   } else {
   roomCount += 1;
   }
+  console.log(roomCount);
 }
 
 function doNothing() {
@@ -620,20 +620,20 @@ function pickThree() {
 
 function pick(guess) {
   let numbers = [];
-  while (numbers.length < 10) {
+  while (numbers.length < 3) {
     numbers.push(Math.floor(Math.random() * 11));
   }
   text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 3; i++) {
     text.innerText += numbers[i] + "\n";
   }
   if (numbers.indexOf(guess) !== -1) {
     text.innerText += "Correct! You win 20 imaginary gold!";
-    gold += 20;
+    gold += Math.floor(Math.random()*21);
     goldText.innerText = gold;
   } else {
     text.innerText += "Wrong! You feel shame for no real reason!";
-    health -= 2;
+    health -= Math.floor(Math.random()*11);
     healthText.innerText = health;
     if (health < 1) {
       goDeathTakeTreasure();
@@ -642,7 +642,7 @@ function pick(guess) {
 }
 
 function toggleInven() {
-  text.innerText += "\n Current Inventory:";
+  text.innerText += "\n\n Current Inventory:";
   const invenString = inven.join(", ");
   text.innerText += invenString; 
   if (inven.includes("Spellbook")) {
@@ -711,7 +711,7 @@ function attack() {
   text.innerText += `You attack it with your ${weapons[currentWeapon][0]}.`;
   health -= monsters[fighting][1];
   healthText.innerText = health;
-  monsterHealth -= weapons[currentWeapon][1] + Math.floor(Math.random());
+  monsterHealth -= weapons[currentWeapon][1] + atk;
   monsterHealthText.innerText = monsterHealth; 
   if (health < 1) {
     if (fighting === 3) {
