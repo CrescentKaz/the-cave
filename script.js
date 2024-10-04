@@ -425,12 +425,7 @@ function goUndergroundRiver() {
 function goOldCampsite() {
   countingRooms();
   updateL(locations[5]);
-  if (inven.includes("Sword")) {
-  } else {
-    inven.unshift("Sword");
-  }
-  if (inven.includes("Spellbook")) {
-  } else {
+  if (!inven.includes("Spellbook")) {
     inven.push("Spellbook");
   }
 }
@@ -495,6 +490,10 @@ function goNewerTracks() {
 function goCavePainting() {
   countingRooms();
   updateL(locations[14]);
+  if (inven.includes("Sword")) {
+  } else {
+    inven.unshift("Sword");
+  }
 }
 
 function goFreshTracks() {
@@ -692,8 +691,8 @@ function goFightDragonFi() {
 }
 
 function goFight() {
-  monsterHealth = monsters[fighting].health;
-  monsterName.innerText = monsters[fighting].name;
+  monsterHealth = monsters[fighting][2];
+  monsterName.innerText = monsters[fighting][0];
   monsterHealthText.innerText = monsterHealth; 
   monsterStats.style.display = "block";
 }
@@ -708,11 +707,11 @@ function attack() {
       const currentWeapon = 0;
     }
   }
-  text.innerText = `The ${monsters[fighting].name} attacks.`; 
-  text.innerText += `You attack it with your ${weapons[currentWeapon].name}.`;
-  health -= monsters[fighting].level;
+  text.innerText = `The ${monsters[fighting][0]} attacks.`; 
+  text.innerText += `You attack it with your ${weapons[currentWeapon][0]}.`;
+  health -= monsters[fighting][1];
   healthText.innerText = health;
-  monsterHealth -= weapons[currentWeapon].atk + Math.floor(Math.random());
+  monsterHealth -= weapons[currentWeapon][1] + Math.floor(Math.random());
   monsterHealthText.innerText = monsterHealth; 
   if (health < 1) {
     if (fighting === 3) {
@@ -742,7 +741,7 @@ function goKilledMonster() {
 }
 
 function dodge() {
-  text.innerText = `You dodged the ${monsters[fighting].name}\'s attack.`;
+  text.innerText = `You dodged the ${monsters[fighting][0]}\'s attack.`;
 }
 
 function restart() {
