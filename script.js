@@ -515,10 +515,26 @@ function goDragonRoomLeave() {
 
 function goDragonRoomFight() {
   updateM(miscLocals[8]);
+  if (!inven.includes("Sword")) {
+    button1.innerText = "";
+    button1.onclick = miscLocals[8]["button functions"][4];
+  }
 }
 
 function goDragonRoomSpell() {
   updateM(miscLocals[9]);
+  if (!cast.includes("Fly")) {
+    button1.innerText = "";
+    button1.onclick = miscLocals[9]["button functions"][4];
+  }
+  if (!cast.includes("Light")) {
+    button2.innerText = "";
+    button2.onclick = miscLocals[9]["button functions"][4];
+  }
+  if (!cast.includes("Fire")) {
+    button3.innerText = "";
+    button3.onclick = miscLocals[9]["button functions"][4];
+  }
 }
 
 function goDeadEnd() {
