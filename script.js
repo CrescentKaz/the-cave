@@ -602,7 +602,7 @@ function goDeathDragonLight() {
 
 function countingRooms() { 
   if (roomCount > 2) {
-    const monNum = Math.floor((Math.random()*3)+3);
+    const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
   }
   roomCount += 1;
