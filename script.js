@@ -604,6 +604,7 @@ function countingRooms() {
   if (roomCount > 2) {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
+    console.log("random fight triggered");
   }
   roomCount += 1;
   console.log("room count =" + roomCount);
@@ -750,7 +751,7 @@ function attack() {
     }
   }
 */
-console.log("you attack the creature");
+  console.log("you attack the creature");
 }
 
 function goKilledMonster() {
