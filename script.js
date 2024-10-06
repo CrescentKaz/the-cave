@@ -714,6 +714,7 @@ function goFight() {
 }
 
 function attack() {
+/*
   if (fighting !== 3) {
     if (inven.includes("Sword")) {
       const currentWeapon = 2;
@@ -748,6 +749,8 @@ function attack() {
       goKilledMonster();
     }
   }
+*/
+console.log("you attack the creature");
 }
 
 function goKilledMonster() {
