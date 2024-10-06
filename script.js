@@ -684,6 +684,7 @@ function fightBat() {
 function fightDragon() {
   fighting = 3;
   goFight();
+  console.log("fightDragon triggered");
 }
 
 function goFightDragonSw() {
@@ -709,6 +710,7 @@ function goFight() {
   monsterName.innerText = monsters[fighting][0];
   monsterHealthText.innerText = monsterHealth; 
   monsterStats.style.display = "block";
+  console.log("goFight triggered");
 }
 
 function attack() {
