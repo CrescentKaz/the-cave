@@ -605,9 +605,10 @@ function countingRooms() {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
     console.log("random fight triggered");
+  } else {
+    roomCount += 1;
+    console.log("room count =" + roomCount);
   }
-  roomCount += 1;
-  console.log("room count =" + roomCount);
 }
 
 function doNothing() {
