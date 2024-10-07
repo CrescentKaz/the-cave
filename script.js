@@ -403,6 +403,7 @@ function goTunnelOfBio() {
   if (!cast.includes("Light")) {
     if (inven.includes("Spellbook")) {
       cast.push("Light");
+      text.innerText += "\n\n You learned the spell, \"Light\". ";
     }
   }
   if (cast.includes("Fly")) {
@@ -416,6 +417,7 @@ function goUndergroundRiver() {
   updateL(locations[4]);
   if (!inven.includes("Stick")) {
     inven.unshift("Stick");
+    text.innerText += "\n\n You picked up a Stick. ";
   }
   countingRooms();
 }
@@ -424,6 +426,7 @@ function goOldCampsite() {
   updateL(locations[5]);
   if (!inven.includes("Spellbook")) {
     inven.push("Spellbook");
+    text.innerText += "\n\n You picked up a Spellbook. ";
   }
   countingRooms();
 }
@@ -434,6 +437,7 @@ function goBatCave() {
   if (!cast.includes("Fire")) {
     if (inven.includes("Spellbook")) {
       cast.push("Fire");
+      text.innerText += "\n\n You learned the spell, \"Fire\". ";
     }
     countingRooms();
   }
@@ -473,6 +477,7 @@ function goDarkRoom() {
   if (!cast.includes("Fly")) {
     if (inven.includes("Spellbook")) {
       cast.push("Fly");
+      text.innerText += "\n\n You learned the spell, \"Fly\". ";
     }
   }
   if (cast.includes("Light")) {
@@ -491,6 +496,7 @@ function goCavePainting() {
   updateL(locations[14]);
   if (!inven.includes("Sword")) {
     inven.unshift("Sword");
+    text.innerText += "\n\n You picked up a Sword. ";
   }
   countingRooms();
 }
