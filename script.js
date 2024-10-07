@@ -760,8 +760,8 @@ function goKilledMonster() {
 }
 
 function dodge() {
-  let dodgeMessage = `You dodged the ${monsters[fighting][0]}` + "'s attack.";
-  text.innerText = dodgeMessage;
+  let dodgeName = monsters[fighting][0];
+  text.innerText = "You dodged the " + dodgeName + "'s attack.";
 }
 
 function restart() {
