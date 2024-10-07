@@ -385,21 +385,20 @@ function goEntrance() {
 }
 
 function goLargeCavern() {
-  countingRooms();
   updateL(locations[1]);
   if (cast.includes("Fly")) {
     button2.innerText = "Fly";
     button2.onclick = locations[1]["button functions"][4];
   }; 
+  countingRooms();
 }
 
 function goHiddenRoom() {
-  countingRooms();
   updateL(locations[2]);
+  countingRooms();
 }
 
 function goTunnelOfBio() {
-  countingRooms();
   updateL(locations[3]);
   if (!cast.includes("Light")) {
     if (inven.includes("Spellbook")) {
@@ -410,66 +409,66 @@ function goTunnelOfBio() {
     button3.innerText = "Fly";
     button3.onclick = locations[3]["button functions"][4];
   }
+  countingRooms();
 }
 
 function goUndergroundRiver() {
-  countingRooms();
   updateL(locations[4]);
   if (!inven.includes("Stick")) {
     inven.unshift("Stick");
   }
+  countingRooms();
 }
 
 function goOldCampsite() {
-  countingRooms();
   updateL(locations[5]);
   if (!inven.includes("Spellbook")) {
     inven.push("Spellbook");
   }
+  countingRooms();
 }
 
 function goBatCave() {
-  countingRooms();
+
   updateL(locations[6]);
   if (!cast.includes("Fire")) {
     if (inven.includes("Spellbook")) {
       cast.push("Fire");
     }
+    countingRooms();
   }
 }
 
 function goOldTracks() {
-  countingRooms();
   updateL(locations[7]);
-
+  countingRooms();
 }
 
 function goSortaOldTracks() {
-  countingRooms();
   updateL(locations[8]);
+  countingRooms();
 }
 
 function goBoneRoom() {
-  countingRooms();
   updateL(locations[9]);
   if (cast.includes("Fly")) {
     button3.innerText = "Fly";
     button3.onclick = locations[9]["button functions"][4];
   }
+  countingRooms();
 }
 
 function goOldCarving() {
-  countingRooms();
   updateL(locations[10]);
+  countingRooms();
 }
 
 function goWeekOldTracks() {
-  countingRooms();
   updateL(locations[11]);
+  countingRooms();
 }
 
 function goDarkRoom() {
-  countingRooms();
   updateL(locations[12]);
   if (!cast.includes("Fly")) {
     if (inven.includes("Spellbook")) {
@@ -480,29 +479,30 @@ function goDarkRoom() {
     button3.innerText = "Light";
     button3.onclick = locations[12]["button functions"][4];
   }
+  countingRooms();
 }
 
 function goNewerTracks() {
-  countingRooms();
   updateL(locations[13]);
+  countingRooms();
 }
 
 function goCavePainting() {
-  countingRooms();
   updateL(locations[14]);
   if (!inven.includes("Sword")) {
     inven.unshift("Sword");
   }
+  countingRooms();
 }
 
 function goFreshTracks() {
-  countingRooms();
   updateL(locations[15]);
+  countingRooms();
 }
 
 function goTreasureHoard() {
-  countingRooms();
   updateL(locations[16]);
+  countingRooms();
 }
 
 function goDragonRoom() {
