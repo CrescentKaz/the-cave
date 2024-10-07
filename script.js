@@ -608,19 +608,20 @@ function goDeathDragonLight() {
 
 function countingRooms() { 
   if (roomCount > 2) {
-    let monNum = Math.floor(Math.random()*3)+3;
-    if (monNum = 3) {
+    const monNum = Math.floor(Math.random()*3)+3;
+    updateM(miscLocals[monNum]);
+    alert("random fight triggered");
+    if (miscLocals[monNum][0] = "fightFrog") {
       fighting = 0;
-    } else if (monNum = 4) {
+    } else if (miscLocals[monNum][0] = "fightWorm") {
       fighting = 1;
     } else {
       fighting = 2;
     }
-    updateM(miscLocals[monNum]);
-    console.log("random fight triggered");
+    goFight();
   } else {
     roomCount += 1;
-    console.log("room count =" + roomCount);
+    alert("room count =" + roomCount);
   }
 }
 
@@ -629,7 +630,7 @@ function doNothing() {
   if (nothingCount > 2) {
     goDeathRunAway();
   }
-  console.log("nothing count =" + nothingCount);
+  alert("nothing count =" + nothingCount);
 }
 
 function pickOne() {
@@ -681,6 +682,7 @@ function toggleInven() {
   }
 }
 
+/*
 function fightFrog() {
   fighting = 0;
   goFight();
@@ -695,6 +697,7 @@ function fightBat() {
   fighting = 2;
   goFight();
 }
+*/
 
 function fightDragon() {
   fighting = 3;
