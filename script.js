@@ -691,19 +691,19 @@ function fightDragon() {
 
 function goFightDragonSw() {
   alert("dragon fight triggered with sword");
-  const currentWeapon = 2;
+  currentWeapon = 2;
   fightDragon();
 }
 
 function goFightDragonSt() {
   alert("dragon fight triggers with stick");
-  const currentWeapon = 1;
+  currentWeapon = 1;
   fightDragon();
 }
 
 function goFightDragonFi() {
   alert("dragon fight triggered with fist");
-  const currentWeapon = 0;
+  currentWeapon = 0;
   fightDragon();
 }
 
@@ -718,11 +718,11 @@ function goFight() {
 function attack() {
   if (fighting !== 3) {
     if (inven.includes("Sword")) {
-      const currentWeapon = 2;
+      currentWeapon = 2;
     } else if (inven.includes("Stick")) {
-      const currentWeapon = 1;
+      currentWeapon = 1;
     } else {
-      const currentWeapon = 0;
+      currentWeapon = 0;
     }
   }
   text.innerText = `The ${monsters[fighting][0]} attacks.`; 
@@ -760,7 +760,7 @@ function goKilledMonster() {
 }
 
 function dodge() {
-  let dodgeMessage = `You dodged the ${monsters[fighting][0]}\'s attack.`;
+  let dodgeMessage = `You dodged the ${monsters[fighting][0]}` + "'s attack.";
   text.innerText = dodgeMessage;
 }
 
