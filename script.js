@@ -611,9 +611,9 @@ function countingRooms() {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
     alert("random fight triggered");
-    if (miscLocals[monNum][0] = "fightFrog") {
+    if (miscLocals[monNum][0].includes("fightFrog")) {
       fighting = 0;
-    } else if (miscLocals[monNum][0] = "fightWorm") {
+    } else if (miscLocals[monNum][0].includes("fightWorm")) {
       fighting = 1;
     } else {
       fighting = 2;
@@ -732,7 +732,7 @@ function goFight() {
 }
 
 function attack() {
-  if (fighting !== 3) {
+  if (fighting != 3) {
     if (inven.includes("Sword")) {
       currentWeapon = 2;
     } else if (inven.includes("Stick")) {
@@ -748,10 +748,10 @@ function attack() {
   monsterHealth -= weapons[currentWeapon][1] + atk;
   monsterHealthText.innerText = monsterHealth; 
   if (health < 1) {
-    if (fighting === 3) {
-      if (currentWeapon === 0) {
+    if (fighting = 3) {
+      if (currentWeapon = 0) {
         goDeathDragonFist();
-      } else if (currentWeapon === 1) {
+      } else if (currentWeapon = 1) {
         goDeathDragonStick();
       } else {
         goDeathDragonLost();
@@ -760,7 +760,7 @@ function attack() {
       goDeathMonsterDidIt();
     }
   } else if (monsterHealth < 1) {
-    if (fighting === 3) {
+    if (fighting = 3) {
       goWinSword();
     } else {
       goKilledMonster();
