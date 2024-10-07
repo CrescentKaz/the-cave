@@ -716,7 +716,6 @@ function goFight() {
 }
 
 function attack() {
-/*
   if (fighting !== 3) {
     if (inven.includes("Sword")) {
       const currentWeapon = 2;
@@ -751,7 +750,6 @@ function attack() {
       goKilledMonster();
     }
   }
-*/
   console.log("you attack the creature");
 }
 
@@ -762,7 +760,8 @@ function goKilledMonster() {
 }
 
 function dodge() {
-  text.innerText = `You dodged the ${monsters[fighting][0]}\'s attack.`;
+  let dodgeMessage = `You dodged the ${monsters[fighting][0]}\'s attack.`;
+  text.innerText = dodgeMessage;
 }
 
 function restart() {
