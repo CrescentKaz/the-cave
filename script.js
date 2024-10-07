@@ -608,7 +608,7 @@ function goDeathDragonLight() {
 
 function countingRooms() { 
   if (roomCount > 2) {
-    const monNum = Math.floor(Math.random()*3)+3;
+    let monNum = Math.floor(Math.random()*3)+3;
     if (monNum = 3) {
       fighting = 0;
     } else if (monNum = 4) {
