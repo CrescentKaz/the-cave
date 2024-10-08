@@ -9,6 +9,7 @@ let fighting;
 let monsterHealth;
 let inven = ["Fist"];
 let cast = [];
+let roomLog = ["Entrance"];
 
 
 const button1 = document.querySelector("#button1");
@@ -356,6 +357,7 @@ function updateL(locations) {
   text.innerText = locations.text;
   picture.src = locations.picture;
   currentRoomText.innerText = locations.room;
+  roomLog.push(locations.room);
 }
 
 function updateM(miscLocals) {
@@ -370,6 +372,7 @@ function updateM(miscLocals) {
   text.innerText = miscLocals.text;
   picture.src = miscLocals.picture;
   currentRoomText.innerText = miscLocals.room;
+  roomLog.push(miscLocals.room);
 }
 
 function updateD(deaths) {
@@ -384,6 +387,7 @@ function updateD(deaths) {
   text.innerText = deaths.text;
   picture.src = deaths.picture;
   currentRoomText.innerText = "You Died";
+  text.innerText += roomLog;
 }
 
 function goEntrance() {
