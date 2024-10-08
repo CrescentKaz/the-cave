@@ -727,8 +727,8 @@ function goFightDragonFi() {
 }
 
 function goFight() {
-  monsterHealth = monsters[fighting][2];
-  monsterName.innerText = monsters[fighting][0];
+  monsterHealth = monsters[fighting].health;
+  monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth; 
   monsterStats.style.display = "block";
   console.log("goFight triggered");
@@ -744,11 +744,11 @@ function attack() {
       currentWeapon = 0;
     }
   }
-  text.innerText = "The " + monsters[fighting][0] + " attacks."; 
+  text.innerText = "The " + monsters[fighting].name + " attacks."; 
   text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
-  health -= monsters[fighting][1];
+  health -= monsters[fighting].level;
   healthText.innerText = health;
-  monsterHealth -= weapons[currentWeapon][1] + atk;
+  monsterHealth -= weapons[currentWeapon].atk + atk;
   monsterHealthText.innerText = monsterHealth; 
   if (health < 1) {
     if (fighting = 3) {
@@ -779,8 +779,7 @@ function goKilledMonster() {
 }
 
 function dodge() {
-  let dodgeName = monsters[fighting][0];
-  text.innerText = "You dodged the " + dodgeName + "'s attack.";
+  text.innerText = "You dodged the " + monsters[fighting].name + "'s attack.";
 }
 
 function restart() {
@@ -809,6 +808,6 @@ function restart() {
     "Can you make it out alive with a hundred gold?",
     "Can you collect all three spells?"
   ]; 
-  let whichTip = Math.floor(Math.random()*someTips.length);
+  let whichTip = Math.floor(Math.random()*someTips.length + 1);
   text.innerText += "\n \n" + someTips[whichTip];
 }
