@@ -32,11 +32,13 @@ const weapons = [
   {name: "sword", atk: 20}
 ];
 
+/*
 const spells = [
   {name: "fire"},
   {name: "fly"},
   {name: "light"}
 ];
+*/
 
 const monsters = [
   {
@@ -611,9 +613,10 @@ function countingRooms() {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
     alert("random fight triggered");
-    if (miscLocals[monNum][0].includes("fightFrog")) {
+    let mon = miscLocals[monNum][0]
+    if (mon = "fightFrog") {
       fighting = 0;
-    } else if (miscLocals[monNum][0].includes("fightWorm")) {
+    } else if (mon = "fightWorm") {
       fighting = 1;
     } else {
       fighting = 2;
