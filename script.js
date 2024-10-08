@@ -660,7 +660,7 @@ function pick(guess) {
   for (let i = 0; i < 3; i++) {
     text.innerText += numbers[i] + "\n";
   }
-  if (numbers.indexOf(guess) !== -1) {
+  if (numbers.indexOf(guess) != -1) {
     text.innerText += "Correct! You win 20 imaginary gold!";
     gold += Math.floor(Math.random()*21);
     goldText.innerText = gold;
@@ -744,8 +744,8 @@ function attack() {
       currentWeapon = 0;
     }
   }
-  text.innerText = `The ${monsters[fighting][0]} attacks.`; 
-  text.innerText += `You attack it with your ${weapons[currentWeapon][0]}.`;
+  text.innerText = "The " + monsters[fighting][0] + " attacks."; 
+  text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
   health -= monsters[fighting][1];
   healthText.innerText = health;
   monsterHealth -= weapons[currentWeapon][1] + atk;
