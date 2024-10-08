@@ -231,7 +231,7 @@ const miscLocals = [
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "A frog has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
     picture: "./images/Frog.PNG",
-    fighting: 0
+    fightNum: 0
   },
   {
     name: "fightWorm",
@@ -240,7 +240,7 @@ const miscLocals = [
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "A worm has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
     picture: "./images/Worm.PNG",
-    fighting: 1
+    fightNum: 1
   },
   {
     name: "fightBat",
@@ -249,7 +249,7 @@ const miscLocals = [
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
     picture: "./images/Bat.PNG",
-    fighting: 2
+    fightNum: 2
   },
   {
     name: "fightDragon",
@@ -258,7 +258,7 @@ const miscLocals = [
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "You picked a fight with the dragon! What do you do? (A - attack, B - dodge, C - flee)",
     picture: "./images/Dragon.PNG",
-    fighting: 3
+    fightNum: 3
   },
   {
     name: "dragonRoom",
@@ -616,7 +616,7 @@ function countingRooms() {
   if (roomCount > 2) {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
-    fighting = miscLocals[monNum].fighting;
+    fighting = miscLocals[monNum].fightNum;
     alert("fighting is " + fighting);
     goFight();
   } else {
