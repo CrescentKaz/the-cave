@@ -230,7 +230,8 @@ const miscLocals = [
     "button text": ["A", "B", "C", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "A frog has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
-    picture: "./images/Frog.PNG"
+    picture: "./images/Frog.PNG",
+    fighting: 0
   },
   {
     name: "fightWorm",
@@ -238,7 +239,8 @@ const miscLocals = [
     "button text": ["A", "B", "C", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "A worm has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
-    picture: "./images/Worm.PNG"
+    picture: "./images/Worm.PNG",
+    fighting: 1
   },
   {
     name: "fightBat",
@@ -246,7 +248,8 @@ const miscLocals = [
     "button text": ["A", "B", "C", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
-    picture: "./images/Bat.PNG"
+    picture: "./images/Bat.PNG",
+    fighting: 2
   },
   {
     name: "fightDragon",
@@ -254,7 +257,8 @@ const miscLocals = [
     "button text": ["A", "B", "C", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
     text: "You picked a fight with the dragon! What do you do? (A - attack, B - dodge, C - flee)",
-    picture: "./images/Dragon.PNG"
+    picture: "./images/Dragon.PNG",
+    fighting: 3
   },
   {
     name: "dragonRoom",
@@ -612,19 +616,10 @@ function countingRooms() {
   if (roomCount > 2) {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
-    alert("random fight triggered");
-    let mon = miscLocals[monNum]
-    if (mon.name = "fightFrog") {
-      fighting = 0;
-    } else if (mon.name = "fightWorm") {
-      fighting = 1;
-    } else {
-      fighting = 2;
-    }
+    fighting = miscLocals[monNum].fighting;
     goFight();
   } else {
     roomCount += 1;
-    alert("room count =" + roomCount);
   }
 }
 
@@ -633,7 +628,6 @@ function doNothing() {
   if (nothingCount > 2) {
     goDeathRunAway();
   }
-  alert("nothing count =" + nothingCount);
 }
 
 function pickOne() {
