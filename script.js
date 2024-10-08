@@ -617,6 +617,7 @@ function countingRooms() {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
     fighting = miscLocals[monNum].fighting;
+    alert("fighting is " + fighting);
     goFight();
   } else {
     roomCount += 1;
