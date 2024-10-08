@@ -613,10 +613,10 @@ function countingRooms() {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
     alert("random fight triggered");
-    let mon = miscLocals[monNum][0]
-    if (mon = "fightFrog") {
+    let mon = miscLocals[monNum]
+    if (mon.name = "fightFrog") {
       fighting = 0;
-    } else if (mon = "fightWorm") {
+    } else if (mon.name = "fightWorm") {
       fighting = 1;
     } else {
       fighting = 2;
