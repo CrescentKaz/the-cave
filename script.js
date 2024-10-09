@@ -10,8 +10,6 @@ let monsterHealth;
 let inven = ["Fist"];
 let cast = [];
 let roomLog = ["Entrance"];
-const roomLogString = roomLog.join(", ");
-
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -388,6 +386,7 @@ function updateD(deaths) {
   text.innerText = deaths.text;
   picture.src = deaths.picture;
   currentRoomText.innerText = "You Died";
+  const roomLogString = roomLog.join(", ");
   text.innerText += "\nYour path was: " + roomLogString;
 }
 
@@ -574,11 +573,13 @@ function goDeadEnd() {
 
 function goWinSword() {
   updateM(miscLocals[0]);
+  const roomLogString = roomLog.join(", ");
   text.innerText += "\nYour path was: " + roomLogString;
 }
 
 function goWinFire() {
   updateM(miscLocals[1]);
+  const roomLogString = roomLog.join(", ");
   text.innerText += "\nYour path was: " + roomLogString;
 }
 
