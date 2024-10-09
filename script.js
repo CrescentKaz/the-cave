@@ -762,10 +762,10 @@ function attack() {
       goDeathMonsterDidIt();
     }
   } else if (monsterHealth < 1) {
-    if (fighting = 3) {
-      goWinSword();
-    } else {
+    if (fighting != 3) {
       goKilledMonster();
+    } else {
+      goWinSword();
     }
   }
   console.log("you attack the creature");
