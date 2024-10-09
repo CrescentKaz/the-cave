@@ -774,6 +774,8 @@ function attack() {
 function goKilledMonster() {
   alert("you killed the monster. placing you in ruby tracks");
   atk += fighting+1;
+  atkText.innerText = atk;
+  roomCount = 0;
   goWeekOldTracks(); 
 }
 
