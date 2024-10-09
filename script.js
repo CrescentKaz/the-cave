@@ -10,6 +10,7 @@ let monsterHealth;
 let inven = ["Fist"];
 let cast = [];
 let roomLog = ["Entrance"];
+const roomLogString = roomLog.join(", ");
 
 
 const button1 = document.querySelector("#button1");
@@ -387,8 +388,7 @@ function updateD(deaths) {
   text.innerText = deaths.text;
   picture.src = deaths.picture;
   currentRoomText.innerText = "You Died";
-  const roomLogString = roomLog.join(", ");
-  text.innerText += "/n" + roomLogString;
+  text.innerText += "\nYour path was: " + roomLogString;
 }
 
 function goEntrance() {
@@ -574,14 +574,12 @@ function goDeadEnd() {
 
 function goWinSword() {
   updateM(miscLocals[0]);
-  const roomLogString = roomLog.join(", ");
-  text.innerText += "/n" + roomLogString;
+  text.innerText += "\nYour path was: " + roomLogString;
 }
 
 function goWinFire() {
   updateM(miscLocals[1]);
-  const roomLogString = roomLog.join(", ");
-  text.innerText += "/n" + roomLogString;
+  text.innerText += "\nYour path was: " + roomLogString;
 }
 
 function goMiniGame() {
@@ -777,16 +775,49 @@ function attack() {
 }
 
 function goKilledMonster() {
-  alert("you killed the monster. placing you in ruby tracks");
+  alert("you killed the monster");
   atk += fighting+1;
   atkText.innerText = atk;
   roomCount = 0;
-  goWeekOldTracks();
-// lastRoom = roomLog.length
-// if (locations.room = roomLog[lastRoom]) 
-//.  if (roomLog[lastRoom] = largeCavern)
-//.     goLargeCavern(); 
-//    etc...?
+  lastRoom = roomLog.length - 2; 
+  lastRoomName = roomLog[lastRoom].name
+  if (lastRoomName = entrance) {
+    goEntrance();
+  } else if (lastRoomName = largeCavern) {
+    goLargeCavern(); 
+  } else if (lastRoomName = hiddenRoom) {
+    goHiddenRoom();
+  } else if (lastRoomName = tunnelOfBio) {
+    goTunnelOfBio();
+  } else if (lastRoomName = undergroundRiver) {
+    goUndergroundRiver();
+  } else if (lastRoomName = oldCampsite) {
+    goOldCampsite();
+  } else if (lastRoomName = batCave) {
+    goBatCave();
+  } else if (lastRoomName = oldTracks) {
+    goOldTracks();
+  } else if (lastRoomName = sortaOldTracks) {
+    goSortaOldTracks();
+  } else if (lastRoomName = boneRoom) {
+    goBoneRoom();
+  } else if (lastRoomName = oldCarving) {
+    goOldCarving();
+  } else if (lastRoomName = weekOldTracks) {
+    goWeekOldTracks();
+  } else if (lastRoomName = darkRoom) {
+    goDarkRoom();
+  } else if (lastRoomName = newerTracks) {
+    goNewerTracks();
+  } else if (lastRoomName = cavePainting) {
+    goCavePainting();
+  } else if (lastRoomName = freshTracks) {
+    goFreshTracks();
+  } else if (lastRoomName = treasureHoard) {
+    goTreasureHoard();
+  } else {
+    goEntrance();
+  }
 }
 
 function dodge() {
@@ -800,6 +831,7 @@ function restart() {
   inven = ["Fist"];
   cast = [];
   roomCount = 0;
+  roomLog = ["Entrance"];
   nothingCount = 0;
   healthText.innerText = health;
   atkText.innerText = atk;
