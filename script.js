@@ -387,7 +387,8 @@ function updateD(deaths) {
   text.innerText = deaths.text;
   picture.src = deaths.picture;
   currentRoomText.innerText = "You Died";
-  text.innerText += roomLog;
+  const roomLogString = roomLog.join(", ");
+  text.innerText += "/n" + roomLogString;
 }
 
 function goEntrance() {
@@ -573,10 +574,14 @@ function goDeadEnd() {
 
 function goWinSword() {
   updateM(miscLocals[0]);
+  const roomLogString = roomLog.join(", ");
+  text.innerText += "/n" + roomLogString;
 }
 
 function goWinFire() {
   updateM(miscLocals[1]);
+  const roomLogString = roomLog.join(", ");
+  text.innerText += "/n" + roomLogString;
 }
 
 function goMiniGame() {
@@ -776,7 +781,12 @@ function goKilledMonster() {
   atk += fighting+1;
   atkText.innerText = atk;
   roomCount = 0;
-  goWeekOldTracks(); 
+  goWeekOldTracks();
+// lastRoom = roomLog.length
+// if (locations.room = roomLog[lastRoom]) 
+//.  if (roomLog[lastRoom] = largeCavern)
+//.     goLargeCavern(); 
+//    etc...?
 }
 
 function dodge() {
