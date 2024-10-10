@@ -752,7 +752,7 @@ function goKilledMonster() {
   atkText.innerText = atk;
   roomCount = 0;
 //  lastRoom = roomLog.length - 2; 
-  lastRoomName = roomLog[roomLog.length - 2]
+  const lastRoomName = roomLog[roomLog.length - 2]
   if (lastRoomName = "Entrance") {
     goEntrance();
     alert("last room read, Entrance");
