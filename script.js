@@ -67,7 +67,7 @@ const locations = [
     name: "largeCavern",
     room: "Large Cavern",
     "button functions": [goUndergroundRiver, goDeadEnd, goTunnelOfBio, goEntrance, goHiddenRoom],
-    text: "You enter a large cavern littered with stalagtites, stalagmites, and columns of various widths. It is dark and dank. The faint scent of muggy decay wafts gently accross the ground. Soft dripping echoes around you as you catch flashes of sunlight reflecting from the falling droplettes.",
+    text: "You enter a large cavern littered with stalagtites, stalagmites and columns of various widths. It is dark and dank. The faint scent of muggy decay wafts gently accross the ground. Soft dripping echoes around you as you catch flashes of sunlight reflecting from the falling droplettes.",
     picture: "./images/Large_Cavern.PNG"
   },
   {
@@ -95,7 +95,7 @@ const locations = [
     name: "oldCampsite",
     room: "Old Campsite",
     "button functions": [goDeadEnd, goUndergroundRiver, goDeadEnd, goDeadEnd],
-    text: "You find an old campsite with a burnt out firepit, a tattered dusty tent that leans too far to the right, and a few large rocks that might have doubled as stools. Luckily, you don\'t find any bodies. You do find a small empty knapsack and a book tucked just inside the tent. To the East lies the underground stream.",
+    text: "You find an old campsite with a burnt out firepit, a tattered dusty tent that leans too far to the right and a few large rocks that might have doubled as stools. Luckily, you don\'t find any bodies. You do find a small empty knapsack and a book tucked just inside the tent. To the East lies the underground stream.",
     picture: "./images/Old_Campsite.PNG"
   },
   {
@@ -123,7 +123,7 @@ const locations = [
     name: "boneRoom",
     room: "Bone Room",
     "button functions": [goDeadEnd, goSortaOldTracks, goDeadEnd, goDeadEnd, goDragonRoom],
-    text: "Bones of full 50 men lie strewn about. Some are broken, others whole, and yet others with many many needle-thin stalagtites poking straight through. You think it might be best to go back the way you came.",
+    text: "Bones of full 50 men lie strewn about. Some are broken, others whole and yet others with many many needle-thin stalagtites poking straight through. You think it might be best to go back the way you came.",
     picture: "./images/Bone_Room.PNG"
   },
   {
@@ -137,7 +137,7 @@ const locations = [
     name: "weekOldTracks",
     room: "Ruby Tracks",
     "button functions": [goDarkRoom, goDeadEnd, goSortaOldTracks, goNewerTracks],
-    text: "The air is stale and heavy as you make your way around a curve in the trail. A bead of sweat trickles down your calf and you peer into the dim light. The tracks definitely went this way... did the King and Queen know the dragon could shapeshift...? To the North is a hole in the wall, too dark to see into. The tracks appear to head around to the South. You hope this hasn\'t been a large loop.",
+    text: "The air is stale and heavy as you make your way around a curve in the trail. A bead of sweat trickles down your calf and you peer into the dim light. The tracks definitely went this way... did the King and Queen know the dragon could shapeshift...? The footprints are all kinds of missmatched. To the North is a hole in the wall, too dark to see into. The tracks appear to head around to the South. You hope this hasn\'t been a large loop.",
     picture: "./images/Tracks_Ruby.PNG"
   },
   {
@@ -151,7 +151,7 @@ const locations = [
     name: "newerTracks",
     room: "Golden Tracks",
     "button functions": [goWeekOldTracks, goCavePainting, goFreshTracks, goDeadEnd],
-    text: "The air is still a little stale but you catch a whiff of a musky scent. You gently brush your left foot across the edge of one track print ringed in gold. The tracks point off to the West. You just came from the North.", 
+    text: "The air is still a little stale but you catch a whiff of a musky lizard scent. You gently brush your left foot across the edge of one track print ringed in gold. The tracks point off to the West. You just came from the North.", 
     picture: "./images/Tracks_Gold.PNG"
   },
   {
@@ -165,14 +165,14 @@ const locations = [
     name: "freshTracks",
     room: "Fresh Tracks",
     "button functions": [goDeadEnd, goNewerTracks, goTreasureHoard, goDeadEnd],
-    text: "You crouch down slowly, mindful of the noise from your armor. Your fingers brush against the easily disturbed ground. These tracks are very fresh, possibly from today, and the pungent odor of lizard musk confirms it. You came from the East. To the west you see the faint glow of what appears to be a rainbow all out of order.",
+    text: "You crouch down slowly, mindful of any noise. Your fingers brush against the easily disturbed ground. These tracks are very fresh, possibly from today, and the pungent odor of lizard musk confirms it. You came from the East. To the west you see the faint glow of what appears to be a rainbow all out of order.",
     picture: "./images/Fresh_Tracks.PNG"
   },
   {
     name: "treasureHoard",
     room: "Treasure Hoard",
     "button functions": [goDragonRoom, goFreshTracks, goDeadEnd, goDeadEnd],
-    text: "Red, green, blue, purple, yellow, and orange lights raidiate from all kinds of gems. Gold coins, ingots, and bars overflow from giant chalises and chests. Strings of pearls hang from stalagtites. Shimmering silks swath ornate silver-wraught forms. Sapphires litter the floor like a river and a small stream of rubies and garnets seem to pour out of a pile of emeralds like lava over a lush mountainside. The entire room is a walk-through-able art piece with a path going from East to North.",
+    text: "Red, green, blue, purple, yellow, and orange lights raidiate from all kinds of gems. Gold coins, ingots, and bars overflow from giant chalises and chests. Strings of pearls hang from stalagtites. Shimmering silks swath ornate silver-wraught forms. Sapphires litter the floor like a river and a small stream of rubies and garnets seem to pour out of a pile of emeralds like lava over a lush mountainside. The entire room is an art gallery of treasure with a path going from East to North.",
     picture: "./images/Treasure_Hoard.PNG"
   },
   { 
@@ -186,7 +186,7 @@ const locations = [
     name: "dragonRoomLeave",
     room: "Dragon Room",
     "button functions": [goDeadEnd, goDeathBoneRoom, goTunnelOfBio, goTreasureHoard],
-    text: "You sneak around the sleeping dragon. Behind you is it\'s treasure hoard. To either side are what kinda look like dark holes? It\'s hard to see in here.",
+    text: "You sneak around the sleeping dragon. Behind you is it\'s treasure hoard. To either side are what kinda look like dark holes? It\'s hard to see in here, honestly.",
     picture: "./images/Dragon.PNG"
   },
 ]; 
