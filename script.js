@@ -755,37 +755,37 @@ function goKilledMonster() {
   lastRoomName = roomLog[lastRoom]
   if (lastRoomName = entrance) {
     goEntrance();
-  } else if (lastRoomName = largeCavern) {
+  } else if (lastRoomName = "Large Cavern") {
     goLargeCavern(); 
-  } else if (lastRoomName = hiddenRoom) {
+  } else if (lastRoomName = "Hidden Room") {
     goHiddenRoom();
-  } else if (lastRoomName = tunnelOfBio) {
+  } else if (lastRoomName = "Tunnel of Bioluminescence") {
     goTunnelOfBio();
-  } else if (lastRoomName = undergroundRiver) {
+  } else if (lastRoomName = "Underground River") {
     goUndergroundRiver();
-  } else if (lastRoomName = oldCampsite) {
+  } else if (lastRoomName = "Old Canpsite") {
     goOldCampsite();
-  } else if (lastRoomName = batCave) {
+  } else if (lastRoomName = "Bat Cave") {
     goBatCave();
-  } else if (lastRoomName = oldTracks) {
+  } else if (lastRoomName = "Coin Tracks") {
     goOldTracks();
-  } else if (lastRoomName = sortaOldTracks) {
+  } else if (lastRoomName = "Sapphire Tracks") {
     goSortaOldTracks();
-  } else if (lastRoomName = boneRoom) {
+  } else if (lastRoomName = "Bone Room") {
     goBoneRoom();
-  } else if (lastRoomName = oldCarving) {
+  } else if (lastRoomName = "Old Carving") {
     goOldCarving();
-  } else if (lastRoomName = weekOldTracks) {
+  } else if (lastRoomName = "Ruby Tracks") {
     goWeekOldTracks();
-  } else if (lastRoomName = darkRoom) {
+  } else if (lastRoomName = "Dark Room") {
     goDarkRoom();
-  } else if (lastRoomName = newerTracks) {
+  } else if (lastRoomName = "Golden Tracks") {
     goNewerTracks();
-  } else if (lastRoomName = cavePainting) {
+  } else if (lastRoomName = "Cave Painting") {
     goCavePainting();
-  } else if (lastRoomName = freshTracks) {
+  } else if (lastRoomName = "Fresh Tracks") {
     goFreshTracks();
-  } else if (lastRoomName = treasureHoard) {
+  } else if (lastRoomName = "Treasure Hoard") {
     goTreasureHoard();
   } else {
     goEntrance();
