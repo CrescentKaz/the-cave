@@ -32,14 +32,6 @@ const weapons = [
   {name: "sword", atk: 20}
 ];
 
-/*
-const spells = [
-  {name: "fire"},
-  {name: "fly"},
-  {name: "light"}
-];
-*/
-
 const monsters = [
   {
     name: "Frog",
@@ -387,7 +379,7 @@ function updateD(deaths) {
   picture.src = deaths.picture;
   currentRoomText.innerText = "You Died";
   const roomLogString = roomLog.join(", ");
-  text.innerText += "\nYour path was: " + roomLogString;
+  text.innerText += "\n\nYour path was: " + roomLogString;
 }
 
 function goEntrance() {
@@ -399,7 +391,7 @@ function goLargeCavern() {
   if (cast.includes("Fly")) {
     button2.innerText = "Fly";
     button2.onclick = locations[1]["button functions"][4];
-  }; 
+  }
   countingRooms();
 }
 
@@ -442,15 +434,14 @@ function goOldCampsite() {
 }
 
 function goBatCave() {
-
   updateL(locations[6]);
   if (!cast.includes("Fire")) {
     if (inven.includes("Spellbook")) {
       cast.push("Fire");
       text.innerText += "\n\n You learned the spell, \"Fire\". ";
     }
-    countingRooms();
   }
+  countingRooms();
 }
 
 function goOldTracks() {
@@ -566,7 +557,6 @@ function goDeadEnd() {
     "Do you ever think about why we're here?",
     "There is no map on this wall."
   ]; 
-//  let whichMessage = Math.floor(Math.random()*deadEnd.length);
   let deadEndMessage = deadEnd[Math.floor(Math.random()*deadEnd.length)];
   alert(deadEndMessage);
 }
@@ -640,17 +630,14 @@ function doNothing() {
 }
 
 function pickOne() {
-//  pick(Math.floor(Math.random()*11));
   pick(1);
 }
 
 function pickTwo() {
-//  pick([Math.floor(Math.random()*11), Math.floor(Math.random()*11)]);
   pick(2);
 }
 
 function pickThree() {
-//  pick([Math.floor(Math.random()*11), Math.floor(Math.random()*11), Math.floor(Math.random()*11)]);
   pick(3);
 }
 
@@ -687,23 +674,6 @@ function toggleInven() {
     text.innerText += castString;
   }
 }
-
-/*
-function fightFrog() {
-  fighting = 0;
-  goFight();
-}
-
-function fightWorm() {
-  fighting = 1;
-  goFight();
-}
-
-function fightBat() {
-  fighting = 2;
-  goFight();
-}
-*/
 
 function fightDragon() {
   fighting = 3;
@@ -781,7 +751,7 @@ function goKilledMonster() {
   atkText.innerText = atk;
   roomCount = 0;
   lastRoom = roomLog.length - 2; 
-  lastRoomName = roomLog[lastRoom].name
+  lastRoomName = roomLog[lastRoom]
   if (lastRoomName = entrance) {
     goEntrance();
   } else if (lastRoomName = largeCavern) {
@@ -832,7 +802,7 @@ function restart() {
   inven = ["Fist"];
   cast = [];
   roomCount = 0;
-  roomLog = ["Entrance"];
+  roomLog = [];
   nothingCount = 0;
   healthText.innerText = health;
   atkText.innerText = atk;
