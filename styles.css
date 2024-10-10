@@ -2,13 +2,15 @@
   --button-color1: tan;
   --button-color2: black;
   --navy: #0a0a23;
+  --accent-dark: rgb(92, 79, 62);
+  --accent-mid: tan;
 }
 
 body {
   background-color: var(--navy);
 }
 
-#currentRoom, #stats, #controls1, #controls2, #text {
+#currentRoom, #stats, #monsterStats, #controls1, #controls2, #text {
   z-index: 1;
   position: relative;
 }
@@ -23,13 +25,20 @@ body {
 }
 
 #currentRoom {
-  color: tan;
-  text-shadow: 1px 1px black;
+  color: var(--accent-mid);
+  text-shadow: 1px 1px var(--accent-dark);
   font-size: xx-large;
 }
 
 #stats {
-  text-shadow: 1px 1px tan;
+  color: var(--accent-dark);
+  text-shadow: 1px 1px var(--accent-mid);
+}
+
+#monsterStats {
+  color: car(--accent-mid);
+  text-shadow: 1px 1px var(--accent-dark);
+  display: none;
 }
 
 #controls1 {

@@ -751,10 +751,11 @@ function goKilledMonster() {
   atk += fighting+1;
   atkText.innerText = atk;
   roomCount = 0;
-  lastRoom = roomLog.length - 2; 
-  lastRoomName = roomLog[lastRoom]
+//  lastRoom = roomLog.length - 2; 
+  lastRoomName = roomLog[roomLog.length - 2]
   if (lastRoomName = "Entrance") {
     goEntrance();
+    alert("last room read, Entrance");
   } else if (lastRoomName = "Large Cavern") {
     goLargeCavern(); 
   } else if (lastRoomName = "Hidden Room") {
@@ -789,6 +790,7 @@ function goKilledMonster() {
     goTreasureHoard();
   } else {
     goEntrance();
+    alert("last room did not match. triggered else statement");
   }
 }
 
