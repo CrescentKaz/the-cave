@@ -753,7 +753,7 @@ function goKilledMonster() {
   roomCount = 0;
   lastRoom = roomLog.length - 2; 
   lastRoomName = roomLog[lastRoom]
-  if (lastRoomName = entrance) {
+  if (lastRoomName = "Entrance") {
     goEntrance();
   } else if (lastRoomName = "Large Cavern") {
     goLargeCavern(); 
