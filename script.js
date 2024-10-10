@@ -378,6 +378,7 @@ function updateD(deaths) {
   text.innerText = deaths.text;
   picture.src = deaths.picture;
   currentRoomText.innerText = "You Died";
+  roomLog.push("You Died");
   const roomLogString = roomLog.join(", ");
   text.innerText += "\n\nYour path was: " + roomLogString;
 }
