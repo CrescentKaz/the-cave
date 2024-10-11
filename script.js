@@ -28,7 +28,7 @@ const currentRoomText = document.querySelector("#currentRoomText");
 
 const weapons = [
   {name: "fist", atk: 1},
-  {name: "stick", atk: 2},
+  {name: "stick", atk: 3},
   {name: "sword", atk: 20}
 ];
 
@@ -45,8 +45,8 @@ const monsters = [
   },
   {
     name: "Bat",
-    level: 10,
-    health: 50
+    level: 7,
+    health: 40
   },
   {
     name: "Dragon",
@@ -613,11 +613,10 @@ function goDeathDragonLight() {
 }
 
 function countingRooms() { 
-  if (roomCount > 2) {
+  if (roomCount > 3) {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
     fighting = miscLocals[monNum].fightNum;
-    alert("fighting is " + fighting);
     goFight();
   } else {
     roomCount += 1;
