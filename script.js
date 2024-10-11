@@ -197,7 +197,7 @@ const miscLocals = [
     room: "Winner!",
     "button text": ["N", "E", "W", "S"],
     "button functions": [restart, restart, restart, restart],
-    text: "You manage to slay the dragon! YOU WIN! 🎉 Ending 1 of 10 (press any direction to continue)",
+    text: "After a long a grueling duel, you manage to thrust your sword hilt-deep into it's eye and slay the dragon! You proudly hold you head high as you walk out of the cave with your " + gold + " gold. YOU WIN! 🎉 Ending 1 of 10 (press any direction to continue)",
     picture: "./images/Win_Sword.PNG"
   },
   {
@@ -205,7 +205,7 @@ const miscLocals = [
     room: "Winner!", 
     "button text": ["N", "E", "W", "S"],
     "button functions": [restart, restart, restart, restart],
-    text: "You incinerate the shapeshifting dragon and almost kill yourself in the process by burning away all the oxygen in the cave! Seriously, might want to rethink that next time... YOU WIN! 🎉 Ending 2 of 10 (press any direction to continue)",
+    text: "You incinerate the shapeshifting dragon and almost kill yourself in the process by burning away all the oxygen in the cave! Seriously, might want to rethink that next time... You proudly raise your chin and grin ear to ear as you walk confidently out of the cave with your " + gold + " gold. YOU WIN! 🎉 Ending 2 of 10 (press any direction to continue)",
     picture: "./images/Win_Fire.PNG"
   },
   {
@@ -219,36 +219,36 @@ const miscLocals = [
   {
     name: "fightFrog",
     room: "Fight!",
-    "button text": ["A", "B", "C", " "],
+    "button text": ["Attack", "Dodge", "Flee", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
-    text: "A frog has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
+    text: "A frog leaps out from behind a rock and picks a fight with you! What do you do?",
     picture: "./images/Frog.PNG",
     fightNum: 0
   },
   {
     name: "fightWorm",
     room: "Fight!",
-    "button text": ["A", "B", "C", " "],
+    "button text": ["Attack", "Dodge", "Flee", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
-    text: "A worm has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
+    text: "A worm pops out from the ground and picks a fight with you! What do you do?",
     picture: "./images/Worm.PNG",
     fightNum: 1
   },
   {
     name: "fightBat",
     room: "Fight!",
-    "button text": ["A", "B", "C", " "],
+    "button text": ["Attack", "Dodge", "Flee", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
-    text: "A bat has picked a fight with you! What do you do? (A - attack, B - dodge, C - flee)",
+    text: "A bat swoops down from a stalagtite and picks a fight with you! What do you do?",
     picture: "./images/Bat.PNG",
     fightNum: 2
   },
   {
     name: "fightDragon",
     room: "Fight!",
-    "button text": ["A", "B", "C", " "],
+    "button text": ["Attack", "Dodge", "Flee", " "],
     "button functions": [attack, dodge, goDeathRunAway, doNothing],
-    text: "You picked a fight with the dragon! What do you do? (A - attack, B - dodge, C - flee)",
+    text: "You picked a fight with the dragon! What do you do?",
     picture: "./images/Dragon.PNG",
     fightNum: 3
   },
@@ -776,7 +776,7 @@ function goKilledMonster() {
       goUndergroundRiver();
       break;
     } 
-    case "Old Canpsite": {
+    case "Old Campsite": {
       goOldCampsite();
       break;
     }
