@@ -743,7 +743,10 @@ function attack() {
       goWinSword();
     }
   }
-  console.log("you attack the creature");
+}
+
+function dodge() {
+  text.innerText = "You dodged the " + monsters[fighting].name + "'s attack.";
 }
 
 function goKilledMonster() {
@@ -751,7 +754,7 @@ function goKilledMonster() {
   atk += fighting+1;
   atkText.innerText = atk;
   roomCount = 0;
-
+  monsterStats.style.display = "none";
   switch (roomLog[roomLog.length-2]) {
     case "Entrance": {
       goEntrance();
@@ -827,10 +830,6 @@ function goKilledMonster() {
       alert("last room did not match. triggered else statement");
     }
   }
-}
-
-function dodge() {
-  text.innerText = "You dodged the " + monsters[fighting].name + "'s attack.";
 }
 
 function restart() {
