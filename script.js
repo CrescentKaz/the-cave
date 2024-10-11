@@ -725,7 +725,9 @@ function attack() {
   monsterHealth -= weapons[currentWeapon].atk + atk;
   monsterHealthText.innerText = monsterHealth; 
   if (health < 1) {
-    if (fighting = 3) {
+    if (fighting != 3) {
+      goDeathMonsterDidIt();
+    } else {
       if (currentWeapon = 0) {
         goDeathDragonFist();
       } else if (currentWeapon = 1) {
@@ -733,8 +735,6 @@ function attack() {
       } else {
         goDeathDragonLost();
       }
-    } else {
-      goDeathMonsterDidIt();
     }
   } else if (monsterHealth < 1) {
     if (fighting != 3) {
@@ -751,7 +751,7 @@ function goKilledMonster() {
   atk += fighting+1;
   atkText.innerText = atk;
   roomCount = 0;
-//  let lastRoomName = roomLog[roomLog.length-2]
+
   switch (roomLog[roomLog.length-2]) {
     case "Entrance": {
       goEntrance();
@@ -790,29 +790,42 @@ function goKilledMonster() {
       goSortaOldTracks();
       break;
     }
+    case "Bone Room": {
+      goBoneRoom();
+      break;
+    }
+    case "Old Carving": {
+      goOldCarving();
+      break;
+    }
+    case "Ruby Tracks": {
+      goWeekOldTracks();
+      break;
+    }
+    case "Dark Room": {
+      goDarkRoom();
+      break;
+    }
+    case "Golden Tracks": {
+      goNewerTracks();
+      break;
+    }
+    case "Cave Painting": {
+      goCavePainting();
+      break;
+    }
+    case "Fresh Tracks": {
+      goFreshTracks();
+      break;
+    }
+    case "Treasure Hoard": {
+      goTreasureHoard();
+      break;
+    }
     default: {
       goEntrance();
       alert("last room did not match. triggered else statement");
     }
-    /*
-    } else if (lastRoomName = "Bone Room") {
-      goBoneRoom();
-    } else if (lastRoomName = "Old Carving") {
-      goOldCarving();
-    } else if (lastRoomName = "Ruby Tracks") {
-      goWeekOldTracks();
-    } else if (lastRoomName = "Dark Room") {
-      goDarkRoom();
-    } else if (lastRoomName = "Golden Tracks") {
-      goNewerTracks();
-    } else if (lastRoomName = "Cave Painting") {
-      goCavePainting();
-    } else if (lastRoomName = "Fresh Tracks") {
-      goFreshTracks();
-    } else if (lastRoomName = "Treasure Hoard") {
-      goTreasureHoard();
-    } 
-      */
   }
 }
 
