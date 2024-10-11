@@ -36,7 +36,7 @@ body {
 }
 
 #monsterStats {
-  color: car(--accent-mid);
+  color: var(--accent-mid);
   text-shadow: 1px 1px var(--accent-dark);
   display: none;
 }
