@@ -753,7 +753,7 @@ function dodge() {
 function goKilledMonster() {
   alert("you killed the monster");
   atk += fighting+1;
-  atkText.innerText = atk;
+  health =+ fighting*Math.floor(Math.random()*11);
   roomCount = 0;
   switch (roomLog[roomLog.length-2]) {
     case "Entrance": {
