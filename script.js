@@ -751,46 +751,68 @@ function goKilledMonster() {
   atk += fighting+1;
   atkText.innerText = atk;
   roomCount = 0;
-//  lastRoom = roomLog.length - 2; 
-  let lastRoomName = roomLog[-2]
-  if (lastRoomName = "Entrance") {
-    goEntrance();
-    alert("last room read, Entrance");
-  } else if (lastRoomName = "Large Cavern") {
-    goLargeCavern(); 
-  } else if (lastRoomName = "Hidden Room") {
-    goHiddenRoom();
-  } else if (lastRoomName = "Tunnel of Bioluminescence") {
-    goTunnelOfBio();
-  } else if (lastRoomName = "Underground River") {
-    goUndergroundRiver();
-  } else if (lastRoomName = "Old Canpsite") {
-    goOldCampsite();
-  } else if (lastRoomName = "Bat Cave") {
-    goBatCave();
-  } else if (lastRoomName = "Coin Tracks") {
-    goOldTracks();
-  } else if (lastRoomName = "Sapphire Tracks") {
-    goSortaOldTracks();
-  } else if (lastRoomName = "Bone Room") {
-    goBoneRoom();
-  } else if (lastRoomName = "Old Carving") {
-    goOldCarving();
-  } else if (lastRoomName = "Ruby Tracks") {
-    goWeekOldTracks();
-  } else if (lastRoomName = "Dark Room") {
-    goDarkRoom();
-  } else if (lastRoomName = "Golden Tracks") {
-    goNewerTracks();
-  } else if (lastRoomName = "Cave Painting") {
-    goCavePainting();
-  } else if (lastRoomName = "Fresh Tracks") {
-    goFreshTracks();
-  } else if (lastRoomName = "Treasure Hoard") {
-    goTreasureHoard();
-  } else {
-    goEntrance();
-    alert("last room did not match. triggered else statement");
+//  let lastRoomName = roomLog[roomLog.length-2]
+  switch (roomLog[roomLog.length-2]) {
+    case "Entrance": {
+      goEntrance();
+      alert("last room read, Entrance");
+      break;
+    } 
+    case "Large Cavern": {
+      goLargeCavern(); 
+      break;
+    } 
+    case "Hidden Room": {
+      goHiddenRoom();
+      break;
+    } 
+    case "Tunnel of Bioluminescence": {
+      goTunnelOfBio();
+      break;
+    } 
+    case "Underground River": {
+      goUndergroundRiver();
+      break;
+    } 
+    case "Old Canpsite": {
+      goOldCampsite();
+      break;
+    }
+    case "Bat Cave": {
+      goBatCave();
+      break;
+    }
+    case "Coin Tracks": {
+      goOldTracks();
+      break;
+    }
+    case "Sapphire Tracks": {
+      goSortaOldTracks();
+      break;
+    }
+    default: {
+      goEntrance();
+      alert("last room did not match. triggered else statement");
+    }
+    /*
+    } else if (lastRoomName = "Bone Room") {
+      goBoneRoom();
+    } else if (lastRoomName = "Old Carving") {
+      goOldCarving();
+    } else if (lastRoomName = "Ruby Tracks") {
+      goWeekOldTracks();
+    } else if (lastRoomName = "Dark Room") {
+      goDarkRoom();
+    } else if (lastRoomName = "Golden Tracks") {
+      goNewerTracks();
+    } else if (lastRoomName = "Cave Painting") {
+      goCavePainting();
+    } else if (lastRoomName = "Fresh Tracks") {
+      goFreshTracks();
+    } else if (lastRoomName = "Treasure Hoard") {
+      goTreasureHoard();
+    } 
+      */
   }
 }
 
