@@ -1,7 +1,7 @@
 
 let atk = 0;
 let health = 100;
-let gold = 1;
+let gold = 0;
 let currentWeapon = 0;
 let roomCount = 0;
 let nothingCount = 0;
@@ -349,6 +349,7 @@ function updateL(locations) {
   picture.src = locations.picture;
   currentRoomText.innerText = locations.room;
   roomLog.push(locations.room);
+  monsterStats.style.display = "none";
 }
 
 function updateM(miscLocals) {
@@ -754,7 +755,6 @@ function goKilledMonster() {
   atk += fighting+1;
   atkText.innerText = atk;
   roomCount = 0;
-  monsterStats.style.display = "none";
   switch (roomLog[roomLog.length-2]) {
     case "Entrance": {
       goEntrance();
