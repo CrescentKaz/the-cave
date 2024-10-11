@@ -773,7 +773,7 @@ function goKilledMonster() {
       goTunnelOfBio();
       break;
     } 
-    case "Underground River": {
+    case "Underground Stream": {
       goUndergroundRiver();
       break;
     } 
