@@ -1,7 +1,7 @@
 :root {
   --button-color1: tan;
   --button-color2: black;
-  --navy: #0a0a23;
+  --navy: #1a0f03;
   --accent-dark: rgb(92, 79, 62);
   --accent-mid: tan;
 }
@@ -17,7 +17,7 @@ body {
 
 #game {
   max-width: 700px;
-  max-height: 810px;
+  max-height: auto;
   background-color: #ffffff;
   margin: 30px auto 0px;
   padding: 10px;

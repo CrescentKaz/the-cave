@@ -1,5 +1,5 @@
 
-let atk = 0;
+let atk = 1;
 let health = 100;
 let gold = 0;
 let currentWeapon = 0;
