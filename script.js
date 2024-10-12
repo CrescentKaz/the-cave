@@ -171,7 +171,7 @@ const locations = [
   {
     name: "treasureHoard",
     room: "Treasure Hoard",
-    "button functions": [goDragonRoom, goFreshTracks, goDeadEnd, goDeadEnd],
+    "button functions": [goDragonRoom, goFreshTracks, goDeadEnd, goDeathTakeTreasure],
     text: "Red, green, blue, purple, yellow, and orange lights raidiate from all kinds of gems. Gold coins, ingots, and bars overflow from giant chalises and chests. Strings of pearls hang from stalagtites. Shimmering silks swath ornate silver-wraught forms. Sapphires litter the floor like a river and a small stream of rubies and garnets seem to pour out of a pile of emeralds like lava over a lush mountainside. The entire room is an art gallery of treasure with a path going from East to North.",
     picture: "./images/Treasure_Hoard.PNG"
   },
@@ -294,7 +294,7 @@ const deaths = [
   {
     name: "takeTreasure",
     "button functions": [restart, restart, restart, restart],
-    text: "ENTER TEXT HERE Ending 5 of 10 (press any direction to continue)",
+    text: "You a head out to steal some of the dragon's hoard. The moment your hand touches a large purple gem, you feel a rumbling beneath your feet and you glance to the north in fear. The flick of a red tail catches your eye and you have the sudden urge to gulp but you don't dare. You don't dare to even breathe. The ground rumbles again and you feel a sharp pain in your back as a large claw comes out of nowhere and slices you from behind. The dragon viciously kills you for even attempting to steal its treasure. You died. Ending 5 of 10 (press any direction to continue)",
     picture: "./images/Death_Treasure.PNG"
   },
   {
@@ -511,6 +511,7 @@ function goFreshTracks() {
 
 function goTreasureHoard() {
   updateL(locations[16]);
+  button4.innerText = "Steal";
   countingRooms();
 }
 
