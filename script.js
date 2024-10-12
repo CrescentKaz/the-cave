@@ -325,7 +325,7 @@ const deaths = [
     name: "dragonLight",
     "button functions": [restart, restart, restart, restart],
     text: "You take a deep breath than cast the spell. As the words leave your lips you finally realize this might not have been the best idea. The dragon's eyelid flies open and you stare in abject horror as it's pupil dialates a mere second before landing its gaze on you. CHOMP! You get eaten whole for disturbing it's rest. Ending 10 of 10 (press any direction to continue)",
-    picture: "./images/No_Image.PNG"
+    picture: "./images/Death_Dragon_Light.PNG"
   },
 ];
 
