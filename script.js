@@ -677,28 +677,37 @@ function toggleInven() {
   }
 }
 
+/*
 function fightDragon() {
   fighting = 3;
   goFight();
+  updateM(miscLocals[7]);
   console.log("fightDragon triggered");
 }
+*/
 
 function goFightDragonSw() {
   alert("dragon fight triggered with sword");
   currentWeapon = 2;
-  fightDragon();
+  fighting = 3;
+  goFight();
+  updateM(miscLocals[7]);
 }
 
 function goFightDragonSt() {
   alert("dragon fight triggers with stick");
   currentWeapon = 1;
-  fightDragon();
+  fighting = 3;
+  goFight();
+  updateM(miscLocals[7]);
 }
 
 function goFightDragonFi() {
   alert("dragon fight triggered with fist");
   currentWeapon = 0;
-  fightDragon();
+  fighting = 3;
+  goFight();
+  updateM(miscLocals[7]);
 }
 
 function goFight() {
