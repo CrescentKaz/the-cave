@@ -760,7 +760,7 @@ function dodge() {
 
 function goKilledMonster() {
   atk += fighting+1;
-  health =+ fighting*Math.floor(Math.random()*11);
+  health += fighting*Math.floor(Math.random()*11);
   roomCount = 0;
   monsterStats.style.display = "none";
   healthText.innerText = health;
