@@ -676,15 +676,6 @@ function toggleInven() {
   }
 }
 
-/*
-function fightDragon() {
-  fighting = 3;
-  goFight();
-  updateM(miscLocals[7]);
-  console.log("fightDragon triggered");
-}
-*/
-
 function goFightDragonSw() {
   currentWeapon = 2;
   fighting = 3;
