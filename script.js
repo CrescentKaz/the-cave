@@ -654,15 +654,15 @@ function pick(guess) {
   if (numbers.indexOf(guess) != -1) {
     text.innerText += "Correct! You win 20 imaginary gold!";
     gold += Math.floor(Math.random()*21);
-    goldText.innerText = gold;
   } else {
     text.innerText += "Wrong! You feel shame for no real reason!";
     health -= Math.floor(Math.random()*11);
-    healthText.innerText = health;
     if (health < 1) {
       goDeathTakeTreasure();
     }
   }
+  healthText.innerText = health;
+  goldText.innerText = gold;
 }
 
 function toggleInven() {
@@ -686,27 +686,24 @@ function fightDragon() {
 */
 
 function goFightDragonSw() {
-  alert("dragon fight triggered with sword");
   currentWeapon = 2;
   fighting = 3;
   goFight();
-  updateM(miscLocals[7]);
+  updateM(miscLocals[6]);
 }
 
 function goFightDragonSt() {
-  alert("dragon fight triggers with stick");
   currentWeapon = 1;
   fighting = 3;
   goFight();
-  updateM(miscLocals[7]);
+  updateM(miscLocals[6]);
 }
 
 function goFightDragonFi() {
-  alert("dragon fight triggered with fist");
   currentWeapon = 0;
   fighting = 3;
   goFight();
-  updateM(miscLocals[7]);
+  updateM(miscLocals[6]);
 }
 
 function goFight() {
@@ -714,7 +711,6 @@ function goFight() {
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth; 
   monsterStats.style.display = "block";
-  console.log("goFight triggered");
 }
 
 function attack() {
