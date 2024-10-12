@@ -349,7 +349,6 @@ function updateL(locations) {
   picture.src = locations.picture;
   currentRoomText.innerText = locations.room;
   roomLog.push(locations.room);
-  monsterStats.style.display = "none";
 }
 
 function updateM(miscLocals) {
@@ -760,14 +759,15 @@ function dodge() {
 }
 
 function goKilledMonster() {
-  alert("you killed the monster");
   atk += fighting+1;
   health =+ fighting*Math.floor(Math.random()*11);
   roomCount = 0;
+  monsterStats.style.display = "none";
+  healthText.innerText = health;
+  atkText.innerText = atk;
   switch (roomLog[roomLog.length-2]) {
     case "Entrance": {
       goEntrance();
-      alert("last room read, Entrance");
       break;
     } 
     case "Large Cavern": {
@@ -836,7 +836,7 @@ function goKilledMonster() {
     }
     default: {
       goEntrance();
-      alert("last room did not match. triggered else statement");
+      alert("LastRoom did not match. Alert the Dev to go bug hunting.");
     }
   }
 }
