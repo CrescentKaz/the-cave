@@ -85,7 +85,7 @@ img {
 .picture {
   width: 100%;
   height: auto; 
-  position: relative;
+  position: static;
   top: -195px;
   z-index: 0;
 }
