@@ -1,13 +1,13 @@
 :root {
   --button-color1: tan;
   --button-color2: black;
-  --navy: #1a0f03;
+  --background: #1a0f03;
   --accent-dark: rgb(92, 79, 62);
   --accent-mid: tan;
 }
 
 body {
-  background-color: var(--navy);
+  background-color: var(--background);
 }
 
 #currentRoom, #stats, #monsterStats, #controls1, #controls2, #text {
@@ -90,7 +90,7 @@ img {
 }
 
 #text {
-  background-color: var(--navy);
+  background-color: var(--background);
   color: white;
   padding: 10px;
   top: -190px;
