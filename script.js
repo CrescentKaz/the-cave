@@ -739,6 +739,8 @@ function attack() {
       goWinSword();
     }
   }
+  console.log("fighting is " + fighting);
+  console.log("weapon is " + currentWeapon);
 }
 
 function dodge() {
