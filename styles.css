@@ -55,7 +55,7 @@ body {
 
 #controls2 {
   width: 100px;
-  height: 500px;
+  height: stretch;
   left: 85%;
 }
 
@@ -85,9 +85,9 @@ img {
 */
 
 .picture {
-  width: fit-content(90%); 
+  width: 90vw; 
   position: absolute;
-  top: 2%;
+  top: 3%;
   z-index: 0;
 }
 
