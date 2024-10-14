@@ -78,7 +78,7 @@ button {
   position: relative; 
 }
 
-#picture {
+.picture {
   width: 90vw; 
   top: 3%;
   z-index: 0;
