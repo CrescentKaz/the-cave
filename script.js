@@ -732,7 +732,8 @@ function attack() {
         goDeathDragonLost();
       }
     }
-  } else if (monsterHealth < 1) {
+  }
+  if (monsterHealth < 1) {
     if (fighting != 3) {
       goKilledMonster();
     } else {
