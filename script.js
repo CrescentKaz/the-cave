@@ -843,6 +843,7 @@ function restart() {
   healthText.innerText = health;
   atkText.innerText = atk;
   goldText.innerText = gold;
+  monsterStats.style.display = "none";
   updateL(locations[17]);
   const someTips = [
     "Can you find all 8 ways to die?",
