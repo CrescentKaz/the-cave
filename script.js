@@ -714,7 +714,7 @@ function attack() {
       currentWeapon = 0;
     }
   }
-  text.innerText = "The " + monsters[fighting].name + " attacks."; 
+  text.innerText = "The " + monsters[fighting].name + " attacks. "; 
   text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
   health -= monsters[fighting].level;
   healthText.innerText = health;
@@ -750,7 +750,7 @@ function dodge() {
 
 function goKilledMonster() {
   atk += fighting+1;
-  health += fighting*Math.floor(Math.random()*11);
+  health += (fighting+1)*Math.floor(Math.random()*11);
   roomCount = 0;
   monsterStats.style.display = "none";
   healthText.innerText = health;
