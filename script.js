@@ -568,7 +568,7 @@ function goTreasureHoard() {
 
 function goDragonRoom() {
   if (testing) {
-    console.log("goDragonRoom")
+    console.log("goDragonRoom");
     console.log("fighting is " + fighting);
     console.log("weapon is " + currentWeapon);
   }
@@ -743,7 +743,7 @@ function pickOne() {
 }
 
 function pickTwo() {
-  if (testing {
+  if (testing) {
     console.log("picked 2");
   }
   pick(2);
