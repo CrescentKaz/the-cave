@@ -14,8 +14,8 @@ body {
   position: relative;
   max-width: 700px;
   max-height: auto;
-  margin: 30px auto 0px;
-  padding: 10px;
+  margin: 1px auto 0px;
+  padding: 0px 10px;
 }
 
 #currentRoom, #stats, #monsterStats, #controls1, #controls2 {
@@ -27,19 +27,23 @@ body {
   color: var(--accent-mid);
   text-shadow: 1px 1px var(--accent-dark);
   font-size: xx-large;
-  top: 7px;
+  top: 15px;
   left: 20px;
 }
 
 #stats {
   color: var(--accent-dark);
   text-shadow: 1px 1px var(--accent-mid);
+  top: 50px;
+  left: 20px;
 }
 
 #monsterStats {
   color: var(--accent-mid);
   text-shadow: 1px 1px var(--accent-dark);
   display: none;
+  top: 65px;
+  left: 20px;
 }
 
 #controls1 {
@@ -50,13 +54,14 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   transform: rotate(45deg);
-  left: 85%;
-  top: 1px;
+  top: 30px;
+  right: 30px;
 }
 
 #controls2 {
   width: 100px;
-  left: 85%;
+  top: 135px;
+  right: 3px;
 }
 
 button {
