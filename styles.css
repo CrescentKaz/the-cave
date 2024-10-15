@@ -11,14 +11,24 @@ body {
 }
 
 #gameOverlay {
+  position: relative;
+  max-width: 700px;
+  max-height: auto;
+  margin: 30px auto 0px;
+  padding: 10px;
+}
+
+#currentRoom, #stats, #monsterStats, #controls1, #controls2 {
   z-index: 1;
-  position: static;
+  position: absolute;
 }
 
 #currentRoom {
   color: var(--accent-mid);
   text-shadow: 1px 1px var(--accent-dark);
   font-size: xx-large;
+  top: 7px;
+  left: 20px;
 }
 
 #stats {
@@ -41,12 +51,11 @@ body {
   grid-template-columns: repeat(2, 1fr);
   transform: rotate(45deg);
   left: 85%;
-  top: -33px;
+  top: 1px;
 }
 
 #controls2 {
   width: 100px;
-  height: stretch;
   left: 85%;
 }
 
@@ -79,9 +88,14 @@ button {
 }
 
 .picture {
-  max-width: 90%; 
+  box-sizing: border-box;
   top: 3%;
   z-index: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 #text {
