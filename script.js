@@ -10,6 +10,7 @@ let monsterHealth;
 let inven = ["Fist"];
 let cast = [];
 let roomLog = ["Entrance"];
+let testing = False;
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -384,10 +385,16 @@ function updateD(deaths) {
 }
 
 function goEntrance() {
+  if (testing) {
+    console.log("goEbtrance");
+  }
   updateL(locations[0]);
 }
 
 function goLargeCavern() {
+  if (testing) {
+    console.log("goLargeCavern");
+  }
   updateL(locations[1]);
   if (cast.includes("Fly")) {
     button2.innerText = "Fly";
@@ -397,11 +404,17 @@ function goLargeCavern() {
 }
 
 function goHiddenRoom() {
+  if (testing) {
+    console.log("goHiddenRoom");
+  }
   updateL(locations[2]);
   countingRooms();
 }
 
 function goTunnelOfBio() {
+  if (testing) {
+    console.log("goTunbelOfBio");
+  }
   updateL(locations[3]);
   if (!cast.includes("Light")) {
     if (inven.includes("Spellbook")) {
@@ -417,6 +430,9 @@ function goTunnelOfBio() {
 }
 
 function goUndergroundRiver() {
+  if (testing) {
+    console.log("goUndergroundRiver");
+  }
   updateL(locations[4]);
   if (!inven.includes("Stick")) {
     inven.unshift("Stick");
@@ -426,6 +442,9 @@ function goUndergroundRiver() {
 }
 
 function goOldCampsite() {
+  if (testing) {
+    console.log("goOldCampsite");
+  }
   updateL(locations[5]);
   if (!inven.includes("Spellbook")) {
     inven.push("Spellbook");
@@ -435,6 +454,9 @@ function goOldCampsite() {
 }
 
 function goBatCave() {
+  if (testing) {
+    console.log("goBatCave");
+  }
   updateL(locations[6]);
   if (!cast.includes("Fire")) {
     if (inven.includes("Spellbook")) {
@@ -446,16 +468,25 @@ function goBatCave() {
 }
 
 function goOldTracks() {
+  if (testing) {
+    console.log("goOldTracks");
+  }
   updateL(locations[7]);
   countingRooms();
 }
 
 function goSortaOldTracks() {
+  if (testing) {
+    console.log("goSortaOldTracks");
+  }
   updateL(locations[8]);
   countingRooms();
 }
 
 function goBoneRoom() {
+  if (testing) {
+    console.log("goBoneRoom");
+  }
   updateL(locations[9]);
   if (cast.includes("Fly")) {
     button3.innerText = "Fly";
@@ -465,16 +496,25 @@ function goBoneRoom() {
 }
 
 function goOldCarving() {
+  if (testing) {
+    console.log("goOldCarving");
+  }
   updateL(locations[10]);
   countingRooms();
 }
 
 function goWeekOldTracks() {
+  if (testing) {
+    console.log("goWeekOldTracks");
+  }
   updateL(locations[11]);
   countingRooms();
 }
 
 function goDarkRoom() {
+  if (testing) {
+    console.log("goDarkRoom");
+  }
   updateL(locations[12]);
   if (!cast.includes("Fly")) {
     if (inven.includes("Spellbook")) {
@@ -490,11 +530,17 @@ function goDarkRoom() {
 }
 
 function goNewerTracks() {
+  if (testing) {
+    console.log("goNewerTracks");
+  }
   updateL(locations[13]);
   countingRooms();
 }
 
 function goCavePainting() {
+  if (testing) {
+    console.log("goCavePainting");
+  }
   updateL(locations[14]);
   if (!inven.includes("Sword")) {
     inven.unshift("Sword");
@@ -504,25 +550,42 @@ function goCavePainting() {
 }
 
 function goFreshTracks() {
+  if (testing) {
+    console.log("goFreshTracks");
+  }
   updateL(locations[15]);
   countingRooms();
 }
 
 function goTreasureHoard() {
+  if (testing) {
+    console.log("goTreasureHoard");
+  }
   updateL(locations[16]);
   button4.innerText = "Steal";
   countingRooms();
 }
 
 function goDragonRoom() {
+  if (testing) {
+    console.log("goDragonRoom")
+    console.log("fighting is " + fighting);
+    console.log("weapon is " + currentWeapon);
+  }
   updateM(miscLocals[7]);
 }
 
 function goDragonRoomLeave() {
+  if (testing) {
+    console.log("goDragonRoomLeave");
+  }
   updateL(locations[18]); 
 }
 
 function goDragonRoomFight() {
+  if (testing) {
+    console.log("goDragonRoomFight weapon being selected by user");
+  }
   updateM(miscLocals[8]);
   if (!inven.includes("Sword")) {
     button1.innerText = "";
@@ -531,6 +594,9 @@ function goDragonRoomFight() {
 }
 
 function goDragonRoomSpell() {
+  if (testing) {
+    console.log("goDragonRoomSpell spell being selected by user");
+  }
   updateM(miscLocals[9]);
   if (!cast.includes("Fly")) {
     button1.innerText = "";
@@ -564,55 +630,91 @@ function goDeadEnd() {
 }
 
 function goWinSword() {
+  if (testing) {
+    console.log("goWinSword");
+  }
   updateM(miscLocals[0]);
   const roomLogString = roomLog.join(", ");
   text.innerText += "\nYour path was: " + roomLogString;
 }
 
 function goWinFire() {
+  if (testing) {
+    console.log("goWinFire"); 
+  }
   updateM(miscLocals[1]);
   const roomLogString = roomLog.join(", ");
   text.innerText += "\nYour path was: " + roomLogString;
 }
 
 function goMiniGame() {
+  if (testing) {
+    console.log("goMiniGame");
+  }
   roomCount = 0;
   updateM(miscLocals[2]);
 }
 
 function goDeathBoneRoom() {
+  if (testing) {
+    console.log("goDeathBoneRoom");
+  }
   updateD(deaths[0]);
 }
 
 function goDeathRunAway() {
+  if (testing) {
+    console.log("goDeathRunAway");
+  }
   updateD(deaths[1]);
 }
 
 function goDeathTakeTreasure() {
+  if (testing) {
+    console.log("goDeathTakeTreasure");
+  }
   updateD(deaths[2]);
 }
 
 function goDeathMonsterDidIt() {
+  if (testing) {
+    console.log("goDeathMonsterDidIt");
+  }
   updateD(deaths[3]);
 }
 
 function goDeathDragonStick() {
+  if (testing) {
+    console.log("goDeathDragonStick");
+  }
   updateD(deaths[4]);
 }
 
 function goDeathDragonFist() {
+  if (testing) {
+    console.log("goDeathDragonFist");
+  }
   updateD(deaths[5]);
 }
 
 function goDeathDragonLost() {
+  if (testing) {
+    console.log("goDeathDragonLost");
+  }
   updateD(deaths[6]);
 }
 
 function goDeathDragonLight() {
+  if (testing) {
+    console.log("goDeathDragonLight");
+  }
   updateD(deaths[7]);
 }
 
 function countingRooms() { 
+  if (testing) {
+    console.log("room count is " + roomCount);
+  }
   if (roomCount > 3) {
     const monNum = Math.floor(Math.random()*3)+3;
     updateM(miscLocals[monNum]);
@@ -624,6 +726,9 @@ function countingRooms() {
 }
 
 function doNothing() {
+  if (testing) {
+    console.log("nothing count is " + nothingCount);
+  }
   nothingCount += 1;
   if (nothingCount > 2) {
     goDeathRunAway();
@@ -631,18 +736,30 @@ function doNothing() {
 }
 
 function pickOne() {
+  if (testing) {
+    console.log("picked 1");
+  }
   pick(1);
 }
 
 function pickTwo() {
+  if (testing {
+    console.log("picked 2");
+  }
   pick(2);
 }
 
 function pickThree() {
+  if (testing) {
+    console.log("picked 3");
+  }
   pick(3);
 }
 
 function pick(guess) {
+  if (testing) {
+    console.log("pick guess triggered");
+  }
   let numbers = [];
   while (numbers.length < 3) {
     numbers.push(Math.floor(Math.random() * 11));
@@ -666,6 +783,9 @@ function pick(guess) {
 }
 
 function toggleInven() {
+  if (testing) {
+    console.log("inven button triggered");
+  }
   text.innerText += "\n\n Current Inventory:";
   const invenString = inven.join(", ");
   text.innerText += invenString; 
@@ -677,10 +797,19 @@ function toggleInven() {
 }
 
 function goFightDragonSw() {
+  if (testing) {
+    console.log("goFightDragonSw");
+    console.log("before, weapon is " + currentWeapon);
+    console.log("before, fighting is " + fighting);
+  }
   currentWeapon = 2;
   fighting = 3;
   goFight();
   updateM(miscLocals[6]);
+  if (testing) {
+    console.log("after, weapon is " + currentWeapon);
+    console.log("after, fighting is " + fighting);
+  }
 }
 
 function goFightDragonSt() {
