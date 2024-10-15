@@ -806,13 +806,14 @@ function goFightDragonSw() {
   fighting = 3;
   goFight();
   updateM(miscLocals[6]);
-  if (testing) {
-    console.log("after, weapon is " + currentWeapon);
-    console.log("after, fighting is " + fighting);
-  }
 }
 
 function goFightDragonSt() {
+  if (testing) {
+    console.log("goFightDragonSt");
+    console.log("before, weapon is " + currentWeapon);
+    console.log("before, fighting is " + fighting);
+  }
   currentWeapon = 1;
   fighting = 3;
   goFight();
@@ -820,6 +821,11 @@ function goFightDragonSt() {
 }
 
 function goFightDragonFi() {
+  if (testing) {
+    console.log("goFightDragonFi");
+    console.log("before, weapon is " + currentWeapon);
+    console.log("before, fighting is " + fighting);
+  }
   currentWeapon = 0;
   fighting = 3;
   goFight();
@@ -827,6 +833,9 @@ function goFightDragonFi() {
 }
 
 function goFight() {
+  if (testing) {
+    console.log("goFight");
+  }
   monsterHealth = monsters[fighting].health;
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth; 
@@ -834,6 +843,11 @@ function goFight() {
 }
 
 function attack() {
+  if (testing) {
+    console.log("attack triggered");
+    console.log("before, weapon is " + currentWeapon);
+    console.log("before, fighting is " + fighting);
+  }
   if (fighting != 3) {
     if (inven.includes("Sword")) {
       currentWeapon = 2;
@@ -869,15 +883,23 @@ function attack() {
       goWinSword();
     }
   }
-  console.log("fighting is " + fighting);
-  console.log("weapon is " + currentWeapon);
+  if (testing) {
+    console.log("after, weapon is " + currentWeapon);
+    console.log("after, fighting is " + fighting);
+  }
 }
 
 function dodge() {
+  if (testing) {
+    console.log("dodge");
+  }
   text.innerText = "You dodged the " + monsters[fighting].name + "'s attack.";
 }
 
 function goKilledMonster() {
+  if (testing) {
+    console.log("goKilledMonster");
+  }
   atk += fighting+1;
   health += (fighting+1)*Math.floor(Math.random()*11);
   roomCount = 0;
@@ -961,6 +983,9 @@ function goKilledMonster() {
 }
 
 function restart() {
+  if (testing) {
+    console.log("restart");
+  }
   health = 100;
   atk = 1;
   gold = 1;
