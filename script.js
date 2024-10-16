@@ -848,7 +848,7 @@ function attack() {
     console.log("before, weapon is " + currentWeapon);
     console.log("before, fighting is " + fighting);
   }
-  if (fighting != 3) {
+  if (fighting !== 3) {
     if (inven.includes("Sword")) {
       currentWeapon = 2;
     } else if (inven.includes("Stick")) {
@@ -864,12 +864,12 @@ function attack() {
   monsterHealth -= weapons[currentWeapon].atk + atk;
   monsterHealthText.innerText = monsterHealth; 
   if (health < 1) {
-    if (fighting != 3) {
+    if (fighting !== 3) {
       goDeathMonsterDidIt();
     } else {
-      if (currentWeapon = 0) {
+      if (currentWeapon === 0) {
         goDeathDragonFist();
-      } else if (currentWeapon = 1) {
+      } else if (currentWeapon === 1) {
         goDeathDragonStick();
       } else {
         goDeathDragonLost();
@@ -877,7 +877,7 @@ function attack() {
     }
   }
   if (monsterHealth < 1) {
-    if (fighting != 3) {
+    if (fighting !== 3) {
       goKilledMonster();
     } else {
       goWinSword();
