@@ -769,10 +769,10 @@ function pick(guess) {
     text.innerText += numbers[i] + "\n";
   }
   if (numbers.indexOf(guess) != -1) {
-    text.innerText += "Correct! You win 20 imaginary gold!";
+    text.innerText += "Correct! You win some imaginary gold!";
     gold += Math.floor(Math.random()*21);
   } else {
-    text.innerText += "Wrong! You feel shame for no real reason!";
+    text.innerText += "Wrong! You feel shame for no real reason! (watch your health)";
     health -= Math.floor(Math.random()*11);
     if (health < 1) {
       goDeathTakeTreasure();
