@@ -988,7 +988,7 @@ function restart() {
   }
   health = 100;
   atk = 1;
-  gold = 1;
+  gold = 0;
   inven = ["Fist"];
   cast = [];
   roomCount = 0;
