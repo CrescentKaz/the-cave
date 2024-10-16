@@ -875,17 +875,12 @@ function attack() {
         goDeathDragonLost();
       }
     }
-  }
-  if (monsterHealth < 1) {
+  } else if (monsterHealth < 1) {
     if (fighting !== 3) {
       goKilledMonster();
     } else {
       goWinSword();
     }
-  }
-  if (testing) {
-    console.log("after, weapon is " + currentWeapon);
-    console.log("after, fighting is " + fighting);
   }
 }
 
@@ -901,7 +896,7 @@ function goKilledMonster() {
     console.log("goKilledMonster");
   }
   atk += fighting+1;
-  health += (fighting+1)*Math.floor(Math.random()*11);
+  health += (fighting+1)*Math.floor(Math.random()*6);
   roomCount = 0;
   monsterStats.style.display = "none";
   healthText.innerText = health;
