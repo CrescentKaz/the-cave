@@ -4,6 +4,14 @@
   --background: #1a0f03;
   --accent-dark: rgb(92, 79, 62);
   --accent-mid: tan;
+  --blackish: #010108;
+    --dark_purple: #1B0259;
+    --light_purple: #866BC9;
+    --navy_black: #0E0D30;
+    --dark_blue: #050178;
+    --royal_blue: #0704C2;
+    --pastel_blue: #4D7BF0;
+    --whiteish: #FCFCFC;
 }
 
 #nav_bar {
