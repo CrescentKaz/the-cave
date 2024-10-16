@@ -7,37 +7,50 @@
   <title>The Cave</title>
 </head>
 <body>
-  <div id="gameOverlay">
-    <div id="currentRoom">
-      <strong><span id="currentRoomText">Entrance</span></strong>
+  <header>
+    <nav id="nav_bar">
+      <a href="https://crescentkaz.github.io/landing-page/">
+      <button type="button" class="nav-button">Home</button></a>
+      <ul class="nav-items">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about_me">About</a></li>
+        <li><a href="#socials">Communicate</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="gameOverlay">
+      <div id="currentRoom">
+        <strong><span id="currentRoomText">Entrance</span></strong>
+      </div>
+      <div id="stats">
+        <span>HP: <strong><span id="healthText">100</span></strong></span>
+        <span>Atk: <strong><span id="atkText">1</span></strong></span>
+        <span>Gold: <strong><span id="goldText">0</span></strong></span>
+      </div>
+      <div id="monsterStats">
+        <span>Monster: <strong><span id="monsterName"></span></strong></span>
+        <span>HP: <strong><span id="monsterHealthText"></span></strong></span>
+      </div>
+      <div id="controls1">
+        <button id="button1" class="north">N</button>
+        <button id="button2" class="east">E</button>
+        <button id="button3" class="west">W</button>
+        <button id="button4" class="south">S</button>
+      </div>
+      <div id="controls2">
+        <button id="button5" class="inven">Inventory</button>
+      </div> 
     </div>
-    <div id="stats">
-      <span>HP: <strong><span id="healthText">100</span></strong></span>
-      <span>Atk: <strong><span id="atkText">1</span></strong></span>
-      <span>Gold: <strong><span id="goldText">0</span></strong></span>
+    <div id="gameBase">
+      <div class="picture">
+        <img id="picture" src="./images/The_Cave.PNG" >
+      </div>
+      <div id="text">
+        Welcome to "The Cave"! You are a valiant knight sent by your King and kingdom to slay a terrible dragon that has been terrifying nearby villages. Unfortunately they failed to equip you with a weapon or gold, so all you have is your fists.  Where do you want to go? Use the buttons above.
+      </div>
     </div>
-    <div id="monsterStats">
-      <span>Monster: <strong><span id="monsterName"></span></strong></span>
-      <span>HP: <strong><span id="monsterHealthText"></span></strong></span>
-    </div>
-    <div id="controls1">
-      <button id="button1" class="north">N</button>
-      <button id="button2" class="east">E</button>
-      <button id="button3" class="west">W</button>
-      <button id="button4" class="south">S</button>
-    </div>
-    <div id="controls2">
-      <button id="button5" class="inven">Inventory</button>
-    </div> 
-  </div>
-  <div id="gameBase">
-    <div class="picture">
-      <img id="picture" src="./images/The_Cave.PNG" >
-    </div>
-    <div id="text">
-      Welcome to "The Cave"! You are a valiant knight sent by your King and kingdom to slay a terrible dragon that has been terrifying nearby villages. Unfortunately they failed to equip you with a weapon or gold, so all you have is your fists.  Where do you want to go? Use the buttons above.
-    </div>
-  </div>
-  <script src="./script.js"></script>
+    <script src="./script.js"></script>
+  </main>
 </body>
 </html> 
