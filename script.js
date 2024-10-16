@@ -10,7 +10,7 @@ let monsterHealth;
 let inven = ["Fist"];
 let cast = [];
 let roomLog = ["Entrance"];
-let testing = True;
+let testing = true;
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
