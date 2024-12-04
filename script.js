@@ -295,7 +295,7 @@ const deaths = [
   {
     name: "takeTreasure",
     "button functions": [restart, restart, restart, restart],
-    text: "You a head out to steal some of the dragon's hoard. The moment your hand touches a large purple gem, you feel a rumbling beneath your feet and you glance to the north in fear. The flick of a red tail catches your eye and you have the sudden urge to gulp but you don't dare. You don't dare to even breathe. The ground rumbles again and you feel a sharp pain in your back as a large claw comes out of nowhere and slices you from behind. The dragon viciously kills you for even attempting to steal its treasure. You died. Ending 5 of 10 (press any direction to continue)",
+    text: "You head out to steal some of the dragon's hoard. The moment your hand touches a large purple gem, you feel a rumbling beneath your feet and you glance to the north in fear. The flick of a red tail catches your eye and you have the sudden urge to gulp but you don't dare. You don't dare to even breathe. The ground rumbles again and you feel a sharp pain in your back as a large claw comes out of nowhere and slices you from behind. The dragon viciously kills you for even attempting to steal its treasure. You died. Ending 5 of 10 (press any direction to continue)",
     picture: "./images/Death_Treasure.PNG"
   },
   {
