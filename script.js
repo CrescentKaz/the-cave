@@ -123,7 +123,7 @@ const locations = [
   {
     name: "boneRoom",
     room: "Bone Room",
-    "button functions": [goDeadEnd, goSortaOldTracks, goDeadEnd, goDeadEnd, goDragonRoom],
+    "button functions": [goDeadEnd, goSortaOldTracks, goDeadEnd, goDeadEnd],
     text: "Bones of full 50 men lie strewn about. Some are broken, others whole and yet others with many many needle-thin stalagtites poking straight through. You think it might be best to go back the way you came.",
     picture: "./images/Bone_Room.PNG"
   },
@@ -490,7 +490,7 @@ function goBoneRoom() {
   updateL(locations[9]);
   if (cast.includes("Fly")) {
     button3.innerText = "Fly";
-    button3.onclick = locations[9]["button functions"][4];
+    button3.onclick = locations[16]["button functions"][1];
   }
   countingRooms();
 }
